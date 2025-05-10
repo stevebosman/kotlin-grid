@@ -1,4 +1,4 @@
-package uk.co.stevebosman.grid.regular_square
+package uk.co.stevebosman.grid.impl.regular.square
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -8,8 +8,6 @@ import uk.co.stevebosman.grid.Point
 class SquareGridCellPositionerTest {
     @Test
     fun testVerticesForOrigin() {
-        val instance = SquareGridCellPositioner()
-
         assertEquals(
             listOf(
                 Point(0.0, 0.0),
@@ -22,8 +20,6 @@ class SquareGridCellPositionerTest {
 
     @Test
     fun testVerticesForRandomGridReference() {
-        val instance = SquareGridCellPositioner()
-
         val ref = GridReference((1..10).random(), (1..10).random())
         assertEquals(
             listOf(
@@ -34,5 +30,9 @@ class SquareGridCellPositionerTest {
             ),
             instance.getVertices(ref),
             { -> "Wrong vertices for $ref" })
+    }
+
+    companion object {
+        val instance = SquareGridCellPositioner()
     }
 }

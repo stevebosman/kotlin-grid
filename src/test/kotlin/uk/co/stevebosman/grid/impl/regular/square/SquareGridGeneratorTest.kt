@@ -1,26 +1,13 @@
-package uk.co.stevebosman.grid.regular_square
+package uk.co.stevebosman.grid.impl.regular.square
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertAll
-import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.grid.Point
+import uk.co.stevebosman.test.GridAssertions.Companion.assertContains
 
 class SquareGridGeneratorTest {
-    private fun assertContains(
-        cells: Map<GridReference, Cell>,
-        expectedReference: GridReference,
-        expectedNeighbours: List<GridReference>,
-        expectedVertices: List<Point>,
-    ) {
-        val referencedCell = cells[expectedReference]
-        Assertions.assertNotNull(referencedCell)
-        Assertions.assertEquals(expectedReference, referencedCell?.gridReference, { -> "Unexpected grid reference" })
-        Assertions.assertEquals(expectedNeighbours, referencedCell?.neighbours, { -> "Unexpected neighbours" })
-        Assertions.assertEquals(expectedVertices, referencedCell?.getVertices(), { -> "Unexpected vertices" })
-    }
-
     @Test
     fun testGenerated2by2grid() {
         val generator = SquareGridGenerator()

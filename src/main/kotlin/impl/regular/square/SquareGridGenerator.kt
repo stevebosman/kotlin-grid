@@ -1,4 +1,4 @@
-package uk.co.stevebosman.grid.regular_square
+package uk.co.stevebosman.grid.impl.regular.square
 
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
@@ -12,7 +12,6 @@ class SquareGridGenerator {
                 references.add(GridReference(x, y))
             }
         }
-        val positioner = SquareGridCellPositioner()
         val cells = references.associateWith { r ->
             val neighbours = listOf(
                 GridReference(r.x, r.y - 1),
@@ -24,5 +23,9 @@ class SquareGridGenerator {
         }
 
         return Grid(cells)
+    }
+
+    companion object {
+        val positioner = SquareGridCellPositioner()
     }
 }
