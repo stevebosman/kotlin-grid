@@ -18,7 +18,7 @@ class SquareGridGenerator {
                 GridReference(r.x - 1, r.y),
                 GridReference(r.x + 1, r.y),
                 GridReference(r.x, r.y + 1)
-            ).filter { r -> r.x >= 0 && r.y >= 0 && r.x < width && r.y < height }
+            ).filter { r -> references.contains(r) }
             Cell(r, neighbours, positioner)
         }
 
