@@ -1,0 +1,71 @@
+package uk.co.stevebosman.grid.impl.regular.hex
+
+import uk.co.stevebosman.grid.Cell
+import uk.co.stevebosman.grid.Grid
+import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.grid.impl.regular.square.SquareGridCellPositioner
+
+class HexGridGenerator {
+    fun generate(width: Int, height: Int, option: HexGridOption = HexGridOption.STANDARD): Grid {
+        val references = mutableListOf<GridReference>()
+        when (option) {
+            HexGridOption.STANDARD -> {
+                (0..height - 1).forEach { y ->
+                    (0..width - 1).forEach { x ->
+                        references.add(GridReference(x, y))
+                    }
+                }
+            }
+
+            HexGridOption.STANDARD_SKIP_LAST -> {
+                (0..height - 1).forEach { y ->
+                    (0..width - 1 - if (y % 2 == 0) {
+                        0
+                    } else {
+                        1
+                    }).forEach { x ->
+                        references.add(GridReference(x, y))
+                    }
+                }
+            }
+
+            HexGridOption.OFFSET -> TODO()
+            HexGridOption.OFFSET_SKIP_LAST -> TODO()
+            HexGridOption.TRIANGLE -> {
+                (0..height - 1).forEach { y ->
+                    (y / 2..width - (y + 1) / 2 - 1).forEach { x ->
+                        references.add(GridReference(x, y))
+                    }
+                }
+            }
+        }
+        val cells = references.associateWith { r ->
+            val neighbours = if (r.y % 2 == 0) {
+                listOf(
+                    GridReference(r.x - 1, r.y - 1),
+                    GridReference(r.x, r.y - 1),
+                    GridReference(r.x + 1, r.y),
+                    GridReference(r.x, r.y + 1),
+                    GridReference(r.x - 1, r.y + 1),
+                    GridReference(r.x - 1, r.y),
+                )
+            } else {
+                listOf(
+                    GridReference(r.x, r.y - 1),
+                    GridReference(r.x + 1, r.y - 1),
+                    GridReference(r.x + 1, r.y),
+                    GridReference(r.x + 1, r.y + 1),
+                    GridReference(r.x, r.y + 1),
+                    GridReference(r.x - 1, r.y),
+                )
+            }.filter { r -> references.contains(r) }
+            Cell(r, neighbours, positioner)
+        }
+
+        return Grid(cells)
+    }
+
+    companion object {
+        val positioner = SquareGridCellPositioner()
+    }
+}

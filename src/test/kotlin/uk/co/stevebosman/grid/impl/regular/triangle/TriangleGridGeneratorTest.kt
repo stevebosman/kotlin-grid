@@ -9,8 +9,7 @@ import uk.co.stevebosman.test.GridAssertions.Companion.assertContains
 class TriangleGridGeneratorTest {
     @Test
     fun testGenerated2by2grid() {
-        val generator = TriangleGridGenerator()
-        val grid = generator.generate(2, 2)
+        val grid = instance.generate(2, 2)
         Assertions.assertEquals(4, grid.cells.size)
 
         assertAll(
@@ -47,8 +46,7 @@ class TriangleGridGeneratorTest {
 
     @Test
     fun testGenerated3by3grid() {
-        val generator = TriangleGridGenerator()
-        val grid = generator.generate(3, 3)
+        val grid = instance.generate(3, 3)
         Assertions.assertEquals(9, grid.cells.size)
         assertAll({
             assertContains(
@@ -114,5 +112,9 @@ class TriangleGridGeneratorTest {
                 null
             )
         })
+    }
+
+    companion object {
+        val instance = TriangleGridGenerator()
     }
 }

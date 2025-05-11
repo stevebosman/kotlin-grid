@@ -1,6 +1,7 @@
 package uk.co.stevebosman.test
 
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.assertAll
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.grid.Point
@@ -19,16 +20,22 @@ class GridAssertions {
                 expectedReference,
                 referencedCell?.gridReference,
                 { -> "Unexpected grid reference" })
-            Assertions.assertEquals(
-                expectedNeighbours,
-                referencedCell?.neighbours,
-                { -> "Unexpected neighbours for $expectedReference" })
-            if (expectedVertices != null) {
-                Assertions.assertEquals(
-                    expectedVertices,
-                    referencedCell?.getVertices(),
-                    { -> "Unexpected vertices for $expectedReference" })
-            }
+            assertAll(
+                { ->
+                    Assertions.assertEquals(
+                        expectedNeighbours,
+                        referencedCell?.neighbours,
+                        { -> "Unexpected neighbours for $expectedReference" })
+                },
+                { ->
+                    if (expectedVertices != null) {
+                        Assertions.assertEquals(
+                            expectedVertices,
+                            referencedCell?.getVertices(),
+                            { -> "Unexpected vertices for $expectedReference" })
+                    }
+                }
+            )
         }
     }
 }
