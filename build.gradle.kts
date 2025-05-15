@@ -7,11 +7,11 @@ plugins {
 group = "uk.co.stevebosman.grid"
 version = "0.0.2-SNAPSHOT"
 
-val sourcesJar by tasks.registering(Jar::class) {
-    from(sourceSets.main.get().allSource)
-}
 
 publishing {
+    val sourcesJar by tasks.registering(Jar::class) {
+        from(sourceSets.main.get().allSource)
+    }
     publications {
         register("mavenJava", MavenPublication::class) {
             from(components["java"])
