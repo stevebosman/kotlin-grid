@@ -9,10 +9,10 @@ version = "0.0.2-SNAPSHOT"
 
 
 publishing {
-    val sourcesJar by tasks.registering(Jar::class) {
-        from(sourceSets.main.get().allSource)
-    }
     publications {
+        val sourcesJar by tasks.registering(Jar::class) {
+            from(sourceSets.main.get().allSource)
+        }
         register("mavenJava", MavenPublication::class) {
             from(components["java"])
             artifact(sourcesJar.get())
