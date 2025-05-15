@@ -1,12 +1,23 @@
 plugins {
     kotlin("jvm") version "2.1.20"
+    id("java-library")
     id("maven-publish")
 }
 
 group = "uk.co.stevebosman.grid"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.2-SNAPSHOT"
+
+val sourcesJar by tasks.registering(Jar::class) {
+    from(sourceSets.main.get().allSource)
+}
 
 publishing {
+    publications {
+        register("mavenJava", MavenPublication::class) {
+            from(components["java"])
+            artifact(sourcesJar.get())
+        }
+    }
     repositories {
         maven {
             name = "GitHubPackages"
