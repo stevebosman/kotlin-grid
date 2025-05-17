@@ -5,13 +5,13 @@ plugins {
 }
 
 group = "uk.co.stevebosman.grid"
-version = "0.0.2-SNAPSHOT"
+version = "0.0.2"
 
 publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/stevebosman/grid")
+            url = uri("https://maven.pkg.github.com/stevebosman/kotlin-grid")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
