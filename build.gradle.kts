@@ -14,6 +14,9 @@ publishing {
             from(sourceSets.main.get().allSource)
         }
         register("mavenJava", MavenPublication::class) {
+            tasks.named("generateMetadataFileForReleasePublication").configure {
+                dependsOn("sourcesJar")
+            }
             from(components["java"])
             artifact(sourcesJar.get())
         }
