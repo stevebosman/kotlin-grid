@@ -7,28 +7,20 @@ plugins {
 group = "uk.co.stevebosman.grid"
 version = "0.0.2-SNAPSHOT"
 
-
 publishing {
-    publications {
-        val sourcesJar by tasks.registering(Jar::class) {
-            from(sourceSets.main.get().allSource)
-        }
-        register("mavenJava", MavenPublication::class) {
-            tasks.named("generateMetadataFileForReleasePublication").configure {
-                dependsOn("sourcesJar")
-            }
-            from(components["java"])
-            artifact(sourcesJar.get())
-        }
-    }
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/stevebosman/kotlin-grid")
+            url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
             }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
         }
     }
 }
