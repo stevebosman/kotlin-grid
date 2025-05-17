@@ -4,8 +4,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "uk.co.stevebosman.grid"
-version = "0.0.2"
+group = "uk.co.stevebosman"
+version = "0.0.3"
 
 publishing {
     repositories {
