@@ -2,9 +2,11 @@ package uk.co.stevebosman.grid.impl.regular.square
 
 import uk.co.stevebosman.grid.CellPositioner
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.Point
+import uk.co.stevebosman.geometry.Point
 
-class SquareGridCellPositioner : CellPositioner {
+object SquareGridCellPositioner : CellPositioner {
+    private val cache = mutableMapOf<GridReference, List<Point>>()
+
     override fun getVertices(gridReference: GridReference): List<Point> =
         cache.getOrPut(gridReference) {
             listOf(
@@ -14,8 +16,4 @@ class SquareGridCellPositioner : CellPositioner {
                 Point(gridReference.x.toDouble(), gridReference.y + 1.0)
             )
         }
-
-    companion object {
-        private val cache = mutableMapOf<GridReference, List<Point>>()
-    }
 }

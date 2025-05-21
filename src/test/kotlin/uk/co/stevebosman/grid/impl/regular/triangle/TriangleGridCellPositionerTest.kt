@@ -3,7 +3,7 @@ package uk.co.stevebosman.grid.impl.regular.triangle
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.Point
+import uk.co.stevebosman.geometry.Point
 import kotlin.math.sqrt
 
 class TriangleGridCellPositionerTest {
@@ -52,7 +52,7 @@ class TriangleGridCellPositionerTest {
     }
 
     companion object {
-        val instance = TriangleGridCellPositioner()
+        val instance = TriangleGridCellPositioner
         val HALF_ROOT_THREE = sqrt(3.0) / 2
     }
 }

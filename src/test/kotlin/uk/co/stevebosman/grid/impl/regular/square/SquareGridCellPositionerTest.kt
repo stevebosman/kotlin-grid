@@ -3,7 +3,7 @@ package uk.co.stevebosman.grid.impl.regular.square
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.Point
+import uk.co.stevebosman.geometry.Point
 
 class SquareGridCellPositionerTest {
     @Test
@@ -33,6 +33,6 @@ class SquareGridCellPositionerTest {
     }
 
     companion object {
-        val instance = SquareGridCellPositioner()
+        val instance = SquareGridCellPositioner
     }
 }

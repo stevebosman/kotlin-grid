@@ -3,8 +3,9 @@ package uk.co.stevebosman.grid.impl.regular.square
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
 import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.grid.BoundingBoxFactory
 
-class SquareGridGenerator {
+object SquareGridGenerator {
     fun generate(width: Int, height: Int): Grid {
         val references = mutableListOf<GridReference>()
         (0..width - 1).forEach { x ->
@@ -19,13 +20,10 @@ class SquareGridGenerator {
                 GridReference(r.x + 1, r.y),
                 GridReference(r.x, r.y + 1)
             ).filter { r -> references.contains(r) }
-            Cell(r, neighbours, positioner)
+            Cell(r, neighbours, SquareGridCellPositioner)
         }
 
-        return Grid(cells)
+        return Grid(cells, BoundingBoxFactory.of(cells.values))
     }
 
-    companion object {
-        val positioner = SquareGridCellPositioner()
-    }
 }

@@ -2,10 +2,12 @@ plugins {
     kotlin("jvm") version "2.1.20"
     id("java-library")
     id("maven-publish")
+    kotlin("plugin.lombok") version "2.1.21"
+    id("io.freefair.lombok") version "8.13"
 }
 
 group = "uk.co.stevebosman"
-version = "0.0.3"
+version = "0.0.4"
 
 publishing {
     repositories {
