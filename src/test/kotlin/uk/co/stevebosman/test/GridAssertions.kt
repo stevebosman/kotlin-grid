@@ -2,9 +2,11 @@ package uk.co.stevebosman.test
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.assertAll
+import uk.co.stevebosman.geometry.Point
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.Point
+
+const val DELTA = 1e-15
 
 class GridAssertions {
     companion object {
@@ -15,7 +17,7 @@ class GridAssertions {
             expectedVertices: List<Point>?,
         ) {
             val referencedCell = cells[expectedReference]
-            Assertions.assertNotNull(referencedCell)
+            Assertions.assertNotNull(referencedCell, { -> "$expectedReference not found in ${cells.keys}" })
             Assertions.assertEquals(
                 expectedReference,
                 referencedCell?.gridReference,

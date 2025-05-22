@@ -3,9 +3,9 @@ package uk.co.stevebosman.grid.impl.regular.hex
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.impl.regular.square.SquareGridCellPositioner
+import uk.co.stevebosman.grid.BoundingBoxFactory
 
-class HexGridGenerator {
+object HexGridGenerator {
     fun generate(width: Int, height: Int, option: HexGridOption = HexGridOption.STANDARD): Grid {
         val references = mutableListOf<GridReference>()
         when (option) {
@@ -29,8 +29,24 @@ class HexGridGenerator {
                 }
             }
 
-            HexGridOption.OFFSET -> TODO()
-            HexGridOption.OFFSET_SKIP_LAST -> TODO()
+            HexGridOption.OFFSET -> {
+                (1..height).forEach { y ->
+                    (0..width - 1).forEach { x ->
+                        references.add(GridReference(x, y))
+                    }
+                }
+            }
+            HexGridOption.OFFSET_SKIP_LAST ->  {
+                (1..height).forEach { y ->
+                    (0..width - 1 - if (y % 2 == 0) {
+                        0
+                    } else {
+                        1
+                    }).forEach { x ->
+                        references.add(GridReference(x, y))
+                    }
+                }
+            }
             HexGridOption.TRIANGLE -> {
                 (0..height - 1).forEach { y ->
                     (y / 2..width - (y + 1) / 2 - 1).forEach { x ->
@@ -59,13 +75,9 @@ class HexGridGenerator {
                     GridReference(r.x - 1, r.y),
                 )
             }.filter { r -> references.contains(r) }
-            Cell(r, neighbours, positioner)
+            Cell(r, neighbours, HexGridCellPositioner)
         }
 
-        return Grid(cells)
-    }
-
-    companion object {
-        val positioner = SquareGridCellPositioner()
+        return Grid(cells, BoundingBoxFactory.of(cells.values))
     }
 }
