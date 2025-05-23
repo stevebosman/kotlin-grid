@@ -2,6 +2,7 @@ package uk.co.stevebosman.grid
 
 import lombok.EqualsAndHashCode
 import lombok.ToString
+import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
 
 @EqualsAndHashCode
@@ -14,5 +15,9 @@ class Cell(
 ) {
     fun getVertices(): List<Point> {
         return cellPositioner.getVertices(gridReference)
+    }
+
+    fun getInscribedCircle(): Circle {
+        return cellPositioner.getInscribedCircle(gridReference)
     }
 }
