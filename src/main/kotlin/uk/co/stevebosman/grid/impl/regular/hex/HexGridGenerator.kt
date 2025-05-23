@@ -1,9 +1,9 @@
 package uk.co.stevebosman.grid.impl.regular.hex
 
+import uk.co.stevebosman.grid.BoundingBoxFactory
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.BoundingBoxFactory
 
 object HexGridGenerator {
     fun generate(width: Int, height: Int, option: HexGridOption = HexGridOption.STANDARD): Grid {
@@ -36,7 +36,8 @@ object HexGridGenerator {
                     }
                 }
             }
-            HexGridOption.OFFSET_SKIP_LAST ->  {
+
+            HexGridOption.OFFSET_SKIP_LAST -> {
                 (1..height).forEach { y ->
                     (0..width - 1 - if (y % 2 == 0) {
                         0
@@ -47,6 +48,7 @@ object HexGridGenerator {
                     }
                 }
             }
+
             HexGridOption.TRIANGLE -> {
                 (0..height - 1).forEach { y ->
                     (y / 2..width - (y + 1) / 2 - 1).forEach { x ->

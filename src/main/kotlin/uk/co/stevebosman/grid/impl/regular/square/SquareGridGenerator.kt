@@ -1,9 +1,9 @@
 package uk.co.stevebosman.grid.impl.regular.square
 
+import uk.co.stevebosman.grid.BoundingBoxFactory
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.BoundingBoxFactory
 
 object SquareGridGenerator {
     fun generate(width: Int, height: Int): Grid {

@@ -252,49 +252,56 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 1),
-                    listOf(GridReference(x=1, y=1), GridReference(x=1, y=2), GridReference(x=0, y=2)),
+                    listOf(GridReference(1, 1), GridReference(1, 2), GridReference(0, 2)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
-                    listOf(GridReference(x=2, y=2), GridReference(x=1, y=2), GridReference(x=0, y=1)),
+                    listOf(GridReference(2, 2), GridReference(1, 2), GridReference(0, 1)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
-                    listOf(GridReference(x=0, y=1), GridReference(x=1, y=2), GridReference(x=0, y=3)),
+                    listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
-                    listOf(GridReference(x=0, y=1), GridReference(x=1, y=1), GridReference(x=2, y=2), GridReference(x=1, y=3), GridReference(x=0, y=3), GridReference(x=0, y=2)),
+                    listOf(
+                        GridReference(0, 1),
+                        GridReference(1, 1),
+                        GridReference(2, 2),
+                        GridReference(1, 3),
+                        GridReference(0, 3),
+                        GridReference(0, 2)
+                    ),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
-                    listOf(GridReference(x=1, y=1), GridReference(x=1, y=3), GridReference(x=1, y=2)),
+                    listOf(GridReference(1, 1), GridReference(1, 3), GridReference(1, 2)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 3),
-                    listOf(GridReference(x=0, y=2), GridReference(x=1, y=2), GridReference(x=1, y=3)),
+                    listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 3),
-                    listOf(GridReference(x=1, y=2), GridReference(x=2, y=2), GridReference(x=0, y=3)),
+                    listOf(GridReference(1, 2), GridReference(2, 2), GridReference(0, 3)),
                     null
                 )
             })
@@ -319,63 +326,76 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 1),
-                    listOf(GridReference(x=1, y=1), GridReference(x=1, y=2), GridReference(x=0, y=2)),
+                    listOf(GridReference(1, 1), GridReference(1, 2), GridReference(0, 2)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
-                    listOf(GridReference(x=0, y=1), GridReference(x=1, y=2), GridReference(x=0, y=3)),
+                    listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 3),
-                    listOf(GridReference(x=0, y=2), GridReference(x=1, y=2), GridReference(x=1, y=3)),
+                    listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
-                    listOf(GridReference(x=2, y=1), GridReference(x=2, y=2), GridReference(x=1, y=2), GridReference(x=0, y=1)),
+                    listOf(GridReference(2, 1), GridReference(2, 2), GridReference(1, 2), GridReference(0, 1)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
-                    listOf(GridReference(x=0, y=1), GridReference(x=1, y=1), GridReference(x=2, y=2), GridReference(x=1, y=3), GridReference(x=0, y=3), GridReference(x=0, y=2)),
+                    listOf(
+                        GridReference(0, 1),
+                        GridReference(1, 1),
+                        GridReference(2, 2),
+                        GridReference(1, 3),
+                        GridReference(0, 3),
+                        GridReference(0, 2)
+                    ),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 3),
-                    listOf(GridReference(x=1, y=2), GridReference(x=2, y=2), GridReference(x=2, y=3), GridReference(x=0, y=3)),
+                    listOf(GridReference(1, 2), GridReference(2, 2), GridReference(2, 3), GridReference(0, 3)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
-                    listOf(GridReference(x=2, y=2), GridReference(x=1, y=1)),
+                    listOf(GridReference(2, 2), GridReference(1, 1)),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
-                    listOf(GridReference(x=1, y=1), GridReference(x=2, y=1), GridReference(x=2, y=3), GridReference(x=1, y=3), GridReference(x=1, y=2)),
+                    listOf(
+                        GridReference(1, 1),
+                        GridReference(2, 1),
+                        GridReference(2, 3),
+                        GridReference(1, 3),
+                        GridReference(1, 2)
+                    ),
                     null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 3),
-                    listOf(GridReference(x=2, y=2), GridReference(x=1, y=3)),
+                    listOf(GridReference(2, 2), GridReference(1, 3)),
                     null
                 )
             })

@@ -2,8 +2,9 @@ package uk.co.stevebosman.grid.impl.regular.square
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.grid.GridReference
 
 class SquareGridCellPositionerTest {
     @Test
@@ -30,6 +31,23 @@ class SquareGridCellPositionerTest {
             ),
             instance.getVertices(ref),
             { -> "Wrong vertices for $ref" })
+    }
+
+    @Test
+    fun testInscribedCircleForOrigin() {
+        assertEquals(
+            Circle(Point(0.5, 0.5), 0.5),
+            instance.getInscribedCircle(GridReference(0, 0))
+        )
+    }
+
+    @Test
+    fun testInscribedCircleForRandomGridReference() {
+        val ref = GridReference((1..10).random(), (1..10).random())
+        assertEquals(
+            Circle(Point(ref.x + 0.5, ref.y + 0.5), 0.5),
+            instance.getInscribedCircle(ref),
+            { -> "Wrong inscribedCircle for $ref" })
     }
 
     companion object {
