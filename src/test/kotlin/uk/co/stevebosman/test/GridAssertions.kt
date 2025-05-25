@@ -22,6 +22,10 @@ class GridAssertions {
                 expectedReference,
                 referencedCell?.gridReference,
                 { -> "Unexpected grid reference" })
+            Assertions.assertEquals(
+                expectedNeighbours.size,
+                referencedCell?.neighbours?.size,
+                { -> "Unexpected neighbourCount for $expectedReference" })
             assertAll(
                 { ->
                     Assertions.assertEquals(

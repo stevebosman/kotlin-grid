@@ -4,6 +4,7 @@ import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
 import uk.co.stevebosman.grid.CellPositioner
 import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridHelper.isUp
 import kotlin.math.sqrt
 
 /**
@@ -43,6 +44,4 @@ object TriangleGridCellPositioner : CellPositioner {
             (gridReference.x + 1.0) / 2,
             HALF_ROOT_THREE * (gridReference.y + THIRD * if (isUp(gridReference)) 1 else 2)
         )
-
-    private fun isUp(gridReference: GridReference): Boolean = (gridReference.x + gridReference.y) % 2 == 0
 }
