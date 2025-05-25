@@ -4,6 +4,7 @@ import uk.co.stevebosman.grid.BoundingBoxFactory
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
 import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridHelper.isUp
 
 object TriangleGridGenerator {
     fun generate(width: Int, height: Int, option: TriangleGridOption = TriangleGridOption.STANDARD): Grid {
@@ -49,7 +50,7 @@ object TriangleGridGenerator {
         }
 
         val cells = references.associateWith { r ->
-            val neighbours = if ((r.x + r.y) % 2 == 0) {
+            val neighbours = if (isUp(r)) {
                 listOf(
                     GridReference(r.x, r.y - 1), GridReference(r.x - 1, r.y), GridReference(r.x + 1, r.y)
                 )
