@@ -14,15 +14,21 @@ object SquareOctagon2GridGenerator {
     ): Grid {
         val references = mutableListOf<GridReference>()
 
+        val xRange = (0..width - 1)
+        val yRange =         when (option) {
+            SquareOctagon2GridOption.START_SQUARE -> (0..height - 1)
+            SquareOctagon2GridOption.START_OCTAGON -> (1..height)
+        }
+
         when (option) {
-            SquareOctagon2GridOption.START_SQUARE -> (0..height - 1).forEach { y ->
-                (0..width - 1).forEach { x ->
+            SquareOctagon2GridOption.START_SQUARE -> yRange.forEach { y ->
+                xRange.forEach { x ->
                     references.add(GridReference(x, y))
                 }
             }
 
-            SquareOctagon2GridOption.START_OCTAGON -> (1..height).forEach { y ->
-                (0..width - 1).forEach { x ->
+            SquareOctagon2GridOption.START_OCTAGON -> yRange.forEach { y ->
+                xRange.forEach { x ->
                     references.add(GridReference(x, y))
                 }
             }
@@ -51,6 +57,6 @@ object SquareOctagon2GridGenerator {
             Cell(r, neighbours, SquareOctagon2GridCellPositioner)
         }
 
-        return Grid(cells, BoundingBoxFactory.of(cells.values))
+        return Grid(cells, BoundingBoxFactory.of(cells.values), xRange, yRange)
     }
 }

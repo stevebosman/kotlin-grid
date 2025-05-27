@@ -21,6 +21,10 @@ class SquareGridGeneratorTest {
         }, {
             assertEquals(2.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
+            assertEquals((0..1), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
             assertEquals(4, grid.cells.size)
 
             assertAll(
@@ -87,6 +91,10 @@ class SquareGridGeneratorTest {
             assertEquals(3.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(3.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(9, grid.cells.size)
             assertAll({
