@@ -29,8 +29,8 @@ class SquareGridCellPositionerTest {
                 Point(ref.x + 1.0, ref.y + 1.0),
                 Point(ref.x.toDouble(), ref.y + 1.0)
             ),
-            instance.getVertices(ref),
-            { -> "Wrong vertices for $ref" })
+            instance.getVertices(ref)
+        ) { -> "Wrong vertices for $ref" }
     }
 
     @Test
@@ -46,8 +46,8 @@ class SquareGridCellPositionerTest {
         val ref = GridReference((1..10).random(), (1..10).random())
         assertEquals(
             Circle(Point(ref.x + 0.5, ref.y + 0.5), 0.5),
-            instance.getInscribedCircle(ref),
-            { -> "Wrong inscribedCircle for $ref" })
+            instance.getInscribedCircle(ref)
+        ) { -> "Wrong inscribedCircle for $ref" }
     }
 
     companion object {

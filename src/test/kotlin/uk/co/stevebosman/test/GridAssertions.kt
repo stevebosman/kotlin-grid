@@ -8,40 +8,38 @@ import uk.co.stevebosman.grid.GridReference
 
 const val DELTA = 1e-15
 
-class GridAssertions {
-    companion object {
-        fun assertContains(
-            cells: Map<GridReference, Cell>,
-            expectedReference: GridReference,
-            expectedNeighbours: List<GridReference>,
-            expectedVertices: List<Point>?,
-        ) {
-            val referencedCell = cells[expectedReference]
-            Assertions.assertNotNull(referencedCell, { -> "$expectedReference not found in ${cells.keys}" })
-            Assertions.assertEquals(
-                expectedReference,
-                referencedCell?.gridReference,
-                { -> "Unexpected grid reference" })
-            Assertions.assertEquals(
-                expectedNeighbours.size,
-                referencedCell?.neighbours?.size,
-                { -> "Unexpected neighbourCount for $expectedReference" })
-            assertAll(
-                { ->
+object GridAssertions {
+    fun assertContains(
+        cells: Map<GridReference, Cell>,
+        expectedReference: GridReference,
+        expectedNeighbours: List<GridReference>,
+        expectedVertices: List<Point>?,
+    ) {
+        val referencedCell = cells[expectedReference]
+        Assertions.assertNotNull(referencedCell) { -> "$expectedReference not found in ${cells.keys}" }
+        Assertions.assertEquals(
+            expectedReference,
+            referencedCell?.gridReference
+        ) { -> "Unexpected grid reference" }
+        Assertions.assertEquals(
+            expectedNeighbours.size,
+            referencedCell?.neighbours?.size
+        ) { -> "Unexpected neighbourCount for $expectedReference" }
+        assertAll(
+            { ->
+                Assertions.assertEquals(
+                    expectedNeighbours,
+                    referencedCell?.neighbours
+                ) { -> "Unexpected neighbours for $expectedReference" }
+            },
+            { ->
+                if (expectedVertices != null) {
                     Assertions.assertEquals(
-                        expectedNeighbours,
-                        referencedCell?.neighbours,
-                        { -> "Unexpected neighbours for $expectedReference" })
-                },
-                { ->
-                    if (expectedVertices != null) {
-                        Assertions.assertEquals(
-                            expectedVertices,
-                            referencedCell?.getVertices(),
-                            { -> "Unexpected vertices for $expectedReference" })
-                    }
+                        expectedVertices,
+                        referencedCell?.getVertices()
+                    ) { -> "Unexpected vertices for $expectedReference" }
                 }
-            )
-        }
+            }
+        )
     }
 }

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertAll
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.test.DELTA
-import uk.co.stevebosman.test.GridAssertions.Companion.assertContains
+import uk.co.stevebosman.test.GridAssertions.assertContains
 import kotlin.math.sqrt
 
 class HexGridGeneratorTest {
@@ -13,13 +13,13 @@ class HexGridGeneratorTest {
     fun testStandardGenerated2by2grid() {
         val grid = instance.generate(2, 2)
         assertAll({
-            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA, { -> "unexpected lower bound x" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
-            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA, { -> "unexpected lower bound y" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(HALF_ROOT_THREE * 4, grid.boundingBox.width, DELTA, { -> "unexpected width" })
+            assertEquals(HALF_ROOT_THREE * 4, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(3.5, grid.boundingBox.height, DELTA, { -> "unexpected height" })
+            assertEquals(3.5, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals(4, grid.cells.size)
 
@@ -60,13 +60,13 @@ class HexGridGeneratorTest {
     fun testStandardGenerated3by3grid() {
         val grid = instance.generate(3, 3)
         assertAll({
-            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA, { -> "unexpected lower bound x" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
-            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA, { -> "unexpected lower bound y" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(5 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA, { -> "unexpected width" })
+            assertEquals(5 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA, { -> "unexpected height" })
+            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals(9, grid.cells.size)
             assertAll({
@@ -153,13 +153,13 @@ class HexGridGeneratorTest {
     fun testStandardSkipLastGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.STANDARD_SKIP_LAST)
         assertAll({
-            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA, { -> "unexpected lower bound x" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
-            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA, { -> "unexpected lower bound y" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA, { -> "unexpected width" })
+            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA, { -> "unexpected height" })
+            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals(8, grid.cells.size)
             assertAll({
@@ -239,13 +239,13 @@ class HexGridGeneratorTest {
     fun testOffsetSkipLastGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.OFFSET_SKIP_LAST)
         assertAll({
-            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA, { -> "unexpected lower bound x" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
-            assertEquals(1.5, grid.boundingBox.lowerLeft.y, DELTA, { -> "unexpected lower bound y" })
+            assertEquals(1.5, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA, { -> "unexpected width" })
+            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA, { -> "unexpected height" })
+            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals(7, grid.cells.size)
             assertAll({
@@ -313,13 +313,13 @@ class HexGridGeneratorTest {
     fun testOffsetGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.OFFSET)
         assertAll({
-            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA, { -> "unexpected lower bound x" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
-            assertEquals(1.5, grid.boundingBox.lowerLeft.y, DELTA, { -> "unexpected lower bound y" })
+            assertEquals(1.5, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(5 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA, { -> "unexpected width" })
+            assertEquals(5 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA, { -> "unexpected height" })
+            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals(9, grid.cells.size)
             assertAll({
@@ -406,13 +406,13 @@ class HexGridGeneratorTest {
     fun testTriangleGenerated4by4grid() {
         val grid = instance.generate(3, 3, HexGridOption.TRIANGLE)
         assertAll({
-            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA, { -> "unexpected lower bound x" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
-            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA, { -> "unexpected lower bound y" })
+            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA, { -> "unexpected width" })
+            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA, { -> "unexpected height" })
+            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals(6, grid.cells.size, "Unexpected grid: ${grid.cells.keys}")
             assertAll({
