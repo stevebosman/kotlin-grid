@@ -14,7 +14,7 @@ object TriangleGridCellPositioner : CellPositioner {
     private val vertex_cache = mutableMapOf<GridReference, List<Point>>()
     private val inscribed_circle_cache = mutableMapOf<GridReference, Circle>()
     private val HALF_ROOT_THREE = sqrt(3.0) / 2
-    private val THIRD = 1 / 3.0
+    private const val THIRD = 1 / 3.0
     private val INCENTRE_RADIUS = HALF_ROOT_THREE * THIRD
 
     override fun getVertices(gridReference: GridReference): List<Point> =
