@@ -21,6 +21,10 @@ class TriangleGridGeneratorTest {
         }, {
             assertEquals(2 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
+            assertEquals((0..1), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
             assertEquals(4, grid.cells.size)
 
             assertAll(
@@ -67,6 +71,10 @@ class TriangleGridGeneratorTest {
             assertEquals(2.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(3 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(9, grid.cells.size)
             assertAll({
@@ -148,6 +156,10 @@ class TriangleGridGeneratorTest {
         }, {
             assertEquals(2 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
+            assertEquals((1..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
             assertEquals(4, grid.cells.size)
 
             assertAll(
@@ -194,6 +206,10 @@ class TriangleGridGeneratorTest {
             assertEquals(2.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(3 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((1..3), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(9, grid.cells.size)
             assertAll({
@@ -275,6 +291,10 @@ class TriangleGridGeneratorTest {
         }, {
             assertEquals(2 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
+            assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
             assertEquals(4, grid.cells.size)
 
             assertAll(
@@ -314,6 +334,10 @@ class TriangleGridGeneratorTest {
             assertEquals(3.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(3 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..4), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(9, grid.cells.size)
 
@@ -396,6 +420,10 @@ class TriangleGridGeneratorTest {
         }, {
             assertEquals(2 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
+            assertEquals((0..1), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
             assertEquals(2, grid.cells.size)
 
             assertAll(
@@ -428,6 +456,10 @@ class TriangleGridGeneratorTest {
             assertEquals(2.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(3 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(6, grid.cells.size)
 

@@ -8,8 +8,10 @@ import uk.co.stevebosman.grid.GridReference
 object SquareGridGenerator {
     fun generate(width: Int, height: Int): Grid {
         val references = mutableListOf<GridReference>()
-        (0..width - 1).forEach { x ->
-            (0..height - 1).forEach { y ->
+        val xRange = 0..width - 1
+        val yRange = 0..height - 1
+        xRange.forEach { x ->
+            yRange.forEach { y ->
                 references.add(GridReference(x, y))
             }
         }
@@ -23,7 +25,7 @@ object SquareGridGenerator {
             Cell(r, neighbours, SquareGridCellPositioner)
         }
 
-        return Grid(cells, BoundingBoxFactory.of(cells.values))
+        return Grid(cells, BoundingBoxFactory.of(cells.values), xRange, yRange)
     }
 
 }

@@ -22,6 +22,10 @@ class SquareOctagon2GridGeneratorTest {
         }, {
             assertEquals(2 + 3 * ROOT_HALF, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
+            assertEquals((0..1), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
             assertEquals(4, grid.cells.size)
 
             assertAll(
@@ -68,7 +72,11 @@ class SquareOctagon2GridGeneratorTest {
         }, {
             assertEquals(3 + 4 * ROOT_HALF, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(3 + 4 * ROOT_HALF, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(3 + 4 * ROOT_HALF, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(9, grid.cells.size)
             assertAll({
@@ -173,7 +181,11 @@ class SquareOctagon2GridGeneratorTest {
         }, {
             assertEquals(4 + 5 * ROOT_HALF, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(4 + 5 * ROOT_HALF, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(4 + 5 * ROOT_HALF, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..3), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..3), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(16, grid.cells.size)
             assertAll({
@@ -345,6 +357,10 @@ class SquareOctagon2GridGeneratorTest {
             assertEquals(2 + 3 * ROOT_HALF, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(2 + 3 * ROOT_HALF, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((0..1), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((1..2), grid.yRange) { -> "unexpected y range" }
         }, {
             assertEquals(4, grid.cells.size)
 

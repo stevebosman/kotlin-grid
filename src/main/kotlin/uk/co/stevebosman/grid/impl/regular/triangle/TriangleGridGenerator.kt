@@ -9,26 +9,33 @@ import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridHelper.isUp
 object TriangleGridGenerator {
     fun generate(width: Int, height: Int, option: TriangleGridOption = TriangleGridOption.STANDARD): Grid {
         val references = mutableListOf<GridReference>()
+        val yRange = (0..height - 1)
+        val xRange = when (option) {
+            TriangleGridOption.STANDARD -> (0..width - 1)
+            TriangleGridOption.OFFSET -> (1..width)
+            TriangleGridOption.SPIKY -> (0..width - 1)
+            TriangleGridOption.TRIANGLE -> (0..width * 2 - 2)
+        }
 
         when (option) {
             TriangleGridOption.STANDARD -> {
-                (0..width - 1).forEach { x ->
-                    (0..height - 1).forEach { y ->
+                xRange.forEach { x ->
+                    yRange.forEach { y ->
                         references.add(GridReference(x, y))
                     }
                 }
             }
 
             TriangleGridOption.OFFSET -> {
-                (1..width).forEach { x ->
-                    (0..height - 1).forEach { y ->
+                xRange.forEach { x ->
+                    yRange.forEach { y ->
                         references.add(GridReference(x, y))
                     }
                 }
             }
 
             TriangleGridOption.TRIANGLE -> {
-                (0..height - 1).forEach { y ->
+                yRange.forEach { y ->
                     val w = width * 2 - 1 - y
                     (y..w - 1).forEach { x ->
                         references.add(GridReference(x, y))
@@ -37,8 +44,8 @@ object TriangleGridGenerator {
             }
 
             TriangleGridOption.SPIKY -> {
-                (0..width - 1).forEach { x ->
-                    (0..height - 1).forEach { y ->
+                xRange.forEach { x ->
+                    yRange.forEach { y ->
                         val innerRows = y != 0 && y != height - 1
                         val firstRowDown = y == 0 && x % 2 == 1
                         val lastRowUp = y == height - 1 && y % 2 == x % 2
@@ -62,6 +69,6 @@ object TriangleGridGenerator {
             Cell(r, neighbours, TriangleGridCellPositioner)
         }
 
-        return Grid(cells, BoundingBoxFactory.of(cells.values))
+        return Grid(cells, BoundingBoxFactory.of(cells.values), xRange, yRange)
     }
 }
