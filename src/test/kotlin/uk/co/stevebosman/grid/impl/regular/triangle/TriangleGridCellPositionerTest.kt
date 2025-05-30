@@ -1,16 +1,17 @@
 package uk.co.stevebosman.grid.impl.regular.triangle
 
-import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
 import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.test.GridAssertions.assertEqualCircles
+import uk.co.stevebosman.test.GridAssertions.assertEqualPoints
 import kotlin.math.sqrt
 
 class TriangleGridCellPositionerTest {
     @Test
     fun testVerticesOrigin() {
-        assertEquals(
+        assertEqualPoints(
             listOf(
                 Point(0.0, 0.0),
                 Point(1.0, 0.0),
@@ -21,7 +22,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testVerticesInnerUp() {
-        assertEquals(
+        assertEqualPoints(
             listOf(
                 Point(5.0, HALF_ROOT_THREE * 6),
                 Point(6.0, HALF_ROOT_THREE * 6),
@@ -32,7 +33,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testVerticesFirstDown() {
-        assertEquals(
+        assertEqualPoints(
             listOf(
                 Point(1.0, 0.0),
                 Point(1.5, HALF_ROOT_THREE),
@@ -43,7 +44,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testVerticesInnerDown() {
-        assertEquals(
+        assertEqualPoints(
             listOf(
                 Point(2.5, HALF_ROOT_THREE * 3),
                 Point(3.0, HALF_ROOT_THREE * 4),
@@ -54,7 +55,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testInscribedCircleOrigin() {
-        assertEquals(
+        assertEqualCircles(
             Circle(Point(0.5, HALF_ROOT_THREE / 3), HALF_ROOT_THREE / 3),
             instance.getInscribedCircle(GridReference(0, 0))
         )
@@ -62,7 +63,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testInscribedCircleInnerUp() {
-        assertEquals(
+        assertEqualCircles(
             Circle(Point(5.5, (6 + 1.0 / 3.0) * HALF_ROOT_THREE), HALF_ROOT_THREE / 3),
             instance.getInscribedCircle(GridReference(10, 6))
         )
@@ -70,7 +71,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testInscribedCircleFirstDown() {
-        assertEquals(
+        assertEqualCircles(
             Circle(Point(1.0, HALF_ROOT_THREE * 2.0 / 3.0), HALF_ROOT_THREE / 3),
             instance.getInscribedCircle(GridReference(1, 0))
         )
@@ -78,7 +79,7 @@ class TriangleGridCellPositionerTest {
 
     @Test
     fun testInscribedCircleInnerDown() {
-        assertEquals(
+        assertEqualCircles(
             Circle(Point(2.5, (3 + 2.0 / 3.0) * HALF_ROOT_THREE), HALF_ROOT_THREE / 3),
             instance.getInscribedCircle(GridReference(4, 3))
         )
