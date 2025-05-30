@@ -17,7 +17,7 @@ class HexGridGeneratorTest {
         }, {
             assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(HALF_ROOT_THREE * 4, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(HALF_ROOT_THREE * 5, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
             assertEquals(3.5, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
@@ -68,9 +68,9 @@ class HexGridGeneratorTest {
         }, {
             assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(5 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(7 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+            assertEquals(5.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
         }, {
@@ -165,9 +165,9 @@ class HexGridGeneratorTest {
         }, {
             assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(6 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+            assertEquals(5.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
         }, {
@@ -255,9 +255,9 @@ class HexGridGeneratorTest {
         }, {
             assertEquals(1.5, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(6 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+            assertEquals(5.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
         }, {
@@ -333,9 +333,9 @@ class HexGridGeneratorTest {
         }, {
             assertEquals(1.5, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(5 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(7 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+            assertEquals(5.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
         }, {
@@ -423,16 +423,16 @@ class HexGridGeneratorTest {
     }
 
     @Test
-    fun testTriangleGenerated4by4grid() {
+    fun testTriangleGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.TRIANGLE)
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
             assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
         }, {
-            assertEquals(4 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+            assertEquals(6 * HALF_ROOT_THREE, grid.boundingBox.width, DELTA) { -> "unexpected width" }
         }, {
-            assertEquals(6.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+            assertEquals(5.0, grid.boundingBox.height, DELTA) { -> "unexpected height" }
         }, {
             assertEquals((0..2), grid.xRange) { -> "unexpected x range" }
         }, {

@@ -9,10 +9,10 @@ object HexGridGenerator {
     fun generate(width: Int, height: Int, option: HexGridOption = HexGridOption.STANDARD): Grid {
         val references = mutableListOf<GridReference>()
         val xRange = (0..width - 1)
-        val yRange =         when (option) {
+        val yRange = when (option) {
             HexGridOption.STANDARD -> (0..height - 1)
             HexGridOption.STANDARD_SKIP_LAST -> (0..height - 1)
-            HexGridOption.OFFSET -> (1..height )
+            HexGridOption.OFFSET -> (1..height)
             HexGridOption.OFFSET_SKIP_LAST -> (1..height)
             HexGridOption.TRIANGLE -> (0..height - 1)
         }
@@ -28,10 +28,10 @@ object HexGridGenerator {
 
             HexGridOption.STANDARD_SKIP_LAST -> {
                 yRange.forEach { y ->
-                    (0..width - 1 - if (y % 2 == 0) {
-                        0
-                    } else {
+                    (0..width - if (y % 2 == 0) {
                         1
+                    } else {
+                        2
                     }).forEach { x ->
                         references.add(GridReference(x, y))
                     }

@@ -15,7 +15,7 @@ object SquareOctagon2GridGenerator {
         val references = mutableListOf<GridReference>()
 
         val xRange = (0..width - 1)
-        val yRange =         when (option) {
+        val yRange = when (option) {
             SquareOctagon2GridOption.START_SQUARE -> (0..height - 1)
             SquareOctagon2GridOption.START_OCTAGON -> (1..height)
         }

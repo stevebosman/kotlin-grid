@@ -1,13 +1,12 @@
 package uk.co.stevebosman.geometry
 
-import kotlin.math.PI
-import kotlin.math.cos
-import kotlin.math.sin
-import kotlin.math.tan
+import uk.co.stevebosman.trigonometry.degrees.Cos
+import uk.co.stevebosman.trigonometry.degrees.Sin
+import uk.co.stevebosman.trigonometry.degrees.Tan
 
 class RegularConvexPolygonBuilder(val n: Int) {
     var centre = Point(0.0, 0.0)
-    var rotation = 0.0
+    var rotationDegrees = 0.0
     var size = 1.0
 
     fun centre(centre: Point): RegularConvexPolygonBuilder {
@@ -16,11 +15,11 @@ class RegularConvexPolygonBuilder(val n: Int) {
     }
 
     /**
-     * Clockwise rotation in radians.
+     * Clockwise rotation in degrees.
      * The default assumption is that the first point is at (0, -1).
      */
-    fun rotation(rotation: Double): RegularConvexPolygonBuilder {
-        this.rotation = rotation
+    fun rotationDegrees(rotationDegrees: Double): RegularConvexPolygonBuilder {
+        this.rotationDegrees = rotationDegrees
         return this
     }
 
@@ -33,12 +32,17 @@ class RegularConvexPolygonBuilder(val n: Int) {
     }
 
     fun build(): Polygon {
-        val circumradius = size / (2 * sin(PI / n))
-        val apothem = size / (2 * tan(PI / n))
-        val vertices = (0..n - 1).map { i ->
-            val theta = (2 * PI * i) / n + rotation
-            Point(cos(theta), sin(theta)).rescaleAndTranslate(circumradius, centre)
-        }.toList()
+        val circumradius = size / (2 * Sin.of(180.0 / n))
+        val apothem = size / (2 * Tan.of(180.0 / n))
+        val vertices = buildVertices(circumradius)
         return Polygon(n, size, circumradius, apothem, centre, vertices)
+    }
+
+    private fun buildVertices(circumradius: Double): List<Point> {
+        val vertices = (0..n - 1).map { i ->
+            val theta = (360.0 * i) / n + rotationDegrees
+            Point(Cos.of(theta), Sin.of(theta)).rescaleAndTranslate(circumradius, centre)
+        }.toList()
+        return vertices
     }
 }

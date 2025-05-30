@@ -2,6 +2,8 @@ package uk.co.stevebosman.grid.impl.regular.triangle
 
 import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.geometry.Polygon
+import uk.co.stevebosman.geometry.RegularConvexPolygonBuilder
 import uk.co.stevebosman.grid.CellPositioner
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridHelper.isUp
@@ -11,37 +13,27 @@ import kotlin.math.sqrt
  * Works out positions for a given triangular grid reference.
  */
 object TriangleGridCellPositioner : CellPositioner {
-    private val vertex_cache = mutableMapOf<GridReference, List<Point>>()
-    private val inscribed_circle_cache = mutableMapOf<GridReference, Circle>()
+    private val polygon_cache = mutableMapOf<GridReference, Polygon>()
     private val HALF_ROOT_THREE = sqrt(3.0) / 2
     private const val THIRD = 1 / 3.0
-    private val INCENTRE_RADIUS = HALF_ROOT_THREE * THIRD
+
+    override fun getPolygon(gridReference: GridReference): Polygon =
+        polygon_cache.getOrPut(gridReference) {
+            RegularConvexPolygonBuilder(3).rotationDegrees(if (isUp(gridReference)) -150.0 else -90.0)
+                .centre(incentre(gridReference))
+                .build()
+        }
+
+    private fun incentre(gridReference: GridReference): Point = Point(
+        (gridReference.x + 1.0) / 2,
+        HALF_ROOT_THREE * (gridReference.y + THIRD * if (isUp(gridReference)) 1 else 2)
+    )
 
     override fun getVertices(gridReference: GridReference): List<Point> =
-        vertex_cache.getOrPut(gridReference) {
-            if (isUp(gridReference)) {
-                listOf(
-                    Point(gridReference.x.toDouble() / 2, gridReference.y * HALF_ROOT_THREE),
-                    Point((gridReference.x + 2.0) / 2, gridReference.y * HALF_ROOT_THREE),
-                    Point((gridReference.x + 1.0) / 2, (gridReference.y + 1) * HALF_ROOT_THREE),
-                )
-            } else {
-                listOf(
-                    Point((gridReference.x + 1.0) / 2, gridReference.y * HALF_ROOT_THREE),
-                    Point((gridReference.x + 2.0) / 2, (gridReference.y + 1) * HALF_ROOT_THREE),
-                    Point((gridReference.x) / 2.0, (gridReference.y + 1) * HALF_ROOT_THREE),
-                )
-            }
-        }
+        getPolygon(gridReference).vertices
 
-    override fun getInscribedCircle(gridReference: GridReference): Circle =
-        inscribed_circle_cache.getOrPut(gridReference) {
-            return Circle(incentre(gridReference), INCENTRE_RADIUS)
-        }
-
-    private fun incentre(gridReference: GridReference): Point =
-        Point(
-            (gridReference.x + 1.0) / 2,
-            HALF_ROOT_THREE * (gridReference.y + THIRD * if (isUp(gridReference)) 1 else 2)
-        )
+    override fun getInscribedCircle(gridReference: GridReference): Circle {
+        val polygon = getPolygon(gridReference)
+        return Circle(polygon.centre, polygon.apothem)
+    }
 }

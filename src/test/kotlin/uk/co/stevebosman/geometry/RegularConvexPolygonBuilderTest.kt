@@ -2,7 +2,6 @@ package uk.co.stevebosman.geometry
 
 import org.junit.jupiter.api.Assertions.assertAll
 import org.junit.jupiter.api.Assertions.assertEquals
-import kotlin.math.PI
 import kotlin.math.sqrt
 import kotlin.test.Test
 
@@ -89,7 +88,7 @@ class RegularConvexPolygonBuilderTest {
     fun canCreateOffsetRotatedUnitSquare() {
         val n = 4
         val actual = RegularConvexPolygonBuilder(n)
-            .rotation(PI / 4)
+            .rotationDegrees(45.0)
             .centre(Point(2.0, 3.0))
             .build()
         assertAll(

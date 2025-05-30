@@ -1,15 +1,16 @@
 package uk.co.stevebosman.grid.impl.regular.square
 
-import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
 import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.test.GridAssertions.assertEqualCircles
+import uk.co.stevebosman.test.GridAssertions.assertEqualPoints
 
 class SquareGridCellPositionerTest {
     @Test
     fun testVerticesForOrigin() {
-        assertEquals(
+        assertEqualPoints(
             listOf(
                 Point(0.0, 0.0),
                 Point(1.0, 0.0),
@@ -22,7 +23,7 @@ class SquareGridCellPositionerTest {
     @Test
     fun testVerticesForRandomGridReference() {
         val ref = GridReference((1..10).random(), (1..10).random())
-        assertEquals(
+        assertEqualPoints(
             listOf(
                 Point(ref.x.toDouble(), ref.y.toDouble()),
                 Point(ref.x + 1.0, ref.y.toDouble()),
@@ -30,12 +31,12 @@ class SquareGridCellPositionerTest {
                 Point(ref.x.toDouble(), ref.y + 1.0)
             ),
             instance.getVertices(ref)
-        ) { -> "Wrong vertices for $ref" }
+        )
     }
 
     @Test
     fun testInscribedCircleForOrigin() {
-        assertEquals(
+        assertEqualCircles(
             Circle(Point(0.5, 0.5), 0.5),
             instance.getInscribedCircle(GridReference(0, 0))
         )
@@ -44,10 +45,10 @@ class SquareGridCellPositionerTest {
     @Test
     fun testInscribedCircleForRandomGridReference() {
         val ref = GridReference((1..10).random(), (1..10).random())
-        assertEquals(
+        assertEqualCircles(
             Circle(Point(ref.x + 0.5, ref.y + 0.5), 0.5),
             instance.getInscribedCircle(ref)
-        ) { -> "Wrong inscribedCircle for $ref" }
+        )
     }
 
     companion object {

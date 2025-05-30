@@ -19,12 +19,16 @@ Small API for generating grids of cells.
   * Offset
   * Offset Skip Last
   * Triangular
+* Octagonal/Square (Truncated Square)  
+  ![Octagonal/Square](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/1-uniform_n2.svg/250px-1-uniform_n2.svg.png)
+* Tri hexagonal  
+  ![Tri Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tiling_3-6_simple.svg/1200px-Tiling_3-6_simple.svg.png)
 
 ### Planned
-* Square/Triangle  
+* Square/Triangle (Elongated Triangular)  
   ![Square/Triangle](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/1-uniform_n8.svg/250px-1-uniform_n8.svg.png)
-* Octagonal/Square  
-  ![Octagonal/Square](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/1-uniform_n2.svg/250px-1-uniform_n2.svg.png)
+* Rhombi Tri hexagonal  
+  ![Rhombi Tri Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tiling_small_rhombi_3-6_simple.svg/1024px-Tiling_small_rhombi_3-6_simple.svg.png)
 * Snub hexagonal  
   ![Snub Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg/120px-Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg.png)
 * Floret Pentagonal  

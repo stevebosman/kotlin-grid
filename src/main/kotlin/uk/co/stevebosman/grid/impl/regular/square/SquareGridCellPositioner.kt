@@ -2,25 +2,26 @@ package uk.co.stevebosman.grid.impl.regular.square
 
 import uk.co.stevebosman.geometry.Circle
 import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.geometry.Polygon
+import uk.co.stevebosman.geometry.RegularConvexPolygonBuilder
 import uk.co.stevebosman.grid.CellPositioner
 import uk.co.stevebosman.grid.GridReference
 
 object SquareGridCellPositioner : CellPositioner {
-    private val vertex_cache = mutableMapOf<GridReference, List<Point>>()
-    private val inscribed_circle_cache = mutableMapOf<GridReference, Circle>()
+    private val polygon_cache = mutableMapOf<GridReference, Polygon>()
+
+    override fun getPolygon(gridReference: GridReference): Polygon =
+        polygon_cache.getOrPut(gridReference) {
+            RegularConvexPolygonBuilder(4).rotationDegrees(-135.0)
+                .centre(Point(gridReference.x + 0.5, gridReference.y + 0.5))
+                .build()
+        }
 
     override fun getVertices(gridReference: GridReference): List<Point> =
-        vertex_cache.getOrPut(gridReference) {
-            listOf(
-                Point(gridReference.x.toDouble(), gridReference.y.toDouble()),
-                Point(gridReference.x + 1.0, gridReference.y.toDouble()),
-                Point(gridReference.x + 1.0, gridReference.y + 1.0),
-                Point(gridReference.x.toDouble(), gridReference.y + 1.0)
-            )
-        }
+        getPolygon(gridReference).vertices
 
-    override fun getInscribedCircle(gridReference: GridReference): Circle =
-        inscribed_circle_cache.getOrPut(gridReference) {
-            return Circle(Point(gridReference.x + 0.5, gridReference.y + 0.5), 0.5)
-        }
+    override fun getInscribedCircle(gridReference: GridReference): Circle {
+        val polygon = getPolygon(gridReference)
+        return Circle(polygon.centre, polygon.apothem)
+    }
 }
