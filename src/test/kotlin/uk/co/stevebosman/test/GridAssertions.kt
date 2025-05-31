@@ -46,7 +46,7 @@ object GridAssertions {
     fun assertContains(
         cells: Map<GridReference, Cell>,
         expectedReference: GridReference,
-        expectedNeighbours: List<GridReference>,
+        expectedNeighbours: List<GridReference>?,
         expectedVertices: List<Point>?,
     ) {
         val referencedCell = cells[expectedReference]
@@ -55,25 +55,39 @@ object GridAssertions {
             expectedReference,
             referencedCell?.gridReference
         ) { -> "Unexpected grid reference" }
-        assertEquals(
-            expectedNeighbours.size,
-            referencedCell?.neighbours?.size
-        ) { -> "Unexpected neighbourCount for $expectedReference" }
-        assertAll(
-            { ->
-                assertEquals(
-                    expectedNeighbours,
-                    referencedCell?.neighbours
-                ) { -> "Unexpected neighbours for $expectedReference" }
-            },
-            { ->
-                if (expectedVertices != null) {
-                    assertEqualPoints(
-                        expectedVertices,
-                        referencedCell!!.getVertices()
-                    )
+        if (expectedNeighbours!=null) {
+            assertEquals(
+                expectedNeighbours.size,
+                referencedCell?.neighbours?.size
+            ) { -> "Unexpected neighbourCount for $expectedReference has\nlistOf(${referencedCell?.neighbours}),\n" }
+            assertAll(
+                { ->
+                    assertEquals(
+                        expectedNeighbours,
+                        referencedCell?.neighbours
+                    ) { -> "Unexpected neighbours for $expectedReference" }
+                },
+                { ->
+                    if (expectedVertices != null) {
+                        assertEqualPoints(
+                            expectedVertices,
+                            referencedCell!!.getVertices()
+                        )
+                    }
                 }
-            }
-        )
+            )
+        }
+    }
+
+    fun assertContains(
+        cells: Map<GridReference, Cell>,
+        expectedReference: GridReference
+    ) {
+        val referencedCell = cells[expectedReference]
+        assertNotNull(referencedCell) { -> "$expectedReference not found in ${cells.keys}" }
+        assertEquals(
+            expectedReference,
+            referencedCell?.gridReference
+        ) { -> "Unexpected grid reference" }
     }
 }
