@@ -17,7 +17,7 @@ class SquareOctagon2GridCellPositionerTest {
                 Point(1.0 + ROOT_HALF, 0.0 + ROOT_HALF),
                 Point(1.0 + ROOT_HALF, 1.0 + ROOT_HALF),
                 Point(0.0 + ROOT_HALF, 1.0 + ROOT_HALF)
-            ), instance.getVertices(GridReference(0, 0))
+            ), instance.getPolygon(GridReference(0, 0)).vertices
         )
     }
 
@@ -29,7 +29,7 @@ class SquareOctagon2GridCellPositionerTest {
                 Point(2.0 + 2 * ROOT_HALF, 1.0 + 2 * ROOT_HALF),
                 Point(2.0 + 2 * ROOT_HALF, 2.0 + 2 * ROOT_HALF),
                 Point(1.0 + 2 * ROOT_HALF, 2.0 + 2 * ROOT_HALF)
-            ), instance.getVertices(GridReference(1, 1))
+            ), instance.getPolygon(GridReference(1, 1)).vertices
         )
     }
 
@@ -45,7 +45,7 @@ class SquareOctagon2GridCellPositionerTest {
                 Point(x = ROOT_HALF, y = 2 + 3 * ROOT_HALF),
                 Point(x = 0.0, y = 2 + 2 * ROOT_HALF),
                 Point(x = 0.0, y = 1 + 2 * ROOT_HALF),
-            ), instance.getVertices(GridReference(0, 1))
+            ), instance.getPolygon(GridReference(0, 1)).vertices
         )
     }
 
@@ -61,7 +61,7 @@ class SquareOctagon2GridCellPositionerTest {
                 Point(x = 1 + 2 * ROOT_HALF, y = 1 + 2 * ROOT_HALF),
                 Point(x = 1 + ROOT_HALF, y = 1 + ROOT_HALF),
                 Point(x = 1 + ROOT_HALF, y = ROOT_HALF),
-            ), instance.getVertices(GridReference(1, 0))
+            ), instance.getPolygon(GridReference(1, 0)).vertices
         )
     }
 

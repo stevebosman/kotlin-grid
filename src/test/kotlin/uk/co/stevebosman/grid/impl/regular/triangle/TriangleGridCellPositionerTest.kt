@@ -16,7 +16,7 @@ class TriangleGridCellPositionerTest {
                 Point(0.0, 0.0),
                 Point(1.0, 0.0),
                 Point(0.5, HALF_ROOT_THREE)
-            ), instance.getVertices(GridReference(0, 0))
+            ), instance.getPolygon(GridReference(0, 0)).vertices
         )
     }
 
@@ -27,7 +27,7 @@ class TriangleGridCellPositionerTest {
                 Point(5.0, HALF_ROOT_THREE * 6),
                 Point(6.0, HALF_ROOT_THREE * 6),
                 Point(5.5, HALF_ROOT_THREE * 7)
-            ), instance.getVertices(GridReference(10, 6))
+            ), instance.getPolygon(GridReference(10, 6)).vertices
         )
     }
 
@@ -38,7 +38,7 @@ class TriangleGridCellPositionerTest {
                 Point(1.0, 0.0),
                 Point(1.5, HALF_ROOT_THREE),
                 Point(0.5, HALF_ROOT_THREE)
-            ), instance.getVertices(GridReference(1, 0))
+            ), instance.getPolygon(GridReference(1, 0)).vertices
         )
     }
 
@@ -49,7 +49,7 @@ class TriangleGridCellPositionerTest {
                 Point(2.5, HALF_ROOT_THREE * 3),
                 Point(3.0, HALF_ROOT_THREE * 4),
                 Point(2.0, HALF_ROOT_THREE * 4)
-            ), instance.getVertices(GridReference(4, 3))
+            ), instance.getPolygon(GridReference(4, 3)).vertices
         )
     }
 

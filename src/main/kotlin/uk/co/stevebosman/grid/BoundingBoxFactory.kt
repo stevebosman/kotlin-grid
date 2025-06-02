@@ -5,7 +5,7 @@ import uk.co.stevebosman.geometry.Rectangle
 
 object BoundingBoxFactory {
     fun of(cells: Collection<Cell>): Rectangle {
-        val flatMap: List<Point> = cells.flatMap { it.getVertices() }
+        val flatMap: List<Point> = cells.flatMap { it.getPolygon().vertices }
         var lowerLeft: Point = flatMap.first()
         var upperRight: Point = flatMap.first()
         flatMap.forEach { (x, y) ->

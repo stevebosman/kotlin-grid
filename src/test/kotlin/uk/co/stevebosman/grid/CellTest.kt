@@ -12,7 +12,7 @@ class CellTest {
     fun canGetVerticesFromCell() {
         assertEqualPoints(
             listOf(Point(0.0, 0.0), Point(1.0, 0.0), Point(1.0, 1.0), Point(0.0, 1.0)),
-            Cell(GridReference(0, 0), listOf(), SquareGridCellPositioner).getVertices()
+            Cell(GridReference(0, 0), listOf(), SquareGridCellPositioner).getPolygon().vertices
         )
     }
 

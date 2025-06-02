@@ -19,7 +19,7 @@ class HexGridCellPositionerTest {
                 Point(HALF_ROOT_THREE, 2.0),
                 Point(0.0, 1.5),
                 Point(0.0, 0.5),
-            ), instance.getVertices(GridReference(0, 0))
+            ), instance.getPolygon(GridReference(0, 0)).vertices
         )
     }
 
@@ -33,7 +33,7 @@ class HexGridCellPositionerTest {
                 Point(3 * HALF_ROOT_THREE, 2.0),
                 Point(2 * HALF_ROOT_THREE, 1.5),
                 Point(2 * HALF_ROOT_THREE, 0.5),
-            ), instance.getVertices(GridReference(1, 0))
+            ), instance.getPolygon(GridReference(1, 0)).vertices
         )
     }
 
@@ -47,7 +47,7 @@ class HexGridCellPositionerTest {
                 Point(2 * HALF_ROOT_THREE, 3.5),
                 Point(HALF_ROOT_THREE, 3.0),
                 Point(HALF_ROOT_THREE, 2.0),
-            ), instance.getVertices(GridReference(0, 1))
+            ), instance.getPolygon(GridReference(0, 1)).vertices
         )
     }
 
@@ -62,7 +62,7 @@ class HexGridCellPositionerTest {
                 Point(9 * HALF_ROOT_THREE, 8.0),
                 Point(8 * HALF_ROOT_THREE, 7.5),
                 Point(8 * HALF_ROOT_THREE, 6.5),
-            ), instance.getVertices(GridReference(4, 4))
+            ), instance.getPolygon(GridReference(4, 4)).vertices
         )
     }
 
@@ -76,7 +76,7 @@ class HexGridCellPositionerTest {
                 Point(14 * HALF_ROOT_THREE, 6.5),
                 Point(13 * HALF_ROOT_THREE, 6.0),
                 Point(13 * HALF_ROOT_THREE, 5.0),
-            ), instance.getVertices(GridReference(6, 3))
+            ), instance.getPolygon(GridReference(6, 3)).vertices
         )
     }
 
