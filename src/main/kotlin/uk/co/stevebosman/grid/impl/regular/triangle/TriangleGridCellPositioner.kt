@@ -29,9 +29,6 @@ object TriangleGridCellPositioner : CellPositioner {
         HALF_ROOT_THREE * (gridReference.y + THIRD * if (isUp(gridReference)) 1 else 2)
     )
 
-    override fun getVertices(gridReference: GridReference): List<Point> =
-        getPolygon(gridReference).vertices
-
     override fun getInscribedCircle(gridReference: GridReference): Circle {
         val polygon = getPolygon(gridReference)
         return Circle(polygon.centre, polygon.apothem)

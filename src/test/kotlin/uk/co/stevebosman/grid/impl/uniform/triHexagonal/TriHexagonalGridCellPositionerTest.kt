@@ -17,7 +17,7 @@ class TriHexagonalGridCellPositionerTest {
                 Point(1.5, 2.0 * HALF_ROOT_THREE),
                 Point(0.5, 2.0 * HALF_ROOT_THREE),
                 Point(0.0, 1.0 * HALF_ROOT_THREE)
-            ), instance.getVertices(GridReference(0, 0))
+            ), instance.getPolygon(GridReference(0, 0)).vertices
         )
     }
 
@@ -28,7 +28,7 @@ class TriHexagonalGridCellPositionerTest {
                 Point(1.5, 0.0),
                 Point(2.5,0.0),
                 Point(2.0, HALF_ROOT_THREE),
-            ), instance.getVertices(GridReference(1, 0))
+            ), instance.getPolygon(GridReference(1, 0)).vertices
         )
     }
 
@@ -39,7 +39,7 @@ class TriHexagonalGridCellPositionerTest {
                 Point(2.0, HALF_ROOT_THREE),
                 Point(2.5,2*HALF_ROOT_THREE),
                 Point(1.5, 2*HALF_ROOT_THREE),
-            ), instance.getVertices(GridReference(2, 0))
+            ), instance.getPolygon(GridReference(2, 0)).vertices
         )
     }
     @Test
@@ -49,7 +49,7 @@ class TriHexagonalGridCellPositionerTest {
                 Point(0.5,2*HALF_ROOT_THREE),
                 Point(1.5, 2*HALF_ROOT_THREE),
                 Point(1.0, 3*HALF_ROOT_THREE),
-            ), instance.getVertices(GridReference(0,1))
+            ), instance.getPolygon(GridReference(0,1)).vertices
         )
     }
 
@@ -60,7 +60,7 @@ class TriHexagonalGridCellPositionerTest {
                 Point(1.0, 3*HALF_ROOT_THREE),
                 Point(1.5,4*HALF_ROOT_THREE),
                 Point(0.5, 4*HALF_ROOT_THREE),
-            ), instance.getVertices(GridReference(1,1))
+            ), instance.getPolygon(GridReference(1,1)).vertices
         )
     }
 
@@ -74,7 +74,7 @@ class TriHexagonalGridCellPositionerTest {
                 Point(2.5, 4.0 * HALF_ROOT_THREE),
                 Point(1.5, 4.0 * HALF_ROOT_THREE),
                 Point(1.0, 3.0 * HALF_ROOT_THREE)
-            ), instance.getVertices(GridReference(2, 1))
+            ), instance.getPolygon(GridReference(2, 1)).vertices
         )
     }
 

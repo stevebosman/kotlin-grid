@@ -21,8 +21,12 @@ Small API for generating grids of cells.
   * Triangular
 * Octagonal/Square (Truncated Square)  
   ![Octagonal/Square](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/1-uniform_n2.svg/250px-1-uniform_n2.svg.png)
+  * Start with octagon
+  * Start with square
 * Tri hexagonal  
   ![Tri Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tiling_3-6_simple.svg/1200px-Tiling_3-6_simple.svg.png)
+  * Start with hexagon
+  * Start with triangles
 
 ### Planned
 * Square/Triangle (Elongated Triangular)  

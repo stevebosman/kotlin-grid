@@ -71,7 +71,7 @@ object GridAssertions {
                     if (expectedVertices != null) {
                         assertEqualPoints(
                             expectedVertices,
-                            referencedCell!!.getVertices()
+                            referencedCell!!.getPolygon().vertices
                         )
                     }
                 }

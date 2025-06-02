@@ -36,9 +36,6 @@ object TriHexagonalGridCellPositioner : CellPositioner {
             }
         }
 
-    override fun getVertices(gridReference: GridReference): List<Point> =
-        getPolygon(gridReference).vertices
-
     override fun getInscribedCircle(gridReference: GridReference): Circle {
         val polygon = getPolygon(gridReference)
         return Circle(polygon.centre, polygon.apothem)

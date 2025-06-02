@@ -16,7 +16,7 @@ class SquareGridCellPositionerTest {
                 Point(1.0, 0.0),
                 Point(1.0, 1.0),
                 Point(0.0, 1.0)
-            ), instance.getVertices(GridReference(0, 0))
+            ), instance.getPolygon(GridReference(0, 0)).vertices
         )
     }
 
@@ -30,7 +30,7 @@ class SquareGridCellPositionerTest {
                 Point(ref.x + 1.0, ref.y + 1.0),
                 Point(ref.x.toDouble(), ref.y + 1.0)
             ),
-            instance.getVertices(ref)
+            instance.getPolygon(ref).vertices
         )
     }
 

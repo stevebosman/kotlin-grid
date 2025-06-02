@@ -15,10 +15,6 @@ class Cell(
         return cellPositioner.getPolygon(gridReference)
     }
 
-    fun getVertices(): List<Point> {
-        return getPolygon().vertices
-    }
-
     fun getInscribedCircle(): Circle {
         return cellPositioner.getInscribedCircle(gridReference)
     }
