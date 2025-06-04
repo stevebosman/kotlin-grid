@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "uk.co.stevebosman"
-version = "0.0.7"
+version = "0.0.8"
 
 publishing {
     repositories {
