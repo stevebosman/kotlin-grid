@@ -5,28 +5,37 @@ Small API for generating grids of cells.
 ## Tilings
 ### Current support
 * Square  
-  ![Square](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1-uniform_n5.svg/250px-1-uniform_n5.svg.png)
-* Triangular  
-  ![Triangular](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/1-uniform_n11.svg/250px-1-uniform_n11.svg.png)
-  * Standard
-  * Offset
-  * Triangle
-  * Spiky
+  ![Square](examples/square.png)
+* Triangular
+  * Standard  
+    ![Triangular - standard](examples/triangular.png)
+  * Offset  
+    ![Triangular - offset](examples/triangular_offset.png)
+  * Triangle  
+    ![Triangular - as big triangle](examples/triangular_triangle.png)
+  * Spiky  
+    ![Triangular - spiky](examples/triangular_spiky.png)
 * Hexagonal  
-  ![Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/1-uniform_n1.svg/250px-1-uniform_n1.svg.png)
-  * Standard
-  * Standard Skip Last
-  * Offset
-  * Offset Skip Last
-  * Triangular
+  * Standard  
+    ![Hexagonal - standard](examples/hexagonal_standard.png)
+  * Standard Skip Last  
+    ![Hexagonal - skip last on odd rows](examples/hexagonal_standard_skip_last.png)
+  * Offset  
+    ![Hexagonal - offset](examples/hexagonal_offset.png)
+  * Offset Skip Last  
+    ![Hexagonal - offset skip last on odd rows](examples/hexagonal_offset_skip_last.png)
+  * Triangular  
+    ![Hexagonal - in triangle shape](examples/hexagonal_triangle.png)
 * Octagonal/Square (Truncated Square)  
-  ![Octagonal/Square](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/1-uniform_n2.svg/250px-1-uniform_n2.svg.png)
-  * Start with octagon
-  * Start with square
-* Tri hexagonal  
-  ![Tri Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tiling_3-6_simple.svg/1200px-Tiling_3-6_simple.svg.png)
-  * Start with hexagon
-  * Start with triangles
+  * Start with octagon  
+    ![Truncated Square - start with octagons](examples/truncated_square_start_octagon.png)
+  * Start with square  
+    ![Truncated Square - start with squares](examples/truncated_square_start_square.png)
+* Tri hexagonal
+  * Start with hexagon  
+    ![Tri Hexagonal](examples/trihexagonal.png)
+  * Start with triangles  
+    ![Tri Hexagonal - starting with triangles](examples/trihexagonal_triangles.png)
 
 ### Planned
 * Square/Triangle (Elongated Triangular)  

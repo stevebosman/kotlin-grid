@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="160.0" height="160.0" viewBox="-5.0 -5.0 155.0 155.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polyline points="0.0,0.0 25.0,0.0 25.0,25.0 0.0,25.0 0.0,0.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,25.0 25.0,25.0 25.0,50.0 0.0,50.0 0.0,25.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,50.0 25.0,50.0 25.0,75.0 0.0,75.0 0.0,50.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,75.0 25.0,75.0 25.0,100.0 0.0,100.0 0.0,75.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,100.0 25.0,100.0 25.0,125.0 0.0,125.0 0.0,100.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,125.0 25.0,125.0 25.0,150.0 0.0,150.0 0.0,125.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,0.0 50.0,0.0 50.0,25.0 25.0,25.0 25.0,0.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,25.0 50.0,25.0 50.0,50.0 25.0,50.0 25.0,25.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,50.0 50.0,50.0 50.0,75.0 25.0,75.0 25.0,50.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,75.0 50.0,75.0 50.0,100.0 25.0,100.0 25.0,75.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,100.0 50.0,100.0 50.0,125.0 25.0,125.0 25.0,100.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,125.0 50.0,125.0 50.0,150.0 25.0,150.0 25.0,125.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,0.0 75.0,0.0 75.0,25.0 50.0,25.0 50.0,0.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,25.0 75.0,25.0 75.0,50.0 50.0,50.0 50.0,25.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,50.0 75.0,50.0 75.0,75.0 50.0,75.0 50.0,50.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,75.0 75.0,75.0 75.0,100.0 50.0,100.0 50.0,75.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,100.0 75.0,100.0 75.0,125.0 50.0,125.0 50.0,100.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,125.0 75.0,125.0 75.0,150.0 50.0,150.0 50.0,125.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,0.0 100.0,0.0 100.0,25.0 75.0,25.0 75.0,0.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,25.0 100.0,25.0 100.0,50.0 75.0,50.0 75.0,25.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,50.0 100.0,50.0 100.0,75.0 75.0,75.0 75.0,50.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,75.0 100.0,75.0 100.0,100.0 75.0,100.0 75.0,75.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,100.0 100.0,100.0 100.0,125.0 75.0,125.0 75.0,100.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,125.0 100.0,125.0 100.0,150.0 75.0,150.0 75.0,125.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="100.0,0.0 125.0,0.0 125.0,25.0 100.0,25.0 100.0,0.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="100.0,25.0 125.0,25.0 125.0,50.0 100.0,50.0 100.0,25.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="100.0,50.0 125.0,50.0 125.0,75.0 100.0,75.0 100.0,50.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="100.0,75.0 125.0,75.0 125.0,100.0 100.0,100.0 100.0,75.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="100.0,100.0 125.0,100.0 125.0,125.0 100.0,125.0 100.0,100.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="100.0,125.0 125.0,125.0 125.0,150.0 100.0,150.0 100.0,125.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="125.0,0.0 150.0,0.0 150.0,25.0 125.0,25.0 125.0,0.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="125.0,25.0 150.0,25.0 150.0,50.0 125.0,50.0 125.0,25.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="125.0,50.0 150.0,50.0 150.0,75.0 125.0,75.0 125.0,50.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="125.0,75.0 150.0,75.0 150.0,100.0 125.0,100.0 125.0,75.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="125.0,100.0 150.0,100.0 150.0,125.0 125.0,125.0 125.0,100.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="125.0,125.0 150.0,125.0 150.0,150.0 125.0,150.0 125.0,125.0" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+</svg>

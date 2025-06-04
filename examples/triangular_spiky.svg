@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="110.0" height="118.25317547305482" viewBox="-5.0 -5.000000000000003 105.0 113.25317547305482" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polyline points="12.5,21.650635094610955 25.0,43.301270189221924 0.0,43.301270189221924 12.5,21.650635094610955" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,43.30127018922194 25.0,43.30127018922194 12.5,64.9519052838329 0.0,43.30127018922194" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="12.5,64.95190528383289 25.0,86.60254037844386 0.0,86.60254037844386 12.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="0.0,86.60254037844385 25.0,86.60254037844385 12.5,108.25317547305482 0.0,86.60254037844385" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,-2.7755575615628914E-15 37.5,21.650635094610966 12.5,21.650635094610966 25.0,-2.7755575615628914E-15" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="12.5,21.650635094610966 37.5,21.650635094610966 25.0,43.30127018922193 12.5,21.650635094610966" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,43.30127018922193 37.5,64.9519052838329 12.5,64.9519052838329 25.0,43.30127018922193" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="12.5,64.95190528383289 37.5,64.95190528383289 25.0,86.60254037844386 12.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="37.5,21.650635094610955 50.0,43.301270189221924 25.0,43.301270189221924 37.5,21.650635094610955" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,43.30127018922194 50.0,43.30127018922194 37.5,64.9519052838329 25.0,43.30127018922194" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="37.5,64.95190528383289 50.0,86.60254037844386 25.0,86.60254037844386 37.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="25.0,86.60254037844385 50.0,86.60254037844385 37.5,108.25317547305482 25.0,86.60254037844385" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,-2.7755575615628914E-15 62.5,21.650635094610966 37.5,21.650635094610966 50.0,-2.7755575615628914E-15" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="37.5,21.650635094610966 62.5,21.650635094610966 50.0,43.30127018922193 37.5,21.650635094610966" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,43.30127018922193 62.5,64.9519052838329 37.5,64.9519052838329 50.0,43.30127018922193" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="37.5,64.95190528383289 62.5,64.95190528383289 50.0,86.60254037844386 37.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="62.5,21.650635094610955 75.0,43.301270189221924 50.0,43.301270189221924 62.5,21.650635094610955" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,43.30127018922194 75.0,43.30127018922194 62.5,64.9519052838329 50.0,43.30127018922194" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="62.5,64.95190528383289 75.0,86.60254037844386 50.0,86.60254037844386 62.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="50.0,86.60254037844385 75.0,86.60254037844385 62.5,108.25317547305482 50.0,86.60254037844385" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,-2.7755575615628914E-15 87.5,21.650635094610966 62.5,21.650635094610966 75.0,-2.7755575615628914E-15" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="62.5,21.650635094610966 87.5,21.650635094610966 75.0,43.30127018922193 62.5,21.650635094610966" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,43.30127018922193 87.5,64.9519052838329 62.5,64.9519052838329 75.0,43.30127018922193" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="62.5,64.95190528383289 87.5,64.95190528383289 75.0,86.60254037844386 62.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="87.5,21.650635094610955 100.0,43.301270189221924 75.0,43.301270189221924 87.5,21.650635094610955" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,43.30127018922194 100.0,43.30127018922194 87.5,64.9519052838329 75.0,43.30127018922194" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="87.5,64.95190528383289 100.0,86.60254037844386 75.0,86.60254037844386 87.5,64.95190528383289" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+    <polyline points="75.0,86.60254037844385 100.0,86.60254037844385 87.5,108.25317547305482 75.0,86.60254037844385" stroke-linecap="round" stroke="red" stroke-width="2" fill="none" />
+</svg>
+
+

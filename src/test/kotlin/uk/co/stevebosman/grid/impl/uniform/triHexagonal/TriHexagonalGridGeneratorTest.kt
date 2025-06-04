@@ -12,6 +12,7 @@ class TriHexagonalGridGeneratorTest {
     @Test
     fun testStandardGenerated2by2grid() {
         val grid = instance.generate(2, 2)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -77,6 +78,7 @@ class TriHexagonalGridGeneratorTest {
     @Test
     fun testStandardGenerated3by3grid() {
         val grid = instance.generate(3, 3)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -168,6 +170,7 @@ class TriHexagonalGridGeneratorTest {
     @Test
     fun testStandardGenerated4by4grid() {
         val grid = instance.generate(4, 4)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -195,6 +198,7 @@ class TriHexagonalGridGeneratorTest {
     @Test
     fun testStartTrianglesGenerated2by2grid() {
         val grid = instance.generate(2, 2, TriHexagonalGridOption.START_TRIANGLES)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -261,6 +265,7 @@ class TriHexagonalGridGeneratorTest {
     @Test
     fun testStartTrianglesGenerated3by3grid() {
         val grid = instance.generate(3, 3, TriHexagonalGridOption.START_TRIANGLES)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {

@@ -12,7 +12,7 @@ class SquareOctagon2GridGeneratorTest {
     @Test
     fun testStandardGenerated2by2grid() {
         val grid = instance.generate(2, 2)
-        println("$grid")
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -64,7 +64,7 @@ class SquareOctagon2GridGeneratorTest {
     @Test
     fun testStandardGenerated3by3grid() {
         val grid = instance.generate(3, 3)
-        println("$grid")
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -173,7 +173,7 @@ class SquareOctagon2GridGeneratorTest {
     @Test
     fun testStandardGenerated4by4grid() {
         val grid = instance.generate(4, 4)
-        println("$grid")
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -348,7 +348,7 @@ class SquareOctagon2GridGeneratorTest {
     @Test
     fun testStartOctagonGenerated2by2grid() {
         val grid = instance.generate(2, 2, SquareOctagon2GridOption.START_OCTAGON)
-        println("$grid")
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
