@@ -12,6 +12,7 @@ class HexGridGeneratorTest {
     @Test
     fun testStandardGenerated2by2grid() {
         val grid = instance.generate(2, 2)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -63,6 +64,7 @@ class HexGridGeneratorTest {
     @Test
     fun testStandardGenerated3by3grid() {
         val grid = instance.generate(3, 3)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -160,6 +162,7 @@ class HexGridGeneratorTest {
     @Test
     fun testStandardSkipLastGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.STANDARD_SKIP_LAST)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -250,6 +253,7 @@ class HexGridGeneratorTest {
     @Test
     fun testOffsetSkipLastGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.OFFSET_SKIP_LAST)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -328,6 +332,7 @@ class HexGridGeneratorTest {
     @Test
     fun testOffsetGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.OFFSET)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -425,6 +430,7 @@ class HexGridGeneratorTest {
     @Test
     fun testTriangleGenerated3by3grid() {
         val grid = instance.generate(3, 3, HexGridOption.TRIANGLE)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {

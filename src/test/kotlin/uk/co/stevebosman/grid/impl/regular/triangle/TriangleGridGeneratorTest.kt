@@ -12,6 +12,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testStandardGenerated2by2grid() {
         val grid = instance.generate(2, 2)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -63,6 +64,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testStandardGenerated3by3grid() {
         val grid = instance.generate(3, 3)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -147,6 +149,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testOffsetGenerated2by2grid() {
         val grid = instance.generate(2, 2, TriangleGridOption.OFFSET)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.5, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -198,6 +201,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testOffsetGenerated3by3grid() {
         val grid = instance.generate(3, 3, TriangleGridOption.OFFSET)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.5, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -282,6 +286,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testTriangleGenerated2by2grid() {
         val grid = instance.generate(2, 2, TriangleGridOption.TRIANGLE)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -326,6 +331,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testTriangleGenerated3by3grid() {
         val grid = instance.generate(3, 3, TriangleGridOption.TRIANGLE)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -411,6 +417,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testSpikyGenerated2by2grid() {
         val grid = instance.generate(2, 2, TriangleGridOption.SPIKY)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.5, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -448,6 +455,7 @@ class TriangleGridGeneratorTest {
     @Test
     fun testSpikyGenerated3by3grid() {
         val grid = instance.generate(3, 3, TriangleGridOption.SPIKY)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {

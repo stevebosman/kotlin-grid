@@ -12,6 +12,7 @@ class SquareGridGeneratorTest {
     @Test
     fun testGenerated2by2grid() {
         val grid = instance.generate(2, 2)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
@@ -83,6 +84,7 @@ class SquareGridGeneratorTest {
     @Test
     fun testGenerated3by3grid() {
         val grid = instance.generate(3, 3)
+        println(grid.toSvg())
         assertAll({
             assertEquals(0.0, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
         }, {
