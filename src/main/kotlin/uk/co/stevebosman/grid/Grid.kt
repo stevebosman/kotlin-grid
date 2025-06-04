@@ -9,16 +9,15 @@ data class Grid(
     val xRange: IntRange,
     val yRange: IntRange
 ) {
-    fun toSvg(): String {
-        val border = 5
-        val scaling = 25
-        fun coordinates(v: Point): String = "${scaling * v.x},${scaling * v.y}"
+    fun toSvg(scaling: Int = 25, border: Int = 5): String {
+        fun coordinates(v: Point): String =
+            "${border + scaling * (v.x - boundingBox.lowerLeft.x)},${border + scaling * (v.y - boundingBox.lowerLeft.y)}"
 
         val result = StringBuilder()
         result.append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n")
         result.append("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n")
         result.append("<svg width=\"${scaling * boundingBox.width + 2 * border}\" height=\"${scaling * boundingBox.height + 2 * border}\"")
-        result.append(" viewBox=\"${scaling * boundingBox.lowerLeft.x - border} ${scaling * boundingBox.lowerLeft.y - border} ${border + scaling * (boundingBox.lowerLeft.x + boundingBox.width)} ${border + scaling * (boundingBox.lowerLeft.y + boundingBox.height)}\"")
+        result.append(" viewBox=\"0 0 ${2 * border + scaling * boundingBox.width} ${2 * border + scaling * boundingBox.height}\"")
         result.append(" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n")
 
         cells.values.forEach { c ->
