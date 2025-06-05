@@ -20,6 +20,8 @@ fun main() {
     println(TriangleGridGenerator.generate(7,4, TriangleGridOption.OFFSET).toSvg(35));
     println("\nTriangular Grid 7 x 4 - Spiky")
     println(TriangleGridGenerator.generate(7,4, TriangleGridOption.SPIKY).toSvg(35));
+    println("\nTriangular Grid 7 x 4 - Offset Spiky")
+    println(TriangleGridGenerator.generate(7,4, TriangleGridOption.OFFSET_SPIKY).toSvg(35));
     println("\nTriangular Grid 4 x 5 - Triangle")
     println(TriangleGridGenerator.generate(4,5, TriangleGridOption.TRIANGLE).toSvg(35));
 
@@ -34,7 +36,7 @@ fun main() {
     println("\nHex Grid 5 x 5 - Triangle")
     println(HexGridGenerator.generate(5,5, HexGridOption.TRIANGLE).toSvg());
 
-    println("\nTruncated SquareGrid 5 x 5 - Start Octagon")
+    println("\nTruncated Square Grid 5 x 5 - Start Octagon")
     println(SquareOctagon2GridGenerator.generate(5,5, SquareOctagon2GridOption.START_OCTAGON).toSvg());
     println("\nTruncated Square Grid 5 x 5 - Start Square")
     println(SquareOctagon2GridGenerator.generate(5,5, SquareOctagon2GridOption.START_SQUARE).toSvg());

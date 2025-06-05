@@ -11,5 +11,9 @@ enum class TriangleGridOption {
     TRIANGLE,
 
     /** Skip up triangles of first row, skip down triangles of last row */
-    SPIKY
+    SPIKY,
+
+    /** Skip up triangles of first offset row, skip down triangles of last row */
+    OFFSET_SPIKY
+
 }

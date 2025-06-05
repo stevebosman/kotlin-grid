@@ -11,10 +11,12 @@ Small API for generating grids of cells.
     ![Triangular - standard](examples/triangular.png)
   * Offset  
     ![Triangular - offset](examples/triangular_offset.png)
-  * Triangle  
-    ![Triangular - as big triangle](examples/triangular_triangle.png)
   * Spiky  
     ![Triangular - spiky](examples/triangular_spiky.png)
+  * Offset Spiky  
+    ![Triangular - offset spiky](examples/triangular_offset_spiky.png)
+  * Triangle  
+    ![Triangular - as big triangle](examples/triangular_triangle.png)
 * Hexagonal  
   * Standard  
     ![Hexagonal - standard](examples/hexagonal_standard.png)
