@@ -21,7 +21,7 @@ data class Grid(
         result.append(" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n")
 
         cells.values.forEach { c ->
-            result.append("<polyline points=\"")
+            result.append("    <polyline points=\"")
             result.append(c.getPolygon().vertices.joinToString(" ") { v -> coordinates(v) })
             result.append(" " + coordinates(c.getPolygon().vertices.first()))
             result.append("\" stroke=\"red\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" />\n")
