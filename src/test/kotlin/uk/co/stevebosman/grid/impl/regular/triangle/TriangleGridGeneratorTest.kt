@@ -517,6 +517,109 @@ class TriangleGridGeneratorTest {
         })
     }
 
+    @Test
+    fun testOffsetSpikyGenerated2by2grid() {
+        val grid = instance.generate(2, 2, TriangleGridOption.OFFSET_SPIKY)
+        println(grid.toSvg())
+        assertAll({
+            assertEquals(0.5, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
+        }, {
+            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
+        }, {
+            assertEquals(1.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+        }, {
+            assertEquals(2 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((1..2), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..1), grid.yRange) { -> "unexpected y range" }
+        }, {
+            assertEquals(2, grid.cells.size)
+
+            assertAll(
+                {
+                    assertContains(
+                        grid.cells,
+                        GridReference(1, 0),
+                        listOf(GridReference(1, 1)),
+                        null
+                    )
+                }, {
+                    assertContains(
+                        grid.cells,
+                        GridReference(1, 1),
+                        listOf(GridReference(1, 0)),
+                        null
+                    )
+                })
+        })
+    }
+
+    @Test
+    fun testOffsetSpikyGenerated3by3grid() {
+        val grid = instance.generate(3, 3, TriangleGridOption.OFFSET_SPIKY)
+        println(grid.toSvg())
+        assertAll({
+            assertEquals(0.5, grid.boundingBox.lowerLeft.x, DELTA) { -> "unexpected lower bound x" }
+        }, {
+            assertEquals(0.0, grid.boundingBox.lowerLeft.y, DELTA) { -> "unexpected lower bound y" }
+        }, {
+            assertEquals(2.0, grid.boundingBox.width, DELTA) { -> "unexpected width" }
+        }, {
+            assertEquals(3 * HALF_ROOT_THREE, grid.boundingBox.height, DELTA) { -> "unexpected height" }
+        }, {
+            assertEquals((1..3), grid.xRange) { -> "unexpected x range" }
+        }, {
+            assertEquals((0..2), grid.yRange) { -> "unexpected y range" }
+        }, {
+            assertEquals(6, grid.cells.size)
+
+            assertAll({
+                assertContains(
+                    grid.cells,
+                    GridReference(1, 0),
+                    listOf(GridReference(1, 1)),
+                    null
+                )
+            }, {
+                assertContains(
+                    grid.cells,
+                    GridReference(1, 1),
+                    listOf(GridReference(1, 0), GridReference(2, 1)),
+                    null
+                )
+            }, {
+                assertContains(
+                    grid.cells,
+                    GridReference(2, 1),
+                    listOf(GridReference(1, 1), GridReference(3, 1), GridReference(2, 2)),
+                    null
+                )
+            }, {
+                assertContains(
+                    grid.cells,
+                    GridReference(2, 2),
+                    listOf(GridReference(2, 1)),
+                    null
+                )
+            }, {
+                assertContains(
+                    grid.cells,
+                    GridReference(3, 0),
+                    listOf(GridReference(3, 1)),
+                    null
+                )
+            }, {
+                assertContains(
+                    grid.cells,
+                    GridReference(3, 1),
+                    listOf(GridReference(3, 0), GridReference(2, 1)),
+                    null
+                )
+            })
+        })
+    }
+
     companion object {
         val instance = TriangleGridGenerator
         val HALF_ROOT_THREE = sqrt(3.0) / 2

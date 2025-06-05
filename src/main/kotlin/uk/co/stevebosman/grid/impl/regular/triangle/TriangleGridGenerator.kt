@@ -14,19 +14,12 @@ object TriangleGridGenerator {
             TriangleGridOption.STANDARD -> (0..width - 1)
             TriangleGridOption.OFFSET -> (1..width)
             TriangleGridOption.SPIKY -> (0..width - 1)
+            TriangleGridOption.OFFSET_SPIKY -> (1..width)
             TriangleGridOption.TRIANGLE -> (0..width * 2 - 2)
         }
 
         when (option) {
-            TriangleGridOption.STANDARD -> {
-                xRange.forEach { x ->
-                    yRange.forEach { y ->
-                        references.add(GridReference(x, y))
-                    }
-                }
-            }
-
-            TriangleGridOption.OFFSET -> {
+            TriangleGridOption.STANDARD, TriangleGridOption.OFFSET -> {
                 xRange.forEach { x ->
                     yRange.forEach { y ->
                         references.add(GridReference(x, y))
@@ -43,7 +36,7 @@ object TriangleGridGenerator {
                 }
             }
 
-            TriangleGridOption.SPIKY -> {
+            TriangleGridOption.SPIKY, TriangleGridOption.OFFSET_SPIKY -> {
                 xRange.forEach { x ->
                     yRange.forEach { y ->
                         val innerRows = y != 0 && y != height - 1
