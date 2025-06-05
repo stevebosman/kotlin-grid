@@ -9,40 +9,92 @@ import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridGene
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridOption
 import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalGridOption
+import java.io.File
 
 fun main() {
-    println("Square Grid 5 x 5")
-    println(SquareGridGenerator.generate(5,5).toSvg());
+    // Square Grid 5 x 5
+    File("examples/square.svg").writeText(SquareGridGenerator.generate(5, 5).toSvg());
 
-    println("\nTriangular Grid 7 x 4 - Standard")
-    println(TriangleGridGenerator.generate(7,4, TriangleGridOption.STANDARD).toSvg(35));
-    println("\nTriangular Grid 7 x 4 - Offset")
-    println(TriangleGridGenerator.generate(7,4, TriangleGridOption.OFFSET).toSvg(35));
-    println("\nTriangular Grid 7 x 4 - Spiky")
-    println(TriangleGridGenerator.generate(7,4, TriangleGridOption.SPIKY).toSvg(35));
-    println("\nTriangular Grid 7 x 4 - Offset Spiky")
-    println(TriangleGridGenerator.generate(7,4, TriangleGridOption.OFFSET_SPIKY).toSvg(35));
-    println("\nTriangular Grid 4 x 5 - Triangle")
-    println(TriangleGridGenerator.generate(4,5, TriangleGridOption.TRIANGLE).toSvg(35));
+    // Triangular Grid 7 x 4 - Standard
+    File("examples/triangular.svg").writeText(
+        TriangleGridGenerator.generate(7, 4, TriangleGridOption.STANDARD).toSvg(35)
+    );
+    // Triangular Grid 7 x 4 - Offset
+    File("examples/triangular_offset.svg").writeText(
+        TriangleGridGenerator.generate(7, 4, TriangleGridOption.OFFSET).toSvg(35)
+    );
+    // Triangular Grid 7 x 4 - Spiky
+    File("examples/triangular_spiky.svg").writeText(
+        TriangleGridGenerator.generate(7, 4, TriangleGridOption.SPIKY).toSvg(35)
+    );
+    // Triangular Grid 7 x 4 - Offset Spiky
+    File("examples/triangular_offset_spiky.svg").writeText(
+        TriangleGridGenerator.generate(
+            7,
+            4,
+            TriangleGridOption.OFFSET_SPIKY
+        ).toSvg(35)
+    );
+    // Triangular Grid 4 x 5 - Triangle
+    File("examples/triangular_triangle.svg").writeText(
+        TriangleGridGenerator.generate(4, 5, TriangleGridOption.TRIANGLE).toSvg(35)
+    );
 
-    println("\nHex Grid 5 x 5 - Standard")
-    println(HexGridGenerator.generate(5,5, HexGridOption.STANDARD).toSvg());
-    println("\nHex Grid 5 x 5 - Standard Skip Last")
-    println(HexGridGenerator.generate(5,5, HexGridOption.STANDARD_SKIP_LAST).toSvg());
-    println("\nHex Grid 5 x 5 - Offset")
-    println(HexGridGenerator.generate(5,5, HexGridOption.OFFSET).toSvg());
-    println("\nHex Grid 5 x 5 - Offset Skip Last")
-    println(HexGridGenerator.generate(5,5, HexGridOption.OFFSET_SKIP_LAST).toSvg());
-    println("\nHex Grid 5 x 5 - Triangle")
-    println(HexGridGenerator.generate(5,5, HexGridOption.TRIANGLE).toSvg());
+    // Hex Grid 5 x 5 - Standard
+    File("examples/hexagonal_standard.svg")
+        .writeText(HexGridGenerator.generate(5, 5, HexGridOption.STANDARD).toSvg());
+    // Hex Grid 5 x 5 - Standard Skip Last
+    File("examples/hexagonal_standard_skip_last.svg").writeText(
+        HexGridGenerator.generate(
+            5,
+            5,
+            HexGridOption.STANDARD_SKIP_LAST
+        ).toSvg()
+    );
+    // Hex Grid 5 x 5 - Offset
+    File("examples/hexagonal_offset.svg").writeText(HexGridGenerator.generate(5, 5, HexGridOption.OFFSET).toSvg());
+    // Hex Grid 5 x 5 - Offset Skip Last
+    File("examples/hexagonal_offset_skip_last.svg").writeText(
+        HexGridGenerator.generate(
+            5,
+            5,
+            HexGridOption.OFFSET_SKIP_LAST
+        ).toSvg()
+    );
+    // Hex Grid 5 x 5 - Triangle
+    File("examples/hexagonal_triangle.svg").writeText(HexGridGenerator.generate(5, 5, HexGridOption.TRIANGLE).toSvg());
 
-    println("\nTruncated Square Grid 5 x 5 - Start Octagon")
-    println(SquareOctagon2GridGenerator.generate(5,5, SquareOctagon2GridOption.START_OCTAGON).toSvg());
-    println("\nTruncated Square Grid 5 x 5 - Start Square")
-    println(SquareOctagon2GridGenerator.generate(5,5, SquareOctagon2GridOption.START_SQUARE).toSvg());
+    // Truncated Square Grid 5 x 5 - Start Octagon
+    File("examples/truncated_square_start_octagon.svg").writeText(
+        SquareOctagon2GridGenerator.generate(
+            5,
+            5,
+            SquareOctagon2GridOption.START_OCTAGON
+        ).toSvg()
+    );
+    // Truncated Square Grid 5 x 5 - Start Square
+    File("examples/truncated_square_start_square.svg").writeText(
+        SquareOctagon2GridGenerator.generate(
+            5,
+            5,
+            SquareOctagon2GridOption.START_SQUARE
+        ).toSvg()
+    );
 
-    println("\nTri Hexagonal Grid 7 x 5 - Start Hexagon")
-    println(TriHexagonalGridGenerator.generate(7,5, TriHexagonalGridOption.START_HEXAGON).toSvg());
-    println("\nTri Hexagonal Grid 7 x 5 - Start Triangles")
-    println(TriHexagonalGridGenerator.generate(7,5, TriHexagonalGridOption.START_TRIANGLES).toSvg());
+    // Tri Hexagonal Grid 7 x 5 - Start Hexagon
+    File("examples/trihexagonal.svg").writeText(
+        TriHexagonalGridGenerator.generate(
+            7,
+            5,
+            TriHexagonalGridOption.START_HEXAGON
+        ).toSvg()
+    );
+    // Tri Hexagonal Grid 7 x 5 - Start Triangles
+    File("examples/trihexagonal_triangles.svg").writeText(
+        TriHexagonalGridGenerator.generate(
+            7,
+            5,
+            TriHexagonalGridOption.START_TRIANGLES
+        ).toSvg()
+    );
 }
