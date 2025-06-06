@@ -34,28 +34,24 @@ class SquareOctagon2GridGeneratorTest {
                         grid.cells,
                         GridReference(0, 0),
                         listOf(GridReference(1, 0), GridReference(0, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 1),
                         listOf(GridReference(0, 0), GridReference(1, 0), GridReference(1, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(0, 0), GridReference(0, 1), GridReference(1, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(1, 0), GridReference(0, 1)),
-                        null
                     )
                 })
         })
@@ -84,7 +80,6 @@ class SquareOctagon2GridGeneratorTest {
                     grid.cells,
                     GridReference(0, 0),
                     listOf(GridReference(1, 0), GridReference(0, 1)),
-                    null
                 )
             }, {
                 assertContains(
@@ -97,14 +92,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(0, 2),
                         GridReference(1, 2)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
                     listOf(GridReference(0, 1), GridReference(1, 2)),
-                    null
                 )
             }, {
                 assertContains(
@@ -117,14 +110,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(1, 1),
                         GridReference(2, 1)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(0, 1), GridReference(2, 1), GridReference(1, 2)),
-                    null
                 )
             }, {
                 assertContains(
@@ -137,14 +128,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(0, 2),
                         GridReference(2, 2)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
                     listOf(GridReference(1, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
@@ -157,14 +146,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(1, 2),
                         GridReference(2, 2)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1), GridReference(1, 2)),
-                    null
                 )
             })
         })
@@ -193,7 +180,6 @@ class SquareOctagon2GridGeneratorTest {
                     grid.cells,
                     GridReference(0, 0),
                     listOf(GridReference(1, 0), GridReference(0, 1)),
-                    null
                 )
             }, {
                 assertContains(
@@ -206,21 +192,18 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(0, 2),
                         GridReference(1, 2)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
                     listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 3),
                     listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3)),
-                    null
                 )
             }, {
                 assertContains(
@@ -233,14 +216,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(1, 1),
                         GridReference(2, 1)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(0, 1), GridReference(2, 1), GridReference(1, 2)),
-                    null
                 )
             }, {
                 assertContains(
@@ -256,21 +237,18 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(1, 3),
                         GridReference(2, 3)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 3),
                     listOf(GridReference(1, 2), GridReference(0, 3), GridReference(2, 3)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
                     listOf(GridReference(1, 0), GridReference(3, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
@@ -286,14 +264,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(2, 2),
                         GridReference(3, 2)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1), GridReference(1, 2), GridReference(3, 2), GridReference(2, 3)),
-                    null
                 )
             }, {
                 assertContains(
@@ -306,20 +282,17 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(1, 3),
                         GridReference(3, 3)
                     ),
-                    null
                 )
                 assertContains(
                     grid.cells,
                     GridReference(3, 0),
                     listOf(GridReference(2, 0), GridReference(2, 1), GridReference(3, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 1),
                     listOf(GridReference(3, 0), GridReference(2, 1), GridReference(3, 2)),
-                    null
                 )
             }, {
                 assertContains(
@@ -332,14 +305,12 @@ class SquareOctagon2GridGeneratorTest {
                         GridReference(2, 3),
                         GridReference(3, 3)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 3),
                     listOf(GridReference(3, 2), GridReference(2, 3)),
-                    null
                 )
             })
         })
@@ -370,28 +341,24 @@ class SquareOctagon2GridGeneratorTest {
                         grid.cells,
                         GridReference(0, 1),
                         listOf(GridReference(1, 1), GridReference(0, 2), GridReference(1, 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 2),
                         listOf(GridReference(0, 1), GridReference(1, 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(0, 1), GridReference(1, 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 2),
                         listOf(GridReference(0, 1), GridReference(1, 1), GridReference(0, 2)),
-                        null
                     )
                 })
         })

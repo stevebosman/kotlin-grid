@@ -46,8 +46,8 @@ object GridAssertions {
     fun assertContains(
         cells: Map<GridReference, Cell>,
         expectedReference: GridReference,
-        expectedNeighbours: List<GridReference>?,
-        expectedVertices: List<Point>?,
+        expectedNeighbours: List<GridReference>? = null,
+        expectedVertices: List<Point>? = null,
     ) {
         val referencedCell = cells[expectedReference]
         assertNotNull(referencedCell) { -> "$expectedReference not found in ${cells.keys}" }

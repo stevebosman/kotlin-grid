@@ -33,29 +33,25 @@ class HexGridGeneratorTest {
                     assertContains(
                         grid.cells,
                         GridReference(0, 0),
-                        listOf(GridReference(1, 0), GridReference(0, 1)),
-                        null
+                        listOf(GridReference(1, 0), GridReference(0, 1))
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 1),
-                        listOf(GridReference(0, 0), GridReference(1, 0), GridReference(1, 1)),
-                        null
+                        listOf(GridReference(0, 0), GridReference(1, 0), GridReference(1, 1))
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 0),
-                        listOf(GridReference(1, 1), GridReference(0, 1), GridReference(0, 0)),
-                        null
+                        listOf(GridReference(1, 1), GridReference(0, 1), GridReference(0, 0))
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
-                        listOf(GridReference(1, 0), GridReference(0, 1)),
-                        null
+                        listOf(GridReference(1, 0), GridReference(0, 1))
                     )
                 })
         })
@@ -83,8 +79,7 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 0),
-                    listOf(GridReference(1, 0), GridReference(0, 1)),
-                    null
+                    listOf(GridReference(1, 0), GridReference(0, 1))
                 )
             }, {
                 assertContains(
@@ -96,22 +91,19 @@ class HexGridGeneratorTest {
                         GridReference(1, 1),
                         GridReference(1, 2),
                         GridReference(0, 2)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
-                    listOf(GridReference(0, 1), GridReference(1, 2)),
-                    null
+                    listOf(GridReference(0, 1), GridReference(1, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 0),
-                    listOf(GridReference(2, 0), GridReference(1, 1), GridReference(0, 1), GridReference(0, 0)),
-                    null
+                    listOf(GridReference(2, 0), GridReference(1, 1), GridReference(0, 1), GridReference(0, 0))
                 )
             }, {
                 assertContains(
@@ -124,36 +116,31 @@ class HexGridGeneratorTest {
                         GridReference(2, 2),
                         GridReference(1, 2),
                         GridReference(0, 1)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
-                    listOf(GridReference(0, 1), GridReference(1, 1), GridReference(2, 2), GridReference(0, 2)),
-                    null
+                    listOf(GridReference(0, 1), GridReference(1, 1), GridReference(2, 2), GridReference(0, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
-                    listOf(GridReference(2, 1), GridReference(1, 1), GridReference(1, 0)),
-                    null
+                    listOf(GridReference(2, 1), GridReference(1, 1), GridReference(1, 0))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
-                    listOf(GridReference(2, 0), GridReference(2, 2), GridReference(1, 1)),
-                    null
+                    listOf(GridReference(2, 0), GridReference(2, 2), GridReference(1, 1))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
-                    listOf(GridReference(1, 1), GridReference(2, 1), GridReference(1, 2)),
-                    null
+                    listOf(GridReference(1, 1), GridReference(2, 1), GridReference(1, 2))
                 )
             })
         })
@@ -181,8 +168,7 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 0),
-                    listOf(GridReference(1, 0), GridReference(0, 1)),
-                    null
+                    listOf(GridReference(1, 0), GridReference(0, 1))
                 )
             }, {
                 assertContains(
@@ -194,22 +180,19 @@ class HexGridGeneratorTest {
                         GridReference(1, 1),
                         GridReference(1, 2),
                         GridReference(0, 2)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
-                    listOf(GridReference(0, 1), GridReference(1, 2)),
-                    null
+                    listOf(GridReference(0, 1), GridReference(1, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 0),
-                    listOf(GridReference(2, 0), GridReference(1, 1), GridReference(0, 1), GridReference(0, 0)),
-                    null
+                    listOf(GridReference(2, 0), GridReference(1, 1), GridReference(0, 1), GridReference(0, 0))
                 )
             }, {
                 assertContains(
@@ -221,29 +204,25 @@ class HexGridGeneratorTest {
                         GridReference(2, 2),
                         GridReference(1, 2),
                         GridReference(0, 1)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
-                    listOf(GridReference(0, 1), GridReference(1, 1), GridReference(2, 2), GridReference(0, 2)),
-                    null
+                    listOf(GridReference(0, 1), GridReference(1, 1), GridReference(2, 2), GridReference(0, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
-                    listOf(GridReference(1, 1), GridReference(1, 0)),
-                    null
+                    listOf(GridReference(1, 1), GridReference(1, 0))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
-                    listOf(GridReference(1, 1), GridReference(1, 2)),
-                    null
+                    listOf(GridReference(1, 1), GridReference(1, 2))
                 )
             })
         })
@@ -272,22 +251,19 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 1),
-                    listOf(GridReference(1, 1), GridReference(1, 2), GridReference(0, 2)),
-                    null
+                    listOf(GridReference(1, 1), GridReference(1, 2), GridReference(0, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
-                    listOf(GridReference(2, 2), GridReference(1, 2), GridReference(0, 1)),
-                    null
+                    listOf(GridReference(2, 2), GridReference(1, 2), GridReference(0, 1))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
-                    listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3)),
-                    null
+                    listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3))
                 )
             }, {
                 assertContains(
@@ -300,29 +276,25 @@ class HexGridGeneratorTest {
                         GridReference(1, 3),
                         GridReference(0, 3),
                         GridReference(0, 2)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
-                    listOf(GridReference(1, 1), GridReference(1, 3), GridReference(1, 2)),
-                    null
+                    listOf(GridReference(1, 1), GridReference(1, 3), GridReference(1, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 3),
-                    listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3)),
-                    null
+                    listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 3),
-                    listOf(GridReference(1, 2), GridReference(2, 2), GridReference(0, 3)),
-                    null
+                    listOf(GridReference(1, 2), GridReference(2, 2), GridReference(0, 3))
                 )
             })
         })
@@ -351,29 +323,25 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 1),
-                    listOf(GridReference(1, 1), GridReference(1, 2), GridReference(0, 2)),
-                    null
+                    listOf(GridReference(1, 1), GridReference(1, 2), GridReference(0, 2))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
-                    listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3)),
-                    null
+                    listOf(GridReference(0, 1), GridReference(1, 2), GridReference(0, 3))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 3),
-                    listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3)),
-                    null
+                    listOf(GridReference(0, 2), GridReference(1, 2), GridReference(1, 3))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
-                    listOf(GridReference(2, 1), GridReference(2, 2), GridReference(1, 2), GridReference(0, 1)),
-                    null
+                    listOf(GridReference(2, 1), GridReference(2, 2), GridReference(1, 2), GridReference(0, 1))
                 )
             }, {
                 assertContains(
@@ -386,22 +354,19 @@ class HexGridGeneratorTest {
                         GridReference(1, 3),
                         GridReference(0, 3),
                         GridReference(0, 2)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 3),
-                    listOf(GridReference(1, 2), GridReference(2, 2), GridReference(2, 3), GridReference(0, 3)),
-                    null
+                    listOf(GridReference(1, 2), GridReference(2, 2), GridReference(2, 3), GridReference(0, 3))
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
-                    listOf(GridReference(2, 2), GridReference(1, 1)),
-                    null
+                    listOf(GridReference(2, 2), GridReference(1, 1))
                 )
             }, {
                 assertContains(
@@ -413,15 +378,13 @@ class HexGridGeneratorTest {
                         GridReference(2, 3),
                         GridReference(1, 3),
                         GridReference(1, 2)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 3),
-                    listOf(GridReference(2, 2), GridReference(1, 3)),
-                    null
+                    listOf(GridReference(2, 2), GridReference(1, 3))
                 )
             })
         })
@@ -449,8 +412,7 @@ class HexGridGeneratorTest {
                 assertContains(
                     grid.cells,
                     GridReference(0, 0),
-                    listOf(GridReference(1, 0), GridReference(0, 1)),
-                    null
+                    listOf(GridReference(1, 0), GridReference(0, 1))
                 )
             }, {
                 assertContains(
@@ -461,8 +423,7 @@ class HexGridGeneratorTest {
                         GridReference(1, 1),
                         GridReference(0, 1),
                         GridReference(0, 0)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
@@ -471,8 +432,7 @@ class HexGridGeneratorTest {
                     listOf(
                         GridReference(1, 1),
                         GridReference(1, 0)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
@@ -483,8 +443,7 @@ class HexGridGeneratorTest {
                         GridReference(1, 0),
                         GridReference(1, 1),
                         GridReference(1, 2),
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
@@ -495,8 +454,7 @@ class HexGridGeneratorTest {
                         GridReference(2, 0),
                         GridReference(1, 2),
                         GridReference(0, 1)
-                    ),
-                    null
+                    )
                 )
             }, {
                 assertContains(
@@ -505,8 +463,7 @@ class HexGridGeneratorTest {
                     listOf(
                         GridReference(0, 1),
                         GridReference(1, 1),
-                    ),
-                    null
+                    )
                 )
             })
         })

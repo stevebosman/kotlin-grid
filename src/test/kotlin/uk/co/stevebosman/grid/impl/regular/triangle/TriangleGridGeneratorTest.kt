@@ -34,29 +34,29 @@ class TriangleGridGeneratorTest {
                         grid.cells,
                         GridReference(0, 0),
                         listOf(GridReference(1, 0)),
-                        null
-                    )
+
+                        )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 1),
                         listOf(GridReference(1, 1)),
-                        null
-                    )
+
+                        )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(0, 0), GridReference(1, 1)),
-                        null
-                    )
+
+                        )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(1, 0), GridReference(0, 1)),
-                        null
-                    )
+
+                        )
                 })
         })
     }
@@ -84,64 +84,64 @@ class TriangleGridGeneratorTest {
                     grid.cells,
                     GridReference(0, 0),
                     listOf(GridReference(1, 0)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 1),
                     listOf(GridReference(1, 1), GridReference(0, 2)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
                     listOf(GridReference(0, 1), GridReference(1, 2)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 0),
                     listOf(GridReference(0, 0), GridReference(2, 0), GridReference(1, 1)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(0, 1), GridReference(2, 1)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
                     listOf(GridReference(0, 2), GridReference(2, 2)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
                     listOf(GridReference(1, 0)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
                     listOf(GridReference(1, 1), GridReference(2, 2)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1), GridReference(1, 2)),
-                    null
-                )
+
+                    )
             })
         })
     }
@@ -171,28 +171,24 @@ class TriangleGridGeneratorTest {
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(2, 0), GridReference(1, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 0),
                         listOf(GridReference(1, 0)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(1, 0), GridReference(2, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 1),
                         listOf(GridReference(1, 1)),
-                        null
                     )
                 })
         })
@@ -221,63 +217,54 @@ class TriangleGridGeneratorTest {
                     grid.cells,
                     GridReference(1, 0),
                     listOf(GridReference(2, 0), GridReference(1, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
                     listOf(GridReference(1, 0), GridReference(3, 0)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 0),
                     listOf(GridReference(2, 0), GridReference(3, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
                     listOf(GridReference(1, 1), GridReference(3, 1), GridReference(2, 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 1),
                     listOf(GridReference(3, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
                     listOf(GridReference(2, 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1), GridReference(1, 2), GridReference(3, 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 2),
                     listOf(GridReference(2, 2)),
-                    null
                 )
             })
         })
@@ -308,21 +295,18 @@ class TriangleGridGeneratorTest {
                         grid.cells,
                         GridReference(0, 0),
                         listOf(GridReference(1, 0)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(0, 0), GridReference(2, 0), GridReference(1, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(1, 0)),
-                        null
                     )
                 })
         })
@@ -352,63 +336,54 @@ class TriangleGridGeneratorTest {
                     grid.cells,
                     GridReference(0, 0),
                     listOf(GridReference(1, 0)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 0),
                     listOf(GridReference(0, 0), GridReference(2, 0), GridReference(1, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
                     listOf(GridReference(1, 0), GridReference(3, 0)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 0),
                     listOf(GridReference(2, 0), GridReference(4, 0), GridReference(3, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(4, 0),
                     listOf(GridReference(3, 0)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
                     listOf(GridReference(1, 1), GridReference(3, 1), GridReference(2, 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 1),
                     listOf(GridReference(3, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1)),
-                    null
                 )
             })
         })
@@ -439,15 +414,15 @@ class TriangleGridGeneratorTest {
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(1, 1)),
-                        null
-                    )
+
+                        )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(1, 0)),
-                        null
-                    )
+
+                        )
                 })
         })
     }
@@ -476,43 +451,43 @@ class TriangleGridGeneratorTest {
                     grid.cells,
                     GridReference(0, 1),
                     listOf(GridReference(1, 1), GridReference(0, 2)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
                     listOf(GridReference(0, 1)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 0),
                     listOf(GridReference(1, 1)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(0, 1), GridReference(2, 1)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
                     listOf(GridReference(1, 1), GridReference(2, 2)),
-                    null
-                )
+
+                    )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1)),
-                    null
-                )
+
+                    )
             })
         })
     }
@@ -542,14 +517,12 @@ class TriangleGridGeneratorTest {
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(1, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(1, 0)),
-                        null
                     )
                 })
         })
@@ -579,42 +552,36 @@ class TriangleGridGeneratorTest {
                     grid.cells,
                     GridReference(1, 0),
                     listOf(GridReference(1, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(1, 0), GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 1),
                     listOf(GridReference(1, 1), GridReference(3, 1), GridReference(2, 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(2, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 0),
                     listOf(GridReference(3, 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(3, 1),
                     listOf(GridReference(3, 0), GridReference(2, 1)),
-                    null
                 )
             })
         })
