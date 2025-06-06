@@ -26,7 +26,7 @@ class TriHexagonalGridCellPositionerTest {
         assertEqualPoints(
             listOf(
                 Point(1.5, 0.0),
-                Point(2.5,0.0),
+                Point(2.5, 0.0),
                 Point(2.0, HALF_ROOT_THREE),
             ), instance.getPolygon(GridReference(1, 0)).vertices
         )
@@ -37,19 +37,20 @@ class TriHexagonalGridCellPositionerTest {
         assertEqualPoints(
             listOf(
                 Point(2.0, HALF_ROOT_THREE),
-                Point(2.5,2*HALF_ROOT_THREE),
-                Point(1.5, 2*HALF_ROOT_THREE),
+                Point(2.5, 2 * HALF_ROOT_THREE),
+                Point(1.5, 2 * HALF_ROOT_THREE),
             ), instance.getPolygon(GridReference(2, 0)).vertices
         )
     }
+
     @Test
     fun testVerticesForTriangleZeroOne() {
         assertEqualPoints(
             listOf(
-                Point(0.5,2*HALF_ROOT_THREE),
-                Point(1.5, 2*HALF_ROOT_THREE),
-                Point(1.0, 3*HALF_ROOT_THREE),
-            ), instance.getPolygon(GridReference(0,1)).vertices
+                Point(0.5, 2 * HALF_ROOT_THREE),
+                Point(1.5, 2 * HALF_ROOT_THREE),
+                Point(1.0, 3 * HALF_ROOT_THREE),
+            ), instance.getPolygon(GridReference(0, 1)).vertices
         )
     }
 
@@ -57,10 +58,10 @@ class TriHexagonalGridCellPositionerTest {
     fun testVerticesForTriangleOneOne() {
         assertEqualPoints(
             listOf(
-                Point(1.0, 3*HALF_ROOT_THREE),
-                Point(1.5,4*HALF_ROOT_THREE),
-                Point(0.5, 4*HALF_ROOT_THREE),
-            ), instance.getPolygon(GridReference(1,1)).vertices
+                Point(1.0, 3 * HALF_ROOT_THREE),
+                Point(1.5, 4 * HALF_ROOT_THREE),
+                Point(0.5, 4 * HALF_ROOT_THREE),
+            ), instance.getPolygon(GridReference(1, 1)).vertices
         )
     }
 
@@ -80,7 +81,7 @@ class TriHexagonalGridCellPositionerTest {
 
     companion object {
         val instance = TriHexagonalGridCellPositioner
-        val HALF_ROOT_THREE = sqrt(3.0)/2
+        val HALF_ROOT_THREE = sqrt(3.0) / 2
     }
 
 }

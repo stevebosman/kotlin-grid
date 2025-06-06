@@ -83,10 +83,29 @@ Small API for generating grids of cells.
     val grid: Grid = TriHexagonalGridGenerator.generate(width = 7, height = 5, option = SquareOctagon2GridOption.START_TRIANGLES)
     ```
     ![Tri Hexagonal - starting with triangles](examples/trihexagonal_triangles.png)
+* Elongated Triangular
+  * Start with full row of triangles
+    ```kotlin
+    val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 9, ElongatedTriangularGridOption.START_TRIANGLES_FULL)
+    ```
+    ![Elongated Triangular](examples/elongated_triangular_start_triangles_full.png)
+  * Start with row of triangles - spiky
+    ```kotlin
+    val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 9, ElongatedTriangularGridOption.START_TRIANGLES_SPIKY)
+    ```
+    ![Elongated Triangular - spiky](examples/elongated_triangular_start_triangles_spiky.png)
+  * Start with row of squares
+    ```kotlin
+    val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 9, ElongatedTriangularGridOption.START_TRIANGLES_FULL)
+    ```
+    ![Elongated Triangular - Squares](examples/elongated_triangular_start_squares_full.png)
+  * Start with row of squares - spiky finish
+    ```kotlin
+    val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 8, ElongatedTriangularGridOption.START_TRIANGLES_SPIKY)
+    ```
+    ![Elongated Triangular - Spiky Squares](examples/elongated_triangular_start_squares_spiky.png)
 
 ### Planned
-* Square/Triangle (Elongated Triangular)  
-  ![Square/Triangle](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/1-uniform_n8.svg/250px-1-uniform_n8.svg.png)
 * Rhombi Tri hexagonal  
   ![Rhombi Tri Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tiling_small_rhombi_3-6_simple.svg/1024px-Tiling_small_rhombi_3-6_simple.svg.png)
 * Snub hexagonal  

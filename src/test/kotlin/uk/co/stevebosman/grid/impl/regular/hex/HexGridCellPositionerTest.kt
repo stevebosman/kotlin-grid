@@ -71,7 +71,7 @@ class HexGridCellPositionerTest {
         assertEqualPoints(
             listOf(
                 Point(14 * HALF_ROOT_THREE, 4.5),
-                Point( 15* HALF_ROOT_THREE, 5.0),
+                Point(15 * HALF_ROOT_THREE, 5.0),
                 Point(15 * HALF_ROOT_THREE, 6.0),
                 Point(14 * HALF_ROOT_THREE, 6.5),
                 Point(13 * HALF_ROOT_THREE, 6.0),

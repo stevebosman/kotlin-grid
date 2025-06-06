@@ -34,42 +34,36 @@ class TriHexagonalGridGeneratorTest {
                         grid.cells,
                         GridReference(0, 0),
                         listOf(GridReference(1, 0), GridReference(2, 0), GridReference(0, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 0),
                         listOf(GridReference(0, 0)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 0),
                         listOf(GridReference(0, 0), GridReference(2, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 1),
                         listOf(GridReference(0, 0), GridReference(2, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(2, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 1),
                         listOf(GridReference(2, 0), GridReference(0, 1), GridReference(1, 1)),
-                        null
                     )
                 })
         })
@@ -98,49 +92,42 @@ class TriHexagonalGridGeneratorTest {
                     grid.cells,
                     GridReference(0, 0),
                     listOf(GridReference(x = 1, y = 0), GridReference(x = 2, y = 0), GridReference(x = 0, y = 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 1),
                     listOf(GridReference(x = 0, y = 0), GridReference(x = 2, y = 1)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(0, 2),
                     listOf(GridReference(x = 1, y = 1), GridReference(x = 1, y = 2), GridReference(x = 2, y = 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 0),
                     listOf(GridReference(x = 0, y = 0), GridReference(x = 3, y = 0)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 1),
                     listOf(GridReference(x = 2, y = 1), GridReference(x = 0, y = 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(1, 2),
                     listOf(GridReference(x = 1, y = 1), GridReference(x = 0, y = 2), GridReference(x = 3, y = 2)),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 0),
                     listOf(GridReference(x = 0, y = 0), GridReference(x = 3, y = 0), GridReference(x = 2, y = 1)),
-                    null
                 )
             }, {
                 assertContains(
@@ -154,14 +141,12 @@ class TriHexagonalGridGeneratorTest {
                         GridReference(x = 4, y = 1),
                         GridReference(x = 1, y = 2)
                     ),
-                    null
                 )
             }, {
                 assertContains(
                     grid.cells,
                     GridReference(2, 2),
                     listOf(GridReference(x = 0, y = 2), GridReference(x = 3, y = 2)),
-                    null
                 )
             })
         })
@@ -220,42 +205,36 @@ class TriHexagonalGridGeneratorTest {
                         grid.cells,
                         GridReference(0, 1),
                         listOf(GridReference(x = 2, y = 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(x = 2, y = 1), GridReference(x = 0, y = 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 1),
                         listOf(GridReference(x = 0, y = 1), GridReference(x = 1, y = 1), GridReference(x = 1, y = 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 2),
                         listOf(GridReference(x = 1, y = 1), GridReference(x = 1, y = 2), GridReference(x = 2, y = 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 2),
                         listOf(GridReference(x = 1, y = 1), GridReference(x = 0, y = 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 2),
                         listOf(GridReference(x = 0, y = 2)),
-                        null
                     )
                 })
         })
@@ -287,14 +266,12 @@ class TriHexagonalGridGeneratorTest {
                         grid.cells,
                         GridReference(0, 1),
                         listOf(GridReference(2, 1)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 1),
                         listOf(GridReference(2, 1), GridReference(0, 2)),
-                        null
                     )
                 }, {
                     assertContains(
@@ -307,28 +284,24 @@ class TriHexagonalGridGeneratorTest {
                             GridReference(4, 1),
                             GridReference(1, 2)
                         ),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(0, 2),
                         listOf(GridReference(1, 1), GridReference(1, 2), GridReference(2, 2), GridReference(0, 3)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(1, 2),
                         listOf(GridReference(1, 1), GridReference(0, 2), GridReference(3, 2)),
-                        null
                     )
                 }, {
                     assertContains(
                         grid.cells,
                         GridReference(2, 2),
                         listOf(GridReference(0, 2), GridReference(3, 2), GridReference(2, 3)),
-                        null
                     )
                 })
         })
