@@ -18,9 +18,9 @@ object HexGridGenerator {
         }
 
         when (option) {
-            HexGridOption.STANDARD -> {
+            HexGridOption.STANDARD, HexGridOption.OFFSET -> {
                 yRange.forEach { y ->
-                    (0..width - 1).forEach { x ->
+                    xRange.forEach { x ->
                         references.add(GridReference(x, y))
                     }
                 }
@@ -33,14 +33,6 @@ object HexGridGenerator {
                     } else {
                         2
                     }).forEach { x ->
-                        references.add(GridReference(x, y))
-                    }
-                }
-            }
-
-            HexGridOption.OFFSET -> {
-                yRange.forEach { y ->
-                    (0..width - 1).forEach { x ->
                         references.add(GridReference(x, y))
                     }
                 }
