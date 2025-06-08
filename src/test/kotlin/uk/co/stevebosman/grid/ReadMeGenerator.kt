@@ -7,6 +7,8 @@ import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridGenerator
 import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridOption
 import uk.co.stevebosman.grid.impl.uniform.elongatedTriangular.ElongatedTriangularGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.elongatedTriangular.ElongatedTriangularGridOption
+import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridGenerator
+import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridOption
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridGenerator
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridOption
 import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalGridGenerator
@@ -114,5 +116,30 @@ fun main() {
     // Tri Hexagonal Grid 7 x 5 - Start Triangles
     File("examples/elongated_triangular_start_squares_spiky.svg").writeText(
         ElongatedTriangularGridGenerator.generate(12, 8, ElongatedTriangularGridOption.START_SQUARES_SPIKY).toSvg()
+    )
+
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
+    File("examples/rhombiTrihexagonal_singleton.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(1, 1, RhombiTriHexagonalGridOption.STANDARD).toSvg()
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
+    File("examples/rhombiTrihexagonal.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.STANDARD).toSvg()
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard SKip Last
+    File("examples/rhombiTrihexagonal_skip_last.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST).toSvg()
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Triangle
+    File("examples/rhombiTrihexagonal_triangle.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.TRIANGLE).toSvg()
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset
+    File("examples/rhombiTrihexagonal_offset.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.OFFSET).toSvg()
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset Skip Last
+    File("examples/rhombiTrihexagonal_offset_skip_last.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST).toSvg()
     )
 }

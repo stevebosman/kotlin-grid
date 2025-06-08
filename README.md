@@ -104,10 +104,39 @@ Small API for generating grids of cells.
     val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 8, ElongatedTriangularGridOption.START_TRIANGLES_SPIKY)
     ```
     ![Elongated Triangular - Spiky Squares](examples/elongated_triangular_start_squares_spiky.png)
+* Rhombi Tri hexagonal  
+  * Singleton
+    ```kotlin
+    val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 1, height = 1)
+    ```
+    ![Hexagonal - singleton](examples/rhombiTrihexagonal_singleton.png)
+  * Standard
+    ```kotlin
+    val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3)
+    ```
+    ![Hexagonal - standard](examples/rhombiTrihexagonal.png)
+  * Standard Skip Last
+    ```kotlin
+    val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST)
+    ```
+    ![Hexagonal - standard skip last](examples/rhombiTrihexagonal_skip_last.png)
+  * Offset
+    ```kotlin
+    val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.OFFSET)
+    ```
+    ![Hexagonal - offset](examples/rhombiTrihexagonal_offset.png)
+  * Offset Skip Last
+    ```kotlin
+    val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST)
+    ```
+    ![Hexagonal - offset skip last](examples/rhombiTrihexagonal_offset_skip_last.png)
+  * Triangular
+    ```kotlin
+    val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.TRIANGLE)
+    ```
+    ![Hexagonal - triangular](examples/rhombiTrihexagonal_triangle.png)
 
 ### Planned
-* Rhombi Tri hexagonal  
-  ![Rhombi Tri Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tiling_small_rhombi_3-6_simple.svg/1024px-Tiling_small_rhombi_3-6_simple.svg.png)
 * Snub hexagonal  
   ![Snub Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg/120px-Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg.png)
 * Floret Pentagonal  
