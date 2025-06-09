@@ -24,14 +24,11 @@ fun main() {
     // Square Grid 5 x 5
     File("examples/square.svg").writeText(
         SquareGridGenerator.generate(5, 5)
-            .toSvg(SvgOptions(fill = { r: GridReference -> if ((r.x + r.y) % 2 == 0) "lightblue" else "red" }))
+            .toSvg(SvgOptions(fill = { r: GridReference -> if ((r.x + r.y) % 2 == 0) "gold" else "darkorange" }))
     )
 
     val triangularSvgOptions = SvgOptions(scaling = 35, fill = { r: GridReference ->
-        when {
-            TriangleGridHelper.isUp(r) -> "red"
-            else -> "lightblue"
-        }
+        if (TriangleGridHelper.isUp(r)) "darkorange" else "gold"
     })
 
     // Triangular Grid 7 x 4 - Standard
@@ -60,11 +57,10 @@ fun main() {
     )
 
     val hexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
-        when {
-            r.x % 2 == 0 && r.y % 2 == 0 -> "lightgreen"
-            r.x % 2 == 0 && r.y % 2 == 1 -> "red"
-            r.x % 2 == 1 && r.y % 2 == 0 -> "lightblue"
-            else -> "yellow"
+        when ((3 + r.x - r.y % 2) % 3) {
+            0 -> "greenyellow"
+            1 -> "gold"
+            else -> "darkorange"
         }
     })
 
@@ -98,9 +94,9 @@ fun main() {
 
     val truncatedSquareSvgOptions = SvgOptions(fill = { r: GridReference ->
         when {
-            SquareOctagon2GridHelper.isSquareCell(r) -> "lightgreen"
-            (r.y % 2 == 0) -> "lightsalmon"
-            else -> "lightblue"
+            SquareOctagon2GridHelper.isSquareCell(r) -> "greenyellow"
+            (r.y % 2 == 0) -> "darkorange"
+            else -> "gold"
         }
     })
 
@@ -123,8 +119,8 @@ fun main() {
 
     val triHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (TriHexagonalCellType.of(r)) {
-            TriHexagonalCellType.TriangleUp, TriHexagonalCellType.TriangleDown -> "yellow"
-            TriHexagonalCellType.Hexagon -> "lightblue"
+            TriHexagonalCellType.TriangleUp, TriHexagonalCellType.TriangleDown -> "darkorange"
+            TriHexagonalCellType.Hexagon -> "gold"
         }
     })
 
@@ -148,11 +144,13 @@ fun main() {
     val elongatedTriangularSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (ElongatedTriangularCellType.of(r)) {
             ElongatedTriangularCellType.TriangleDown ->
-                if (r.y % 4 == 2) "lightblue" else if (r.x % 4 == 0) "salmon" else "yellow"
+                if (r.y % 4 == 2) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
+
             ElongatedTriangularCellType.TriangleUp ->
-                if (r.y % 4 == 0) "lightblue" else if (r.x % 4 == 0) "salmon" else "yellow"
+                if (r.y % 4 == 0) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
+
             ElongatedTriangularCellType.Square ->
-                if (r.x % 4 == 0) (if (r.y % 4 == 3) "lightblue" else "yellow") else "salmon"
+                if (r.x % 4 == 0) (if (r.y % 4 == 3) "gold" else "greenyellow") else "darkorange"
         }
     })
 
@@ -179,12 +177,8 @@ fun main() {
 
     val rhombiTriHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (RhombiTriHexagonalCellType.of(r)) {
-            RhombiTriHexagonalCellType.Hexagon -> "red"
-            RhombiTriHexagonalCellType.TriangleDown -> "yellow"
-            RhombiTriHexagonalCellType.TriangleUp -> "yellow"
-            RhombiTriHexagonalCellType.Square0 -> "lightblue"
-            RhombiTriHexagonalCellType.Square30 -> "lightblue"
-            RhombiTriHexagonalCellType.Square60 -> "lightblue"
+            RhombiTriHexagonalCellType.Hexagon, RhombiTriHexagonalCellType.TriangleDown, RhombiTriHexagonalCellType.TriangleUp -> "darkorange"
+            RhombiTriHexagonalCellType.Square0, RhombiTriHexagonalCellType.Square30, RhombiTriHexagonalCellType.Square60 -> "gold"
         }
     })
 
