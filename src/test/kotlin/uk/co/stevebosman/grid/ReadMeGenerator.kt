@@ -147,9 +147,12 @@ fun main() {
 
     val elongatedTriangularSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (ElongatedTriangularCellType.of(r)) {
-            ElongatedTriangularCellType.TriangleDown -> "yellow"
-            ElongatedTriangularCellType.TriangleUp -> "lightgreen"
-            ElongatedTriangularCellType.Square -> if ((r.y + r.x / 2) % 2 == 0) "lightsalmon" else "lightblue"
+            ElongatedTriangularCellType.TriangleDown ->
+                if (r.y % 4 == 2) "lightblue" else if (r.x % 4 == 0) "salmon" else "yellow"
+            ElongatedTriangularCellType.TriangleUp ->
+                if (r.y % 4 == 0) "lightblue" else if (r.x % 4 == 0) "salmon" else "yellow"
+            ElongatedTriangularCellType.Square ->
+                if (r.x % 4 == 0) (if (r.y % 4 == 3) "lightblue" else "yellow") else "salmon"
         }
     })
 
