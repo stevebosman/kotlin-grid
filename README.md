@@ -8,139 +8,139 @@ Small API for generating grids of cells.
   ```kotlin
   val grid: Grid = SquareGridGenerator.generate(height = 5, width = 5)
   ```
-  ![Square](examples/square.png)
+  ![Square](examples/square.svg.png)
 * Triangular
   * Standard
     ```kotlin
     val grid: Grid = TriangleGridGenerator.generate(width = 7, height = 4)
     ```
-    ![Triangular - standard](examples/triangular.png)
+    ![Triangular - standard](examples/triangular.svg.png)
   * Offset
     ```kotlin
     val grid: Grid = TriangleGridGenerator.generate(width = 7, height = 4, option = TriangleGridOption.OFFSET)
     ```
-    ![Triangular - offset](examples/triangular_offset.png)
+    ![Triangular - offset](examples/triangular_offset.svg.png)
   * Spiky
     ```kotlin
     val grid: Grid = TriangleGridGenerator.generate(width = 7, height = 4, option = TriangleGridOption.SPIKY)
     ```
-    ![Triangular - spiky](examples/triangular_spiky.png)
+    ![Triangular - spiky](examples/triangular_spiky.svg.png)
   * Offset Spiky
     ```kotlin
     val grid: Grid = TriangleGridGenerator.generate(width = 7, height = 4, option = TriangleGridOption.OFFSET_SPIKY)
     ```
-    ![Triangular - offset spiky](examples/triangular_offset_spiky.png)
+    ![Triangular - offset spiky](examples/triangular_offset_spiky.svg.png)
   * Triangle
     ```kotlin
     val grid: Grid = TriangleGridGenerator.generate(4, 5, TriangleGridOption.TRIANGLE)
     ```
-    ![Triangular - as big triangle](examples/triangular_triangle.png)
+    ![Triangular - as big triangle](examples/triangular_triangle.svg.png)
 * Hexagonal  
   * Standard
     ```kotlin
     val grid: Grid = HexGridGenerator.generate(width = 5, height = 5)
     ```
-    ![Hexagonal - standard](examples/hexagonal_standard.png)
+    ![Hexagonal - standard](examples/hexagonal_standard.svg.png)
   * Standard Skip Last
     ```kotlin
     val grid: Grid = HexGridGenerator.generate(width = 5, height = 5, option = HexGridOption.STANDARD_SKIP_LAST)
     ```
-    ![Hexagonal - skip last on odd rows](examples/hexagonal_standard_skip_last.png)
+    ![Hexagonal - skip last on odd rows](examples/hexagonal_standard_skip_last.svg.png)
   * Offset
     ```kotlin
     val grid: Grid = HexGridGenerator.generate(width = 5, height = 5, option = HexGridOption.OFFSET)
     ```
-    ![Hexagonal - offset](examples/hexagonal_offset.png)
+    ![Hexagonal - offset](examples/hexagonal_offset.svg.png)
   * Offset Skip Last
     ```kotlin
     val grid: Grid = HexGridGenerator.generate(width = 5, height = 5, option = HexGridOption.OFFSET_SKIP_LAST)
     ```
-    ![Hexagonal - offset skip last on odd rows](examples/hexagonal_offset_skip_last.png)
+    ![Hexagonal - offset skip last on odd rows](examples/hexagonal_offset_skip_last.svg.png)
   * Triangular
     ```kotlin
     val grid: Grid = HexGridGenerator.generate(width = 5, height = 5, option = HexGridOption.TRIANGLE)
     ```
-    ![Hexagonal - in triangle shape](examples/hexagonal_triangle.png)
+    ![Hexagonal - in triangle shape](examples/hexagonal_triangle.svg.png)
 * Octagonal/Square (Truncated Square)  
   * Start with octagon
     ```kotlin
     val grid: Grid = SquareOctagon2GridGenerator.generate(width = 5, height = 5, option = SquareOctagon2GridOption.START_OCTAGON)
     ```
-    ![Truncated Square - start with octagons](examples/truncated_square_start_octagon.png)
+    ![Truncated Square - start with octagons](examples/truncated_square_start_octagon.svg.png)
   * Start with square
     ```kotlin
     val grid: Grid = SquareOctagon2GridGenerator.generate(width = 5, height = 5, option = SquareOctagon2GridOption.START_SQUARE)
     ```
-    ![Truncated Square - start with squares](examples/truncated_square_start_square.png)
+    ![Truncated Square - start with squares](examples/truncated_square_start_square.svg.png)
 * Tri hexagonal
   * Start with hexagon
     ```kotlin
     val grid: Grid = TriHexagonalGridGenerator.generate(width = 7, height = 5, option = SquareOctagon2GridOption.START_HEXAGON)
     ```
-    ![Tri Hexagonal](examples/trihexagonal.png)
+    ![Tri Hexagonal](examples/trihexagonal.svg.png)
   * Start with triangles
     ```kotlin
     val grid: Grid = TriHexagonalGridGenerator.generate(width = 7, height = 5, option = SquareOctagon2GridOption.START_TRIANGLES)
     ```
-    ![Tri Hexagonal - starting with triangles](examples/trihexagonal_triangles.png)
+    ![Tri Hexagonal - starting with triangles](examples/trihexagonal_triangles.svg.png)
 * Elongated Triangular
   * Start with full row of triangles
     ```kotlin
     val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 9, ElongatedTriangularGridOption.START_TRIANGLES_FULL)
     ```
-    ![Elongated Triangular](examples/elongated_triangular_start_triangles_full.png)
+    ![Elongated Triangular](examples/elongated_triangular_start_triangles_full.svg.png)
   * Start with row of triangles - spiky
     ```kotlin
     val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 9, ElongatedTriangularGridOption.START_TRIANGLES_SPIKY)
     ```
-    ![Elongated Triangular - spiky](examples/elongated_triangular_start_triangles_spiky.png)
+    ![Elongated Triangular - spiky](examples/elongated_triangular_start_triangles_spiky.svg.png)
   * Start with row of squares
     ```kotlin
     val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 9, ElongatedTriangularGridOption.START_TRIANGLES_FULL)
     ```
-    ![Elongated Triangular - Squares](examples/elongated_triangular_start_squares_full.png)
+    ![Elongated Triangular - Squares](examples/elongated_triangular_start_squares_full.svg.png)
   * Start with row of squares - spiky finish
     ```kotlin
     val grid: Grid = ElongatedTriangularGridGenerator.generate(12, 8, ElongatedTriangularGridOption.START_TRIANGLES_SPIKY)
     ```
-    ![Elongated Triangular - Spiky Squares](examples/elongated_triangular_start_squares_spiky.png)
+    ![Elongated Triangular - Spiky Squares](examples/elongated_triangular_start_squares_spiky.svg.png)
 * Rhombi Tri hexagonal  
   * Singleton
     ```kotlin
     val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 1, height = 1)
     ```
-    ![Hexagonal - singleton](examples/rhombiTrihexagonal_singleton.png)
+    ![Hexagonal - singleton](examples/rhombiTrihexagonal_singleton.svg.png)
   * Standard
     ```kotlin
     val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3)
     ```
-    ![Hexagonal - standard](examples/rhombiTrihexagonal.png)
+    ![Hexagonal - standard](examples/rhombiTrihexagonal.svg.png)
   * Standard Skip Last
     ```kotlin
     val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST)
     ```
-    ![Hexagonal - standard skip last](examples/rhombiTrihexagonal_skip_last.png)
+    ![Hexagonal - standard skip last](examples/rhombiTrihexagonal_skip_last.svg.png)
   * Offset
     ```kotlin
     val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.OFFSET)
     ```
-    ![Hexagonal - offset](examples/rhombiTrihexagonal_offset.png)
+    ![Hexagonal - offset](examples/rhombiTrihexagonal_offset.svg.png)
   * Offset Skip Last
     ```kotlin
     val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST)
     ```
-    ![Hexagonal - offset skip last](examples/rhombiTrihexagonal_offset_skip_last.png)
+    ![Hexagonal - offset skip last](examples/rhombiTrihexagonal_offset_skip_last.svg.png)
   * Triangular
     ```kotlin
     val grid: Grid = RhombiTriHexagonalGridGenerator.generate(width = 3, height = 3, RhombiTriHexagonalGridOption.TRIANGLE)
     ```
-    ![Hexagonal - triangular](examples/rhombiTrihexagonal_triangle.png)
+    ![Hexagonal - triangular](examples/rhombiTrihexagonal_triangle.svg.png)
 
 ### Planned
 * Snub hexagonal  
-  ![Snub Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg/120px-Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg.png)
+  ![Snub Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg/120px-Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg.svg.png)
 * Floret Pentagonal  
-  ![Floret Pentagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg/120px-Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg.png)
+  ![Floret Pentagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg/120px-Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg.svg.png)
 
 ## SVG Grid Generation
 Generates images like those used in the supported section of this README file.

@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="210.0" height="226.50635094610965" viewBox="0 0 210.0 226.50635094610965" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <polygon points="17.5,5.000000000000002 42.5,5.000000000000002 55.0,26.650635094610966 42.5,48.30127018922193 17.5,48.30127018922193 5.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="42.5,5.0 67.5,5.0 55.0,26.65063509461097" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="55.0,26.65063509461096 67.5,48.301270189221924 42.5,48.301270189221924" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="67.5,5.000000000000002 92.5,5.000000000000002 105.0,26.650635094610966 92.5,48.30127018922193 67.5,48.30127018922193 55.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="92.5,5.0 117.5,5.0 105.0,26.65063509461097" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="105.0,26.65063509461096 117.5,48.301270189221924 92.5,48.301270189221924" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="117.5,5.000000000000002 142.5,5.000000000000002 155.0,26.650635094610966 142.5,48.30127018922193 117.5,48.30127018922193 105.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="142.5,5.0 167.5,5.0 155.0,26.65063509461097" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="155.0,26.65063509461096 167.5,48.301270189221924 142.5,48.301270189221924" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="167.5,5.000000000000002 192.5,5.000000000000002 205.0,26.650635094610966 192.5,48.30127018922193 167.5,48.30127018922193 155.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="17.5,48.30127018922194 42.5,48.30127018922194 30.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="30.0,69.95190528383289 42.5,91.60254037844386 17.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="42.5,48.30127018922194 67.5,48.30127018922194 80.0,69.9519052838329 67.5,91.60254037844386 42.5,91.60254037844386 30.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="67.5,48.30127018922194 92.5,48.30127018922194 80.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="80.0,69.95190528383289 92.5,91.60254037844386 67.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="92.5,48.30127018922194 117.5,48.30127018922194 130.0,69.9519052838329 117.5,91.60254037844386 92.5,91.60254037844386 80.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="117.5,48.30127018922194 142.5,48.30127018922194 130.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="130.0,69.95190528383289 142.5,91.60254037844386 117.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="142.5,48.30127018922194 167.5,48.30127018922194 180.0,69.9519052838329 167.5,91.60254037844386 142.5,91.60254037844386 130.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="167.5,48.30127018922194 192.5,48.30127018922194 180.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="180.0,69.95190528383289 192.5,91.60254037844386 167.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="17.5,91.60254037844386 42.5,91.60254037844386 55.0,113.25317547305482 42.5,134.90381056766577 17.5,134.90381056766577 5.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="42.5,91.60254037844385 67.5,91.60254037844385 55.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="55.0,113.25317547305482 67.5,134.9038105676658 42.5,134.9038105676658" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="67.5,91.60254037844386 92.5,91.60254037844386 105.0,113.25317547305482 92.5,134.90381056766577 67.5,134.90381056766577 55.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="92.5,91.60254037844385 117.5,91.60254037844385 105.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="105.0,113.25317547305482 117.5,134.9038105676658 92.5,134.9038105676658" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="117.5,91.60254037844386 142.5,91.60254037844386 155.0,113.25317547305482 142.5,134.90381056766577 117.5,134.90381056766577 105.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="142.5,91.60254037844385 167.5,91.60254037844385 155.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="155.0,113.25317547305482 167.5,134.9038105676658 142.5,134.9038105676658" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="167.5,91.60254037844386 192.5,91.60254037844386 205.0,113.25317547305482 192.5,134.90381056766577 167.5,134.90381056766577 155.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="17.5,134.90381056766577 42.5,134.90381056766577 30.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="30.0,156.55444566227675 42.5,178.20508075688775 17.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="42.5,134.9038105676658 67.5,134.9038105676658 80.0,156.55444566227675 67.5,178.20508075688772 42.5,178.20508075688772 30.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="67.5,134.90381056766577 92.5,134.90381056766577 80.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="80.0,156.55444566227675 92.5,178.20508075688775 67.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="92.5,134.9038105676658 117.5,134.9038105676658 130.0,156.55444566227675 117.5,178.20508075688772 92.5,178.20508075688772 80.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="117.5,134.90381056766577 142.5,134.90381056766577 130.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="130.0,156.55444566227675 142.5,178.20508075688775 117.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="142.5,134.9038105676658 167.5,134.9038105676658 180.0,156.55444566227675 167.5,178.20508075688772 142.5,178.20508075688772 130.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="167.5,134.90381056766577 192.5,134.90381056766577 180.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="180.0,156.55444566227675 192.5,178.20508075688775 167.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="17.5,178.20508075688772 42.5,178.20508075688772 55.0,199.85571585149867 42.5,221.50635094610965 17.5,221.50635094610965 5.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="42.5,178.20508075688772 67.5,178.20508075688772 55.0,199.8557158514987" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="55.0,199.85571585149864 67.5,221.50635094610965 42.5,221.50635094610965" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="67.5,178.20508075688772 92.5,178.20508075688772 105.0,199.85571585149867 92.5,221.50635094610965 67.5,221.50635094610965 55.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="92.5,178.20508075688772 117.5,178.20508075688772 105.0,199.8557158514987" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="105.0,199.85571585149864 117.5,221.50635094610965 92.5,221.50635094610965" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="117.5,178.20508075688772 142.5,178.20508075688772 155.0,199.85571585149867 142.5,221.50635094610965 117.5,221.50635094610965 105.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
-    <polygon points="142.5,178.20508075688772 167.5,178.20508075688772 155.0,199.8557158514987" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="155.0,199.85571585149864 167.5,221.50635094610965 142.5,221.50635094610965" stroke="black" stroke-linecap="round" stroke-width="1" fill="yellow"/>
-    <polygon points="167.5,178.20508075688772 192.5,178.20508075688772 205.0,199.85571585149867 192.5,221.50635094610965 167.5,221.50635094610965 155.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="lightblue"/>
+    <polygon points="17.5,5.000000000000002 42.5,5.000000000000002 55.0,26.650635094610966 42.5,48.30127018922193 17.5,48.30127018922193 5.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="42.5,5.0 67.5,5.0 55.0,26.65063509461097" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="55.0,26.65063509461096 67.5,48.301270189221924 42.5,48.301270189221924" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="67.5,5.000000000000002 92.5,5.000000000000002 105.0,26.650635094610966 92.5,48.30127018922193 67.5,48.30127018922193 55.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="92.5,5.0 117.5,5.0 105.0,26.65063509461097" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="105.0,26.65063509461096 117.5,48.301270189221924 92.5,48.301270189221924" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="117.5,5.000000000000002 142.5,5.000000000000002 155.0,26.650635094610966 142.5,48.30127018922193 117.5,48.30127018922193 105.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="142.5,5.0 167.5,5.0 155.0,26.65063509461097" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="155.0,26.65063509461096 167.5,48.301270189221924 142.5,48.301270189221924" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="167.5,5.000000000000002 192.5,5.000000000000002 205.0,26.650635094610966 192.5,48.30127018922193 167.5,48.30127018922193 155.0,26.650635094610966" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="17.5,48.30127018922194 42.5,48.30127018922194 30.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="30.0,69.95190528383289 42.5,91.60254037844386 17.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="42.5,48.30127018922194 67.5,48.30127018922194 80.0,69.9519052838329 67.5,91.60254037844386 42.5,91.60254037844386 30.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="67.5,48.30127018922194 92.5,48.30127018922194 80.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="80.0,69.95190528383289 92.5,91.60254037844386 67.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="92.5,48.30127018922194 117.5,48.30127018922194 130.0,69.9519052838329 117.5,91.60254037844386 92.5,91.60254037844386 80.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="117.5,48.30127018922194 142.5,48.30127018922194 130.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="130.0,69.95190528383289 142.5,91.60254037844386 117.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="142.5,48.30127018922194 167.5,48.30127018922194 180.0,69.9519052838329 167.5,91.60254037844386 142.5,91.60254037844386 130.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="167.5,48.30127018922194 192.5,48.30127018922194 180.0,69.9519052838329" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="180.0,69.95190528383289 192.5,91.60254037844386 167.5,91.60254037844386" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="17.5,91.60254037844386 42.5,91.60254037844386 55.0,113.25317547305482 42.5,134.90381056766577 17.5,134.90381056766577 5.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="42.5,91.60254037844385 67.5,91.60254037844385 55.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="55.0,113.25317547305482 67.5,134.9038105676658 42.5,134.9038105676658" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="67.5,91.60254037844386 92.5,91.60254037844386 105.0,113.25317547305482 92.5,134.90381056766577 67.5,134.90381056766577 55.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="92.5,91.60254037844385 117.5,91.60254037844385 105.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="105.0,113.25317547305482 117.5,134.9038105676658 92.5,134.9038105676658" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="117.5,91.60254037844386 142.5,91.60254037844386 155.0,113.25317547305482 142.5,134.90381056766577 117.5,134.90381056766577 105.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="142.5,91.60254037844385 167.5,91.60254037844385 155.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="155.0,113.25317547305482 167.5,134.9038105676658 142.5,134.9038105676658" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="167.5,91.60254037844386 192.5,91.60254037844386 205.0,113.25317547305482 192.5,134.90381056766577 167.5,134.90381056766577 155.0,113.25317547305482" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="17.5,134.90381056766577 42.5,134.90381056766577 30.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="30.0,156.55444566227675 42.5,178.20508075688775 17.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="42.5,134.9038105676658 67.5,134.9038105676658 80.0,156.55444566227675 67.5,178.20508075688772 42.5,178.20508075688772 30.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="67.5,134.90381056766577 92.5,134.90381056766577 80.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="80.0,156.55444566227675 92.5,178.20508075688775 67.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="92.5,134.9038105676658 117.5,134.9038105676658 130.0,156.55444566227675 117.5,178.20508075688772 92.5,178.20508075688772 80.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="117.5,134.90381056766577 142.5,134.90381056766577 130.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="130.0,156.55444566227675 142.5,178.20508075688775 117.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="142.5,134.9038105676658 167.5,134.9038105676658 180.0,156.55444566227675 167.5,178.20508075688772 142.5,178.20508075688772 130.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="167.5,134.90381056766577 192.5,134.90381056766577 180.0,156.55444566227675" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="180.0,156.55444566227675 192.5,178.20508075688775 167.5,178.20508075688775" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="17.5,178.20508075688772 42.5,178.20508075688772 55.0,199.85571585149867 42.5,221.50635094610965 17.5,221.50635094610965 5.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="42.5,178.20508075688772 67.5,178.20508075688772 55.0,199.8557158514987" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="55.0,199.85571585149864 67.5,221.50635094610965 42.5,221.50635094610965" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="67.5,178.20508075688772 92.5,178.20508075688772 105.0,199.85571585149867 92.5,221.50635094610965 67.5,221.50635094610965 55.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="92.5,178.20508075688772 117.5,178.20508075688772 105.0,199.8557158514987" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="105.0,199.85571585149864 117.5,221.50635094610965 92.5,221.50635094610965" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="117.5,178.20508075688772 142.5,178.20508075688772 155.0,199.85571585149867 142.5,221.50635094610965 117.5,221.50635094610965 105.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="142.5,178.20508075688772 167.5,178.20508075688772 155.0,199.8557158514987" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="155.0,199.85571585149864 167.5,221.50635094610965 142.5,221.50635094610965" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
+    <polygon points="167.5,178.20508075688772 192.5,178.20508075688772 205.0,199.85571585149867 192.5,221.50635094610965 167.5,221.50635094610965 155.0,199.85571585149867" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
 </svg>
