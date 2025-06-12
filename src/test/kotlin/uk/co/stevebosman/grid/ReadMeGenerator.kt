@@ -12,6 +12,9 @@ import uk.co.stevebosman.grid.impl.uniform.elongatedTriangular.ElongatedTriangul
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalCellType
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridOption
+import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalCellType
+import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridGenerator
+import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridOption
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridGenerator
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridHelper
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridOption
@@ -21,12 +24,25 @@ import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalGridOption
 import java.io.File
 
 fun main() {
+    generateSquareExamples()
+    generateTriangleExamples()
+    generateHexagonalExamples()
+    generateTruncatedSquareExamples()
+    generateTriHexagonalExamples()
+    generateElongatedTriangularExamples()
+    generateRhombiTriHexagonalExamples()
+    generateSnubHexagonalExamples()
+}
+
+fun generateSquareExamples() {
     // Square Grid 5 x 5
     File("examples/square.svg").writeText(
         SquareGridGenerator.generate(5, 5)
             .toSvg(SvgOptions(fill = { r: GridReference -> if ((r.x + r.y) % 2 == 0) "gold" else "darkorange" }))
     )
+}
 
+fun generateTriangleExamples() {
     val triangularSvgOptions = SvgOptions(scaling = 35, fill = { r: GridReference ->
         if (TriangleGridHelper.isUp(r)) "darkorange" else "gold"
     })
@@ -46,111 +62,103 @@ fun main() {
     // Triangular Grid 7 x 4 - Offset Spiky
     File("examples/triangular_offset_spiky.svg").writeText(
         TriangleGridGenerator.generate(
-            7,
-            4,
-            TriangleGridOption.OFFSET_SPIKY
+            7, 4, TriangleGridOption.OFFSET_SPIKY
         ).toSvg(triangularSvgOptions)
     )
     // Triangular Grid 4 x 5 - Triangle
     File("examples/triangular_triangle.svg").writeText(
         TriangleGridGenerator.generate(4, 5, TriangleGridOption.TRIANGLE).toSvg(triangularSvgOptions)
     )
+}
 
-    val hexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
-        when ((3 + r.x - r.y % 2) % 3) {
-            0 -> "greenyellow"
-            1 -> "gold"
-            else -> "darkorange"
+private fun generateSnubHexagonalExamples() {
+    val snubHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
+        when (SnubHexagonalCellType.of(r)) {
+            SnubHexagonalCellType.Hexagon, SnubHexagonalCellType.TriangleDown, SnubHexagonalCellType.TriangleUp -> "darkorange"
+            SnubHexagonalCellType.Square0, SnubHexagonalCellType.Square30, SnubHexagonalCellType.Square60 -> "gold"
         }
     })
 
-    // Hex Grid 5 x 5 - Standard
-    File("examples/hexagonal_standard.svg")
-        .writeText(HexGridGenerator.generate(5, 5, HexGridOption.STANDARD).toSvg(hexagonalSvgOptions))
-    // Hex Grid 5 x 5 - Standard Skip Last
-    File("examples/hexagonal_standard_skip_last.svg").writeText(
-        HexGridGenerator.generate(
-            5,
-            5,
-            HexGridOption.STANDARD_SKIP_LAST
-        ).toSvg(hexagonalSvgOptions)
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
+    File("examples/snubHexagonal_singleton.svg").writeText(
+        SnubHexagonalGridGenerator.generate(1, 1, SnubHexagonalGridOption.STANDARD)
+            .toSvg(snubHexagonalSvgOptions)
     )
-    // Hex Grid 5 x 5 - Offset
-    File("examples/hexagonal_offset.svg").writeText(
-        HexGridGenerator.generate(5, 5, HexGridOption.OFFSET).toSvg(hexagonalSvgOptions)
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
+    File("examples/snubHexagonal.svg").writeText(
+        SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.STANDARD)
+            .toSvg(snubHexagonalSvgOptions)
     )
-    // Hex Grid 5 x 5 - Offset Skip Last
-    File("examples/hexagonal_offset_skip_last.svg").writeText(
-        HexGridGenerator.generate(
-            5,
-            5,
-            HexGridOption.OFFSET_SKIP_LAST
-        ).toSvg(hexagonalSvgOptions)
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard SKip Last
+    File("examples/snubHexagonal_skip_last.svg").writeText(
+        SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.STANDARD_SKIP_LAST)
+            .toSvg(snubHexagonalSvgOptions)
     )
-    // Hex Grid 5 x 5 - Triangle
-    File("examples/hexagonal_triangle.svg").writeText(
-        HexGridGenerator.generate(5, 5, HexGridOption.TRIANGLE).toSvg(hexagonalSvgOptions)
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Triangle
+    File("examples/snubHexagonal_triangle.svg").writeText(
+        SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.TRIANGLE)
+            .toSvg(snubHexagonalSvgOptions)
     )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset
+    File("examples/snubHexagonal_offset.svg").writeText(
+        SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.OFFSET)
+            .toSvg(snubHexagonalSvgOptions)
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset Skip Last
+    File("examples/snubHexagonal_offset_skip_last.svg").writeText(
+        SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.OFFSET_SKIP_LAST)
+            .toSvg(snubHexagonalSvgOptions)
+    )
+}
 
-    val truncatedSquareSvgOptions = SvgOptions(fill = { r: GridReference ->
-        when {
-            SquareOctagon2GridHelper.isSquareCell(r) -> "greenyellow"
-            (r.y % 2 == 0) -> "darkorange"
-            else -> "gold"
+private fun generateRhombiTriHexagonalExamples() {
+    val rhombiTriHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
+        when (RhombiTriHexagonalCellType.of(r)) {
+            RhombiTriHexagonalCellType.Hexagon, RhombiTriHexagonalCellType.TriangleDown, RhombiTriHexagonalCellType.TriangleUp -> "darkorange"
+            RhombiTriHexagonalCellType.Square0, RhombiTriHexagonalCellType.Square30, RhombiTriHexagonalCellType.Square60 -> "gold"
         }
     })
 
-    // Truncated Square Grid 5 x 5 - Start Octagon
-    File("examples/truncated_square_start_octagon.svg").writeText(
-        SquareOctagon2GridGenerator.generate(
-            5,
-            5,
-            SquareOctagon2GridOption.START_OCTAGON
-        ).toSvg(truncatedSquareSvgOptions)
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
+    File("examples/rhombiTriHexagonal_singleton.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(1, 1, RhombiTriHexagonalGridOption.STANDARD)
+            .toSvg(rhombiTriHexagonalSvgOptions)
     )
-    // Truncated Square Grid 5 x 5 - Start Square
-    File("examples/truncated_square_start_square.svg").writeText(
-        SquareOctagon2GridGenerator.generate(
-            5,
-            5,
-            SquareOctagon2GridOption.START_SQUARE
-        ).toSvg(truncatedSquareSvgOptions)
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
+    File("examples/rhombiTriHexagonal.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.STANDARD)
+            .toSvg(rhombiTriHexagonalSvgOptions)
     )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard SKip Last
+    File("examples/rhombiTriHexagonal_skip_last.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST)
+            .toSvg(rhombiTriHexagonalSvgOptions)
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Triangle
+    File("examples/rhombiTriHexagonal_triangle.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.TRIANGLE)
+            .toSvg(rhombiTriHexagonalSvgOptions)
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset
+    File("examples/rhombiTriHexagonal_offset.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.OFFSET)
+            .toSvg(rhombiTriHexagonalSvgOptions)
+    )
+    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset Skip Last
+    File("examples/rhombiTriHexagonal_offset_skip_last.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST)
+            .toSvg(rhombiTriHexagonalSvgOptions)
+    )
+}
 
-    val triHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
-        when (TriHexagonalCellType.of(r)) {
-            TriHexagonalCellType.TriangleUp, TriHexagonalCellType.TriangleDown -> "darkorange"
-            TriHexagonalCellType.Hexagon -> "gold"
-        }
-    })
-
-    // Tri Hexagonal Grid 7 x 5 - Start Hexagon
-    File("examples/trihexagonal.svg").writeText(
-        TriHexagonalGridGenerator.generate(
-            7,
-            5,
-            TriHexagonalGridOption.START_HEXAGON
-        ).toSvg(triHexagonalSvgOptions)
-    )
-    // Tri Hexagonal Grid 7 x 5 - Start Triangles
-    File("examples/trihexagonal_triangles.svg").writeText(
-        TriHexagonalGridGenerator.generate(
-            7,
-            5,
-            TriHexagonalGridOption.START_TRIANGLES
-        ).toSvg(triHexagonalSvgOptions)
-    )
-
+private fun generateElongatedTriangularExamples() {
     val elongatedTriangularSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (ElongatedTriangularCellType.of(r)) {
-            ElongatedTriangularCellType.TriangleDown ->
-                if (r.y % 4 == 2) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
+            ElongatedTriangularCellType.TriangleDown -> if (r.y % 4 == 2) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
 
-            ElongatedTriangularCellType.TriangleUp ->
-                if (r.y % 4 == 0) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
+            ElongatedTriangularCellType.TriangleUp -> if (r.y % 4 == 0) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
 
-            ElongatedTriangularCellType.Square ->
-                if (r.x % 4 == 0) (if (r.y % 4 == 3) "gold" else "greenyellow") else "darkorange"
+            ElongatedTriangularCellType.Square -> if (r.x % 4 == 0) (if (r.y % 4 == 3) "gold" else "greenyellow") else "darkorange"
         }
     })
 
@@ -174,42 +182,84 @@ fun main() {
         ElongatedTriangularGridGenerator.generate(12, 8, ElongatedTriangularGridOption.START_SQUARES_SPIKY)
             .toSvg(elongatedTriangularSvgOptions)
     )
+}
 
-    val rhombiTriHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
-        when (RhombiTriHexagonalCellType.of(r)) {
-            RhombiTriHexagonalCellType.Hexagon, RhombiTriHexagonalCellType.TriangleDown, RhombiTriHexagonalCellType.TriangleUp -> "darkorange"
-            RhombiTriHexagonalCellType.Square0, RhombiTriHexagonalCellType.Square30, RhombiTriHexagonalCellType.Square60 -> "gold"
+private fun generateTriHexagonalExamples() {
+    val triHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
+        when (TriHexagonalCellType.of(r)) {
+            TriHexagonalCellType.TriangleUp, TriHexagonalCellType.TriangleDown -> "darkorange"
+            TriHexagonalCellType.Hexagon -> "gold"
         }
     })
 
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
-    File("examples/rhombiTrihexagonal_singleton.svg").writeText(
-        RhombiTriHexagonalGridGenerator.generate(1, 1, RhombiTriHexagonalGridOption.STANDARD)
-            .toSvg(rhombiTriHexagonalSvgOptions)
+    // Tri Hexagonal Grid 7 x 5 - Start Hexagon
+    File("examples/triHexagonal.svg").writeText(
+        TriHexagonalGridGenerator.generate(
+            7, 5, TriHexagonalGridOption.START_HEXAGON
+        ).toSvg(triHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
-    File("examples/rhombiTrihexagonal.svg").writeText(
-        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.STANDARD)
-            .toSvg(rhombiTriHexagonalSvgOptions)
+    // Tri Hexagonal Grid 7 x 5 - Start Triangles
+    File("examples/triHexagonal_triangles.svg").writeText(
+        TriHexagonalGridGenerator.generate(
+            7, 5, TriHexagonalGridOption.START_TRIANGLES
+        ).toSvg(triHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard SKip Last
-    File("examples/rhombiTrihexagonal_skip_last.svg").writeText(
-        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST)
-            .toSvg(rhombiTriHexagonalSvgOptions)
+}
+
+private fun generateTruncatedSquareExamples() {
+    val truncatedSquareSvgOptions = SvgOptions(fill = { r: GridReference ->
+        when {
+            SquareOctagon2GridHelper.isSquareCell(r) -> "greenyellow"
+            (r.y % 2 == 0) -> "darkorange"
+            else -> "gold"
+        }
+    })
+
+    // Truncated Square Grid 5 x 5 - Start Octagon
+    File("examples/truncated_square_start_octagon.svg").writeText(
+        SquareOctagon2GridGenerator.generate(
+            5, 5, SquareOctagon2GridOption.START_OCTAGON
+        ).toSvg(truncatedSquareSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Triangle
-    File("examples/rhombiTrihexagonal_triangle.svg").writeText(
-        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.TRIANGLE)
-            .toSvg(rhombiTriHexagonalSvgOptions)
+    // Truncated Square Grid 5 x 5 - Start Square
+    File("examples/truncated_square_start_square.svg").writeText(
+        SquareOctagon2GridGenerator.generate(
+            5, 5, SquareOctagon2GridOption.START_SQUARE
+        ).toSvg(truncatedSquareSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset
-    File("examples/rhombiTrihexagonal_offset.svg").writeText(
-        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.OFFSET)
-            .toSvg(rhombiTriHexagonalSvgOptions)
+}
+
+private fun generateHexagonalExamples() {
+    val hexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
+        when ((3 + r.x - r.y % 2) % 3) {
+            0 -> "greenyellow"
+            1 -> "gold"
+            else -> "darkorange"
+        }
+    })
+
+    // Hex Grid 5 x 5 - Standard
+    File("examples/hexagonal_standard.svg").writeText(
+            HexGridGenerator.generate(5, 5, HexGridOption.STANDARD).toSvg(hexagonalSvgOptions)
+        )
+    // Hex Grid 5 x 5 - Standard Skip Last
+    File("examples/hexagonal_standard_skip_last.svg").writeText(
+        HexGridGenerator.generate(
+            5, 5, HexGridOption.STANDARD_SKIP_LAST
+        ).toSvg(hexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset Skip Last
-    File("examples/rhombiTrihexagonal_offset_skip_last.svg").writeText(
-        RhombiTriHexagonalGridGenerator.generate(3, 3, RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST)
-            .toSvg(rhombiTriHexagonalSvgOptions)
+    // Hex Grid 5 x 5 - Offset
+    File("examples/hexagonal_offset.svg").writeText(
+        HexGridGenerator.generate(5, 5, HexGridOption.OFFSET).toSvg(hexagonalSvgOptions)
+    )
+    // Hex Grid 5 x 5 - Offset Skip Last
+    File("examples/hexagonal_offset_skip_last.svg").writeText(
+        HexGridGenerator.generate(
+            5, 5, HexGridOption.OFFSET_SKIP_LAST
+        ).toSvg(hexagonalSvgOptions)
+    )
+    // Hex Grid 5 x 5 - Triangle
+    File("examples/hexagonal_triangle.svg").writeText(
+        HexGridGenerator.generate(5, 5, HexGridOption.TRIANGLE).toSvg(hexagonalSvgOptions)
     )
 }
