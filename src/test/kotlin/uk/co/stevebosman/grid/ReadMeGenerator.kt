@@ -74,8 +74,9 @@ fun generateTriangleExamples() {
 private fun generateSnubHexagonalExamples() {
     val snubHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (SnubHexagonalCellType.of(r)) {
-            SnubHexagonalCellType.Hexagon, SnubHexagonalCellType.TriangleDown, SnubHexagonalCellType.TriangleUp -> "darkorange"
-            SnubHexagonalCellType.Square0, SnubHexagonalCellType.Square30, SnubHexagonalCellType.Square60 -> "gold"
+            SnubHexagonalCellType.Hexagon -> "greenyellow"
+            SnubHexagonalCellType.TriangleLeft -> "darkorange"
+            SnubHexagonalCellType.TriangleRight -> "gold"
         }
     })
 

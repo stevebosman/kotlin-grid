@@ -66,32 +66,27 @@ object SnubHexagonalGridGenerator {
 
         val references = hexReferences.flatMap { r ->
             setOf(
-                //triangle up
+                GridReference(r.x - 2, r.y - 1),
                 GridReference(r.x - 1, r.y - 1),
-                //square slant 1
                 GridReference(r.x, r.y - 1),
-                //triangle down
                 GridReference(r.x + 1, r.y - 1),
-                //square slant 2
                 GridReference(r.x + 2, r.y - 1),
-                //triangle up
                 GridReference(r.x + 3, r.y - 1),
-                //square
+                GridReference(r.x + 4, r.y - 1),
+
+                GridReference(r.x - 2, r.y),
                 GridReference(r.x - 1, r.y),
-                //hexagon
                 r,
-                //square
-                GridReference(r.x + 3, r.y),
-                //triangle down
+                GridReference(r.x + 4, r.y),
+                GridReference(r.x + 5, r.y),
+
+                GridReference(r.x - 2, r.y + 1),
                 GridReference(r.x - 1, r.y + 1),
-                // square 2
                 GridReference(r.x, r.y + 1),
-                // triangle up
                 GridReference(r.x + 1, r.y + 1),
-                //square 1
                 GridReference(r.x + 2, r.y + 1),
-                // triangle down
                 GridReference(r.x + 3, r.y + 1),
+                GridReference(r.x + 4, r.y + 1),
             )
         }
         val xRange = (0..references.maxOf { r -> r.x })
@@ -107,10 +102,10 @@ object SnubHexagonalGridGenerator {
 
     private fun getHexReference(y: Int, x: Int): GridReference = GridReference(
         if (y % 2 == 0) {
-            1
+            2
         } else {
-            3
-        } + 4 * x,
+            5
+        } + 6 * x,
         1 + 2 * y
     )
 }
