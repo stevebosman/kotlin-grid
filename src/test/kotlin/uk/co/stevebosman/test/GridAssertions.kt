@@ -3,8 +3,8 @@ package uk.co.stevebosman.test
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.assertAll
-import uk.co.stevebosman.geometry.Circle
-import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.maths.geometry.Circle
+import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.GridReference
 

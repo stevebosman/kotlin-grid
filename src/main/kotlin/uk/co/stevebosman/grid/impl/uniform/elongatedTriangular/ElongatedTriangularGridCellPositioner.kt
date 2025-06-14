@@ -1,12 +1,11 @@
 package uk.co.stevebosman.grid.impl.uniform.elongatedTriangular
 
-import uk.co.stevebosman.geometry.Circle
-import uk.co.stevebosman.geometry.Point
-import uk.co.stevebosman.geometry.Polygon
-import uk.co.stevebosman.geometry.RegularConvexPolygonBuilder
+import uk.co.stevebosman.maths.geometry.Circle
+import uk.co.stevebosman.maths.geometry.Point
+import uk.co.stevebosman.maths.geometry.Polygon
+import uk.co.stevebosman.maths.geometry.RegularConvexPolygonBuilder
 import uk.co.stevebosman.grid.CellPositioner
 import uk.co.stevebosman.grid.GridReference
-import uk.co.stevebosman.grid.impl.regular.triangle.TriangleGridCellPositioner
 import kotlin.math.sqrt
 
 /**

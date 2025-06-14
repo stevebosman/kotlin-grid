@@ -3,7 +3,7 @@ package uk.co.stevebosman.grid.impl.regular.square
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertAll
-import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.test.DELTA
 import uk.co.stevebosman.test.GridAssertions.assertContains

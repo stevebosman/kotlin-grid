@@ -1,8 +1,8 @@
-package uk.co.stevebosman.geometry
+package uk.co.stevebosman.maths.geometry
 
-import uk.co.stevebosman.trigonometry.degrees.Cos
-import uk.co.stevebosman.trigonometry.degrees.Sin
-import uk.co.stevebosman.trigonometry.degrees.Tan
+import uk.co.stevebosman.maths.trigonometry.degrees.Cos
+import uk.co.stevebosman.maths.trigonometry.degrees.Sin
+import uk.co.stevebosman.maths.trigonometry.degrees.Tan
 
 class RegularConvexPolygonBuilder(val n: Int) {
     var centre = Point(0.0, 0.0)

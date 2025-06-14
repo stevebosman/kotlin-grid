@@ -1,7 +1,7 @@
 package uk.co.stevebosman.grid
 
-import uk.co.stevebosman.geometry.Point
-import uk.co.stevebosman.geometry.Rectangle
+import uk.co.stevebosman.maths.geometry.Point
+import uk.co.stevebosman.maths.geometry.Rectangle
 
 data class Grid(
     val cells: Map<GridReference, Cell>,

@@ -1,4 +1,4 @@
-package uk.co.stevebosman.geometry
+package uk.co.stevebosman.maths.geometry
 
 import org.junit.jupiter.api.Assertions.assertAll
 import org.junit.jupiter.api.Assertions.assertEquals

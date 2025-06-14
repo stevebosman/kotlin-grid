@@ -13,6 +13,7 @@ import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonal
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridOption
 import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalCellType
+import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridCellPositioner
 import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridOption
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridGenerator
@@ -72,7 +73,18 @@ fun generateTriangleExamples() {
 }
 
 private fun generateSnubHexagonalExamples() {
-    val snubHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
+    println("Opposite Angle: ${SnubHexagonalGridCellPositioner.OPPOSITE}")
+    println("Main Angle: ${SnubHexagonalGridCellPositioner.ROTATE}")
+    println("X repeat: ${SnubHexagonalGridCellPositioner.REPETITION_X}")
+    println("dY: ${SnubHexagonalGridCellPositioner.DELTA_Y}")
+    println("dX: ${SnubHexagonalGridCellPositioner.DELTA_X}")
+    println("tX: ${SnubHexagonalGridCellPositioner.TRIANGLEP}")
+
+    val snubHexagonalSvgOptions = SvgOptions(
+        showXIndex = true,
+        showYIndex = true,
+        scaling = 60,
+        fill = { r: GridReference ->
         when (SnubHexagonalCellType.of(r)) {
             SnubHexagonalCellType.Hexagon -> "greenyellow"
             SnubHexagonalCellType.TriangleLeft -> "darkorange"
