@@ -56,4 +56,18 @@ class SideAngleSideSolverTest {
             { assertEquals(15.997422607629758, actual.angleC, 1e-14, "unexpected angle B") },
         )
     }
+
+    @Test
+    fun solvePythagorean() {
+        val actual = SideAngleSideSolver.solve(3.0, 90.0, 4.0)
+        assertAll(
+            { assertEquals(5.0, actual.sideA, "unexpected side C") },
+            { assertEquals(3.0, actual.sideB, "unexpected side B") },
+            { assertEquals(4.0, actual.sideC, "unexpected side A") },
+            { assertEquals(90.0, actual.angleA, "unexpected angle A") },
+            { assertEquals(36.86989764584402, actual.angleB, 1e-14, "unexpected angle B") },
+            { assertEquals(53.13010235415598, actual.angleC, 1e-14, "unexpected angle C") },
+        )
+    }
+
 }

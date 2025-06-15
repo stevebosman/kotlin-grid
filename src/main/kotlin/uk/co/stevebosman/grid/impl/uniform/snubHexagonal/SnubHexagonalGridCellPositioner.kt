@@ -6,6 +6,8 @@ import uk.co.stevebosman.maths.geometry.Polygon
 import uk.co.stevebosman.maths.geometry.RegularConvexPolygonBuilder
 import uk.co.stevebosman.grid.CellPositioner
 import uk.co.stevebosman.grid.GridReference
+import uk.co.stevebosman.maths.trigonometry.AngleSideAngleSolver
+import uk.co.stevebosman.maths.trigonometry.SideAngleSideSolver
 import uk.co.stevebosman.maths.trigonometry.degrees.Cos
 import uk.co.stevebosman.maths.trigonometry.degrees.Tan
 import kotlin.math.*
@@ -25,6 +27,9 @@ object SnubHexagonalGridCellPositioner : CellPositioner {
 //    private val SLOPE_Y = sin(OPPOSITE)
 //    private val SLOPE_X = cos(OPPOSITE)
     val TRIANGLEP= ROOT_THREE*Tan.of(OPPOSITE)/6
+    val VERTICAL_REPEAT = SideAngleSideSolver.solve(1.0, 120.0, 4.0)
+    val HORIZONTAL_REPEAT = SideAngleSideSolver.solve(1.0, 120.0, 2.0)
+    val ORIGIN_TRIANGLE = AngleSideAngleSolver.solve(HORIZONTAL_REPEAT.angleC, 2.0, VERTICAL_REPEAT.angleC)
 
     override fun getPolygon(gridReference: GridReference): Polygon = polygon_cache.getOrPut(gridReference) {
         when (SnubHexagonalCellType.of(gridReference)) {

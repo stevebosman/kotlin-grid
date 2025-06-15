@@ -2,7 +2,6 @@ package uk.co.stevebosman.maths.trigonometry.degrees
 
 import kotlin.math.PI
 import kotlin.math.asin
-import kotlin.math.sin
 import kotlin.math.sqrt
 
 object ArcSin {

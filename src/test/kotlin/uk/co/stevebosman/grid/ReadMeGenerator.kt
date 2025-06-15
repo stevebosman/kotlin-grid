@@ -79,6 +79,9 @@ private fun generateSnubHexagonalExamples() {
     println("dY: ${SnubHexagonalGridCellPositioner.DELTA_Y}")
     println("dX: ${SnubHexagonalGridCellPositioner.DELTA_X}")
     println("tX: ${SnubHexagonalGridCellPositioner.TRIANGLEP}")
+    println("horizontal repeat: ${SnubHexagonalGridCellPositioner.HORIZONTAL_REPEAT}")
+    println("vertical repeat: ${SnubHexagonalGridCellPositioner.VERTICAL_REPEAT}")
+    println("origin triangle: ${SnubHexagonalGridCellPositioner.ORIGIN_TRIANGLE}")
 
     val snubHexagonalSvgOptions = SvgOptions(
         showXIndex = true,
