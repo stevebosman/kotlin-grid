@@ -185,8 +185,6 @@ These grids are generated in overlapping repetitions of the singleton pattern.
   ![Snub Hexagonal - triangular](examples/snubHexagonal_triangle.svg.png)
 
 ### Planned
-* Snub hexagonal  
-  ![Snub Hexagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg/120px-Academ_Periodic_tiling_where_eighteen_triangles_encircle_each_hexagon.svg.svg.png)
 * Floret Pentagonal  
   ![Floret Pentagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg/120px-Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg.svg.png)
 

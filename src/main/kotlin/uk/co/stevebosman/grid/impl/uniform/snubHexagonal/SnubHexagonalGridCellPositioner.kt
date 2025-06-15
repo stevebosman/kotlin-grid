@@ -17,37 +17,32 @@ import kotlin.math.sqrt
 object SnubHexagonalGridCellPositioner : CellPositioner {
     private val polygon_cache = mutableMapOf<GridReference, Polygon>()
     private val ROOT_THREE = sqrt(3.0)
-    val DELTA_Y = sqrt(3.0 / 7.0)
-
-    //    private val SLOPE_Y = sin(OPPOSITE)
-//    private val SLOPE_X = cos(OPPOSITE)
-//    val TRIANGLEP = ROOT_THREE * Tan.of(OPPOSITE) / 6
-    val VERTICAL_REPEAT = SideAngleSideSolver.solve(1.0, 120.0, 4.0)
-    val HORIZONTAL_REPEAT = SideAngleSideSolver.solve(1.0, 120.0, 2.0)
-    val ORIGIN_TRIANGLE = AngleSideAngleSolver.solve(HORIZONTAL_REPEAT.angleC, 2.0, VERTICAL_REPEAT.angleC)
-    val FIRST_HEX_ROW_0_TRIANGLE = AngleAngleSideSolver.solve(HORIZONTAL_REPEAT.angleB + 60.0, 90.0, 2.0)
-    val FIRST_HEX_ROW_0_LOCATION =
+    private val VERTICAL_REPEAT = SideAngleSideSolver.solve(1.0, 120.0, 4.0)
+    private val HORIZONTAL_REPEAT = SideAngleSideSolver.solve(1.0, 120.0, 2.0)
+    private val ORIGIN_TRIANGLE = AngleSideAngleSolver.solve(HORIZONTAL_REPEAT.angleC, 2.0, VERTICAL_REPEAT.angleC)
+    private val FIRST_HEX_ROW_0_TRIANGLE = AngleAngleSideSolver.solve(HORIZONTAL_REPEAT.angleB + 60.0, 90.0, 2.0)
+    private val FIRST_HEX_ROW_0_LOCATION =
         Point(ORIGIN_TRIANGLE.sideC + FIRST_HEX_ROW_0_TRIANGLE.sideB, FIRST_HEX_ROW_0_TRIANGLE.sideA)
 
     // triangle under (3,0)
-    val NIBLET_TRIANGLE_UNDER_3_0 = AngleSideAngleSolver.solve(HORIZONTAL_REPEAT.angleB, 1.0, 60.0)
-    val RIGHT_NIBLET_TRIANGLE_UNDER_3_0 =
+    private val NIBLET_TRIANGLE_UNDER_3_0 = AngleSideAngleSolver.solve(HORIZONTAL_REPEAT.angleB, 1.0, 60.0)
+    private val RIGHT_NIBLET_TRIANGLE_UNDER_3_0 =
         AngleAngleSideSolver.solve(HORIZONTAL_REPEAT.angleB, 90.0, 1.0)
-    val FIRST_HEX_ROW_2_TRIANGLE =
+    private val FIRST_HEX_ROW_2_TRIANGLE =
         AngleAngleSideSolver.solve(180 - NIBLET_TRIANGLE_UNDER_3_0.angleA, 90.0, 4.0 + NIBLET_TRIANGLE_UNDER_3_0.sideB)
-    val FIRST_HEX_ROW_2_LOCATION = Point(
+    private val FIRST_HEX_ROW_2_LOCATION = Point(
         ORIGIN_TRIANGLE.sideC + NIBLET_TRIANGLE_UNDER_3_0.sideC + FIRST_HEX_ROW_2_TRIANGLE.sideB,
         FIRST_HEX_ROW_2_TRIANGLE.sideA
     )
 
-    val NIBLET_TRIANGLE_UNDER_4_0 =
+    private val NIBLET_TRIANGLE_UNDER_4_0 =
         AngleAngleSideSolver.solve(30 + HORIZONTAL_REPEAT.angleB, 90.0, ROOT_THREE * 2.0 / 3.0)
 
-    val ROW_0_TO_2_DELTA = FIRST_HEX_ROW_2_LOCATION.minus(FIRST_HEX_ROW_0_LOCATION)
+    private val ROW_0_TO_2_DELTA = FIRST_HEX_ROW_2_LOCATION.minus(FIRST_HEX_ROW_0_LOCATION)
 
-    val ROTATE = FIRST_HEX_ROW_0_TRIANGLE.angleB
+    private val ROTATE = FIRST_HEX_ROW_0_TRIANGLE.angleB
 
-    val ROW_0_POSITIONS = listOf(
+    private val ROW_0_POSITIONS = listOf(
         Point(
             ORIGIN_TRIANGLE.sideC * 0.25 + ORIGIN_TRIANGLE.sideB * ROOT_THREE / 12.0,
             ORIGIN_TRIANGLE.sideB * 0.75 + ORIGIN_TRIANGLE.sideC * ROOT_THREE / 12.0
@@ -73,7 +68,7 @@ object SnubHexagonalGridCellPositioner : CellPositioner {
             RIGHT_NIBLET_TRIANGLE_UNDER_3_0.sideA + NIBLET_TRIANGLE_UNDER_4_0.sideA / 2
         ),
     )
-    val ROW_1_POSITIONS = listOf(
+    private val ROW_1_POSITIONS = listOf(
         Point(
             NIBLET_TRIANGLE_UNDER_4_0.sideB / 2,
             ORIGIN_TRIANGLE.sideB + NIBLET_TRIANGLE_UNDER_4_0.sideA / 2
@@ -90,7 +85,7 @@ object SnubHexagonalGridCellPositioner : CellPositioner {
         Point(-1.0, -1.0),
         Point(-1.0, -1.0),
     )
-    val ROW_2_POSITIONS = listOf(
+    private val ROW_2_POSITIONS = listOf(
         ROW_0_POSITIONS[3].translate(ROW_0_TO_2_DELTA).translate(Point(-HORIZONTAL_REPEAT.sideA, 0.0)),
         ROW_0_POSITIONS[4].translate(ROW_0_TO_2_DELTA).translate(Point(-HORIZONTAL_REPEAT.sideA, 0.0)),
         ROW_0_POSITIONS[5].translate(ROW_0_TO_2_DELTA).translate(Point(-HORIZONTAL_REPEAT.sideA, 0.0)),
@@ -98,7 +93,7 @@ object SnubHexagonalGridCellPositioner : CellPositioner {
         ROW_0_POSITIONS[1].translate(ROW_0_TO_2_DELTA),
         ROW_0_POSITIONS[2].translate(ROW_0_TO_2_DELTA),
     )
-    val ROW_3_POSITIONS = listOf(
+    private val ROW_3_POSITIONS = listOf(
         Point(-1.0, -1.0),
         Point(-1.0, -1.0),
         Point(-1.0, -1.0),
@@ -158,5 +153,4 @@ object SnubHexagonalGridCellPositioner : CellPositioner {
                 ROW_3_POSITIONS[gridReference.x % 6].y + (gridReference.y / 4) * VERTICAL_REPEAT.sideA
             )
         }
-
 }
