@@ -1,7 +1,7 @@
 package uk.co.stevebosman.grid
 
-import uk.co.stevebosman.geometry.Point
-import uk.co.stevebosman.geometry.Rectangle
+import uk.co.stevebosman.maths.geometry.Point
+import uk.co.stevebosman.maths.geometry.Rectangle
 
 object BoundingBoxFactory {
     fun of(cells: Collection<Cell>): Rectangle {

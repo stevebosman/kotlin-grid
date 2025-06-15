@@ -1,4 +1,4 @@
-package uk.co.stevebosman.trigonometry.degrees
+package uk.co.stevebosman.maths.trigonometry.degrees
 
 import kotlin.math.PI
 import kotlin.math.sqrt

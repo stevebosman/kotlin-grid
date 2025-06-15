@@ -1,4 +1,4 @@
-package uk.co.stevebosman.geometry
+package uk.co.stevebosman.maths.geometry
 
 data class Polygon(
     val sideCount: Int,

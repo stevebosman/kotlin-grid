@@ -1,7 +1,7 @@
 package uk.co.stevebosman.grid.impl.uniform.triHexagonal
 
 import org.junit.jupiter.api.Test
-import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.test.GridAssertions.assertEqualPoints
 import kotlin.math.sqrt

@@ -1,9 +1,9 @@
 package uk.co.stevebosman.grid
 
 import lombok.EqualsAndHashCode
-import uk.co.stevebosman.geometry.Circle
-import uk.co.stevebosman.geometry.Point
-import uk.co.stevebosman.geometry.Polygon
+import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridCellPositioner
+import uk.co.stevebosman.maths.geometry.Circle
+import uk.co.stevebosman.maths.geometry.Polygon
 
 @EqualsAndHashCode
 class Cell(

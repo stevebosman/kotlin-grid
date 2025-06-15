@@ -1,8 +1,7 @@
 package uk.co.stevebosman.grid
 
-import uk.co.stevebosman.geometry.Circle
-import uk.co.stevebosman.geometry.Point
-import uk.co.stevebosman.geometry.Polygon
+import uk.co.stevebosman.maths.geometry.Circle
+import uk.co.stevebosman.maths.geometry.Polygon
 
 interface CellPositioner {
     fun getPolygon(gridReference: GridReference): Polygon

@@ -1,8 +1,8 @@
 package uk.co.stevebosman.grid.impl.regular.triangle
 
 import org.junit.jupiter.api.Test
-import uk.co.stevebosman.geometry.Circle
-import uk.co.stevebosman.geometry.Point
+import uk.co.stevebosman.maths.geometry.Circle
+import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.test.GridAssertions.assertEqualCircles
 import uk.co.stevebosman.test.GridAssertions.assertEqualPoints

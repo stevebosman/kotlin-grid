@@ -1,4 +1,4 @@
-package uk.co.stevebosman.geometry
+package uk.co.stevebosman.maths.geometry
 
 data class Point(val x: Double, val y: Double) {
     fun translate(offset: Point) = Point(x + offset.x, y + offset.y)
@@ -6,4 +6,6 @@ data class Point(val x: Double, val y: Double) {
     fun rescaleAndTranslate(scale: Double, offset: Point): Point {
         return Point(scale * x + offset.x, scale * y + offset.y)
     }
+
+    fun minus(remove: Point) = Point(x-remove.x, y-remove.y)
 }
