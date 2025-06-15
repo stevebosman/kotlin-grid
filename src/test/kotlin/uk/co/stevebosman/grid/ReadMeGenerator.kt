@@ -73,20 +73,7 @@ fun generateTriangleExamples() {
 }
 
 private fun generateSnubHexagonalExamples() {
-    println("Opposite Angle: ${SnubHexagonalGridCellPositioner.OPPOSITE}")
-    println("Main Angle: ${SnubHexagonalGridCellPositioner.ROTATE}")
-    println("X repeat: ${SnubHexagonalGridCellPositioner.REPETITION_X}")
-    println("dY: ${SnubHexagonalGridCellPositioner.DELTA_Y}")
-    println("dX: ${SnubHexagonalGridCellPositioner.DELTA_X}")
-    println("tX: ${SnubHexagonalGridCellPositioner.TRIANGLEP}")
-    println("horizontal repeat: ${SnubHexagonalGridCellPositioner.HORIZONTAL_REPEAT}")
-    println("vertical repeat: ${SnubHexagonalGridCellPositioner.VERTICAL_REPEAT}")
-    println("origin triangle: ${SnubHexagonalGridCellPositioner.ORIGIN_TRIANGLE}")
-
     val snubHexagonalSvgOptions = SvgOptions(
-        showXIndex = true,
-        showYIndex = true,
-        scaling = 60,
         fill = { r: GridReference ->
         when (SnubHexagonalCellType.of(r)) {
             SnubHexagonalCellType.Hexagon -> "greenyellow"
