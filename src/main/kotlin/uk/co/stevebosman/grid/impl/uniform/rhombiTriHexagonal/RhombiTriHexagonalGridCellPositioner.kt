@@ -1,11 +1,11 @@
 package uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal
 
+import uk.co.stevebosman.grid.CellPositioner
+import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.maths.geometry.Circle
 import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.maths.geometry.Polygon
 import uk.co.stevebosman.maths.geometry.RegularConvexPolygonBuilder
-import uk.co.stevebosman.grid.CellPositioner
-import uk.co.stevebosman.grid.GridReference
 import kotlin.math.sqrt
 
 /**
@@ -62,12 +62,12 @@ object RhombiTriHexagonalGridCellPositioner : CellPositioner {
 
     private fun incentreTriangleUp(gridReference: GridReference): Point = Point(
         (if (gridReference.y % 4 == 0) 0.5 else 1 + HALF_ROOT_THREE) + (gridReference.x / 4) * REPETITION_X,
-        (if (gridReference.y % 4 == 0) 0.5 else 2 + HALF_ROOT_THREE) + HALF_ROOT_THREE*2/3 + (gridReference.y / 4) * REPETITION_Y
+        (if (gridReference.y % 4 == 0) 0.5 else 2 + HALF_ROOT_THREE) + HALF_ROOT_THREE * 2 / 3 + (gridReference.y / 4) * REPETITION_Y
     )
 
     private fun incentreTriangleDown(gridReference: GridReference): Point = Point(
         (if (gridReference.y % 4 == 2) 0.5 else 1 + HALF_ROOT_THREE) + (gridReference.x / 4) * REPETITION_X,
-        (if (gridReference.y % 4 == 2) 1.5 + HALF_ROOT_THREE else 0.0) + HALF_ROOT_THREE/3 + (gridReference.y / 4) * REPETITION_Y
+        (if (gridReference.y % 4 == 2) 1.5 + HALF_ROOT_THREE else 0.0) + HALF_ROOT_THREE / 3 + (gridReference.y / 4) * REPETITION_Y
     )
 
     private fun incentreSquare0(gridReference: GridReference): Point = Point(
@@ -76,13 +76,13 @@ object RhombiTriHexagonalGridCellPositioner : CellPositioner {
     )
 
     private fun incentreSquare60(gridReference: GridReference): Point = Point(
-        (if (gridReference.y % 4 == 0) 0.75 + QUARTER_ROOT_THREE else 1.25 + 3*QUARTER_ROOT_THREE) + (gridReference.x / 4) * REPETITION_X,
+        (if (gridReference.y % 4 == 0) 0.75 + QUARTER_ROOT_THREE else 1.25 + 3 * QUARTER_ROOT_THREE) + (gridReference.x / 4) * REPETITION_X,
         (if (gridReference.y % 4 == 0) 0.0 else 1.5 + HALF_ROOT_THREE) + 0.25 + QUARTER_ROOT_THREE + (gridReference.y / 4) * REPETITION_Y
     )
 
     private fun incentreSquare30(gridReference: GridReference): Point {
         return Point(
-            (if (gridReference.y % 4 == 0) 1.25 + QUARTER_ROOT_THREE*3 else 0.75 + QUARTER_ROOT_THREE) + (gridReference.x / 4) * REPETITION_X,
+            (if (gridReference.y % 4 == 0) 1.25 + QUARTER_ROOT_THREE * 3 else 0.75 + QUARTER_ROOT_THREE) + (gridReference.x / 4) * REPETITION_X,
             (if (gridReference.y % 4 == 0) 0.0 else 1.5 + HALF_ROOT_THREE) + 0.25 + QUARTER_ROOT_THREE + (gridReference.y / 4) * REPETITION_Y
         )
     }

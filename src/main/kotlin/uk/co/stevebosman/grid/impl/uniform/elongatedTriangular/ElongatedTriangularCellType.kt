@@ -7,9 +7,9 @@ enum class ElongatedTriangularCellType {
 
     companion object {
         fun of(position: GridReference): ElongatedTriangularCellType =
-            if (position.y%2 == 1) {
+            if (position.y % 2 == 1) {
                 Square
-            } else if ((position.x%2 == 0 && position.y%4 == 0) || (position.x%2 == 1 && position.y%4 == 2)) {
+            } else if ((position.x % 2 == 0 && position.y % 4 == 0) || (position.x % 2 == 1 && position.y % 4 == 2)) {
                 TriangleUp
             } else {
                 TriangleDown

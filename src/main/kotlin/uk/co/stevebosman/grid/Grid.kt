@@ -37,10 +37,22 @@ data class Grid(
             result.append(" fill=\"${options.fill(c.gridReference)}\"")
             result.append("/>\n")
             if (options.showCentre) {
-                result.append("<circle r=\"${1+options.scaling /10.0}\" cx=\"${adjustedX(polygon.centre)}\" cy=\"${adjustedY(polygon.centre)}\" fill=\"white\" />")
+                result.append(
+                    "<circle r=\"${1 + options.scaling / 10.0}\" cx=\"${adjustedX(polygon.centre)}\" cy=\"${
+                        adjustedY(
+                            polygon.centre
+                        )
+                    }\" fill=\"white\" />"
+                )
             }
             if (options.showXIndex || options.showYIndex) {
-                result.append("   <text fill=\"black\" x=\"${adjustedX(polygon.centre) - options.scaling / 5}\" y=\"${adjustedY(polygon.centre)}\" class=\"coordinates\">")
+                result.append(
+                    "   <text fill=\"black\" x=\"${adjustedX(polygon.centre) - options.scaling / 5}\" y=\"${
+                        adjustedY(
+                            polygon.centre
+                        )
+                    }\" class=\"coordinates\">"
+                )
                 if (options.showXIndex) result.append("${c.gridReference.x}")
                 if (options.showXIndex && options.showYIndex) result.append(",")
                 if (options.showYIndex) result.append("${c.gridReference.y}")

@@ -1,11 +1,11 @@
 package uk.co.stevebosman.grid.impl.uniform.elongatedTriangular
 
+import uk.co.stevebosman.grid.CellPositioner
+import uk.co.stevebosman.grid.GridReference
 import uk.co.stevebosman.maths.geometry.Circle
 import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.maths.geometry.Polygon
 import uk.co.stevebosman.maths.geometry.RegularConvexPolygonBuilder
-import uk.co.stevebosman.grid.CellPositioner
-import uk.co.stevebosman.grid.GridReference
 import kotlin.math.sqrt
 
 /**
@@ -34,7 +34,7 @@ object ElongatedTriangularGridCellPositioner : CellPositioner {
         when (ElongatedTriangularCellType.of(gridReference)) {
             ElongatedTriangularCellType.Square -> {
                 Point(
-                    (gridReference.x + if (gridReference.y%4==1) 1.0 else 2.0) / 2,
+                    (gridReference.x + if (gridReference.y % 4 == 1) 1.0 else 2.0) / 2,
                     dy(gridReference) + HALF_ROOT_THREE / 2
                 )
             }
@@ -53,7 +53,7 @@ object ElongatedTriangularGridCellPositioner : CellPositioner {
         }
 
     private fun dy(gridReference: GridReference) =
-        (1 + HALF_ROOT_THREE) * gridReference.y/2
+        (1 + HALF_ROOT_THREE) * gridReference.y / 2
 
     override fun getInscribedCircle(gridReference: GridReference): Circle {
         val polygon = getPolygon(gridReference)

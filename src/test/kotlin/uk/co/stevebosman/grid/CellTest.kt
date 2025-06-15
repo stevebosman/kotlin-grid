@@ -1,9 +1,9 @@
 package uk.co.stevebosman.grid
 
 import org.junit.jupiter.api.Test
+import uk.co.stevebosman.grid.impl.regular.square.SquareGridCellPositioner
 import uk.co.stevebosman.maths.geometry.Circle
 import uk.co.stevebosman.maths.geometry.Point
-import uk.co.stevebosman.grid.impl.regular.square.SquareGridCellPositioner
 import uk.co.stevebosman.test.GridAssertions.assertEqualCircles
 import uk.co.stevebosman.test.GridAssertions.assertEqualPoints
 

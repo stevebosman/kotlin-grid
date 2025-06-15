@@ -13,7 +13,6 @@ import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonal
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.rhombiTriHexagonal.RhombiTriHexagonalGridOption
 import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalCellType
-import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridCellPositioner
 import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.snubHexagonal.SnubHexagonalGridOption
 import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridGenerator
@@ -75,12 +74,12 @@ fun generateTriangleExamples() {
 private fun generateSnubHexagonalExamples() {
     val snubHexagonalSvgOptions = SvgOptions(
         fill = { r: GridReference ->
-        when (SnubHexagonalCellType.of(r)) {
-            SnubHexagonalCellType.Hexagon -> "greenyellow"
-            SnubHexagonalCellType.TriangleLeft -> "darkorange"
-            SnubHexagonalCellType.TriangleRight -> "gold"
-        }
-    })
+            when (SnubHexagonalCellType.of(r)) {
+                SnubHexagonalCellType.Hexagon -> "greenyellow"
+                SnubHexagonalCellType.TriangleLeft -> "darkorange"
+                SnubHexagonalCellType.TriangleRight -> "gold"
+            }
+        })
 
     // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
     File("examples/snubHexagonal_singleton.svg").writeText(
@@ -243,8 +242,8 @@ private fun generateHexagonalExamples() {
 
     // Hex Grid 5 x 5 - Standard
     File("examples/hexagonal_standard.svg").writeText(
-            HexGridGenerator.generate(5, 5, HexGridOption.STANDARD).toSvg(hexagonalSvgOptions)
-        )
+        HexGridGenerator.generate(5, 5, HexGridOption.STANDARD).toSvg(hexagonalSvgOptions)
+    )
     // Hex Grid 5 x 5 - Standard Skip Last
     File("examples/hexagonal_standard_skip_last.svg").writeText(
         HexGridGenerator.generate(
