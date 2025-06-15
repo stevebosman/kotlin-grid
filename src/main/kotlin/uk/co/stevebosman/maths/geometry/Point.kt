@@ -7,5 +7,5 @@ data class Point(val x: Double, val y: Double) {
         return Point(scale * x + offset.x, scale * y + offset.y)
     }
 
-    fun minus(remove: Point) = Point(x-remove.x, y-remove.y)
+    fun minus(remove: Point) = Point(x - remove.x, y - remove.y)
 }

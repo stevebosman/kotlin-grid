@@ -1,4 +1,4 @@
-package uk.co.stevebosman.maths.trigonometry
+package uk.co.stevebosman.maths.trigonometry.degrees.solver
 
 import uk.co.stevebosman.maths.geometry.Triangle
 import uk.co.stevebosman.maths.trigonometry.degrees.Sin
