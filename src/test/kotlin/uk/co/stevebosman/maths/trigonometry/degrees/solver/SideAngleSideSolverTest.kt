@@ -1,4 +1,4 @@
-package uk.co.stevebosman.maths.trigonometry
+package uk.co.stevebosman.maths.trigonometry.degrees.solver
 
 import org.junit.jupiter.api.Assertions.assertAll
 import org.junit.jupiter.api.Assertions.assertEquals

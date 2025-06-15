@@ -6,9 +6,9 @@ import uk.co.stevebosman.maths.geometry.Circle
 import uk.co.stevebosman.maths.geometry.Point
 import uk.co.stevebosman.maths.geometry.Polygon
 import uk.co.stevebosman.maths.geometry.RegularConvexPolygonBuilder
-import uk.co.stevebosman.maths.trigonometry.AngleAngleSideSolver
-import uk.co.stevebosman.maths.trigonometry.AngleSideAngleSolver
-import uk.co.stevebosman.maths.trigonometry.SideAngleSideSolver
+import uk.co.stevebosman.maths.trigonometry.degrees.solver.AngleAngleSideSolver
+import uk.co.stevebosman.maths.trigonometry.degrees.solver.AngleSideAngleSolver
+import uk.co.stevebosman.maths.trigonometry.degrees.solver.SideAngleSideSolver
 import kotlin.math.sqrt
 
 /**
