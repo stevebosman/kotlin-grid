@@ -4,6 +4,7 @@ import uk.co.stevebosman.grid.BoundingBoxFactory
 import uk.co.stevebosman.grid.Cell
 import uk.co.stevebosman.grid.Grid
 import uk.co.stevebosman.grid.GridReference
+import kotlin.math.max
 
 object RhombiTriHexagonalGridGenerator {
     fun generate(
@@ -13,7 +14,13 @@ object RhombiTriHexagonalGridGenerator {
     ): Grid {
         val hexReferences = mutableListOf<GridReference>()
 
-        val xHexRange = (0..width - 1)
+        val xHexRange = when (option) {
+            RhombiTriHexagonalGridOption.STANDARD -> (0..width - 1) 
+            RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST -> (0..max(width - 1, 1))
+            RhombiTriHexagonalGridOption.OFFSET -> (0..width - 1)
+            RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST -> (0..max(width - 1, 1))
+            RhombiTriHexagonalGridOption.TRIANGLE -> (0..width - 1)
+        }
         val yHexRange = when (option) {
             RhombiTriHexagonalGridOption.STANDARD -> (0..height - 1)
             RhombiTriHexagonalGridOption.STANDARD_SKIP_LAST -> (0..height - 1)
@@ -45,7 +52,7 @@ object RhombiTriHexagonalGridGenerator {
 
             RhombiTriHexagonalGridOption.OFFSET_SKIP_LAST -> {
                 yHexRange.forEach { y ->
-                    (0..width - 1 - if (y % 2 == 0) {
+                    (0..width - 1 - if (height == 1 || y % 2 == 0) {
                         0
                     } else {
                         1
@@ -94,11 +101,11 @@ object RhombiTriHexagonalGridGenerator {
                 GridReference(r.x + 3, r.y + 1),
             )
         }
-        val xRange = (0..references.maxOf { r -> r.x })
-        val yRange = (0..references.maxOf { r -> r.y })
+        val xRange = (references.minOf { r -> r.x }..references.maxOf { r -> r.x })
+        val yRange = (references.minOf { r -> r.x }..references.maxOf { r -> r.y })
 
         val cells = references.associateWith { r ->
-            val neighbours = listOf<GridReference>().filter { r -> references.contains(r) }
+            val neighbours = neighboursOf(r).filter { r -> references.contains(r) }
             Cell(r, neighbours, RhombiTriHexagonalGridCellPositioner)
         }
 
@@ -113,4 +120,94 @@ object RhombiTriHexagonalGridGenerator {
         } + 4 * x,
         1 + 2 * y
     )
+
+    private fun neighboursOf(
+        ref: GridReference,
+    ): List<GridReference> = when {
+        ref.y % 4 == 0 && ref.x % 4 == 0 -> listOf(
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x, ref.y + 1),
+        )
+
+        ref.y % 4 == 0 && ref.x % 4 == 1 -> listOf(
+            GridReference(ref.x - 2, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x, ref.y + 1),
+        )
+
+        ref.y % 4 == 0 && ref.x % 4 == 2 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+        )
+
+        ref.y % 4 == 0 && ref.x % 4 == 3 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x - 2, ref.y + 1),
+        )
+
+        ref.y % 4 == 1 && ref.x % 4 == 0 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x - 3, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x, ref.y + 1),
+        )
+
+        ref.y % 4 == 1 && ref.x % 4 == 1 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x + 2, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 3, ref.y),
+            GridReference(ref.x, ref.y + 1),
+            GridReference(ref.x + 2, ref.y + 1),
+        )
+
+        ref.y % 4 == 2 && ref.x % 4 == 0 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+        )
+
+        ref.y % 4 == 2 && ref.x % 4 == 1 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x - 2, ref.y + 1),
+        )
+
+        ref.y % 4 == 2 && ref.x % 4 == 2 -> listOf(
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x, ref.y + 1),
+        )
+
+        ref.y % 4 == 2 && ref.x % 4 == 3 -> listOf(
+            GridReference(ref.x - 2, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x, ref.y + 1),
+        )
+
+        ref.y % 4 == 3 && ref.x % 4 == 2 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x - 3, ref.y),
+            GridReference(ref.x + 1, ref.y),
+            GridReference(ref.x, ref.y + 1),
+        )
+
+        ref.y % 4 == 3 && ref.x % 4 == 3 -> listOf(
+            GridReference(ref.x, ref.y - 1),
+            GridReference(ref.x + 2, ref.y - 1),
+            GridReference(ref.x - 1, ref.y),
+            GridReference(ref.x + 3, ref.y),
+            GridReference(ref.x, ref.y + 1),
+            GridReference(ref.x + 2, ref.y + 1),
+        )
+
+        else -> throw IllegalStateException("Unknown reference: ${ref}")
+    }
 }
