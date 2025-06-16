@@ -59,7 +59,7 @@ object GridAssertions {
             assertEquals(
                 expectedNeighbours.size,
                 referencedCell?.neighbours?.size
-            ) { -> "Unexpected neighbourCount for $expectedReference has\nlistOf(${referencedCell?.neighbours}),\n" }
+            ) { -> "Unexpected neighbourCount for $expectedReference\n  expected listOf($expectedNeighbours\n  has listOf(${referencedCell?.neighbours}),\n" }
             assertAll(
                 { ->
                     assertEquals(

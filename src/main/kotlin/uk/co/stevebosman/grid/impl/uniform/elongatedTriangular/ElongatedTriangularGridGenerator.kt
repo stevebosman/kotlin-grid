@@ -45,62 +45,69 @@ object ElongatedTriangularGridGenerator {
         }
 
         val cells = references.associateWith { r ->
-            val type = ElongatedTriangularCellType.of(r)
-            val neighbours = when {
-                r.y % 4 == 1 ->
-                    // squares
-                    listOf(
-                        GridReference(r.x, r.y - 1),
-                        GridReference(r.x - 2, r.y),
-                        GridReference(r.x + 2, r.y),
-                        GridReference(r.x, r.y + 1)
-                    )
-
-                r.y % 4 == 3 ->
-                    // offset squares
-                    listOf(
-                        GridReference(r.x, r.y - 1),
-                        GridReference(r.x - 2, r.y),
-                        GridReference(r.x + 2, r.y),
-                        GridReference(r.x, r.y + 1)
-                    )
-
-                r.x % 2 == 1 && type == ElongatedTriangularCellType.TriangleDown ->
-                    // down triangle first type
-                    listOf(
-                        GridReference(r.x - 1, r.y - 1),
-                        GridReference(r.x - 1, r.y),
-                        GridReference(r.x + 1, r.y)
-                    )
-
-                r.x % 2 == 0 && type == ElongatedTriangularCellType.TriangleDown ->
-                    // down triangle second type
-                    listOf(
-                        GridReference(r.x, r.y - 1),
-                        GridReference(r.x - 1, r.y),
-                        GridReference(r.x + 1, r.y)
-                    )
-
-                r.x % 2 == 0 ->
-                    // up triangle first type
-                    listOf(
-                        GridReference(r.x - 1, r.y),
-                        GridReference(r.x + 1, r.y),
-                        GridReference(r.x, r.y + 1)
-                    )
-
-                else ->
-                    // up triangle second type
-                    listOf(
-                        GridReference(r.x - 1, r.y),
-                        GridReference(r.x + 1, r.y),
-                        GridReference(r.x - 1, r.y - 1)
-                    )
-            }.filter { r -> references.contains(r) }
+            val neighbours = neighboursOf(r).filter { r -> references.contains(r) }
             Cell(r, neighbours, ElongatedTriangularGridCellPositioner)
         }
 
         return Grid(cells, BoundingBoxFactory.of(cells.values), xRange, yRange)
+    }
+
+    private fun neighboursOf(
+        reference: GridReference,
+    ): List<GridReference> {
+        val type = ElongatedTriangularCellType.of(reference)
+
+        return when {
+            reference.y % 4 == 1 ->
+                // squares
+                listOf(
+                    GridReference(reference.x, reference.y - 1),
+                    GridReference(reference.x - 2, reference.y),
+                    GridReference(reference.x + 2, reference.y),
+                    GridReference(reference.x, reference.y + 1)
+                )
+
+            reference.y % 4 == 3 ->
+                // offset squares
+                listOf(
+                    GridReference(reference.x, reference.y - 1),
+                    GridReference(reference.x - 2, reference.y),
+                    GridReference(reference.x + 2, reference.y),
+                    GridReference(reference.x, reference.y + 1)
+                )
+
+            reference.x % 2 == 1 && type == ElongatedTriangularCellType.TriangleDown ->
+                // down triangle first type
+                listOf(
+                    GridReference(reference.x - 1, reference.y - 1),
+                    GridReference(reference.x - 1, reference.y),
+                    GridReference(reference.x + 1, reference.y)
+                )
+
+            reference.x % 2 == 0 && type == ElongatedTriangularCellType.TriangleDown ->
+                // down triangle second type
+                listOf(
+                    GridReference(reference.x, reference.y - 1),
+                    GridReference(reference.x - 1, reference.y),
+                    GridReference(reference.x + 1, reference.y)
+                )
+
+            reference.x % 2 == 0 ->
+                // up triangle first type
+                listOf(
+                    GridReference(reference.x - 1, reference.y),
+                    GridReference(reference.x + 1, reference.y),
+                    GridReference(reference.x, reference.y + 1)
+                )
+
+            else ->
+                // up triangle second type
+                listOf(
+                    GridReference(reference.x - 1, reference.y),
+                    GridReference(reference.x + 1, reference.y),
+                    GridReference(reference.x - 1, reference.y - 1)
+                )
+        }
     }
 
     private fun isSquare(width: Int, x: Int, y: Int): Boolean =

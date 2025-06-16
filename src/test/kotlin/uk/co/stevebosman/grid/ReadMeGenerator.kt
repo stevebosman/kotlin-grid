@@ -81,9 +81,14 @@ private fun generateSnubHexagonalExamples() {
             }
         })
 
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
+    // Rhombi Tri Hexagonal Grid 1 x 1 - Singleton
     File("examples/snubHexagonal_singleton.svg").writeText(
         SnubHexagonalGridGenerator.generate(1, 1, SnubHexagonalGridOption.STANDARD)
+            .toSvg(snubHexagonalSvgOptions)
+    )
+    // Rhombi Tri Hexagonal Grid 1 x 2 - Double
+    File("examples/snubHexagonal_double.svg").writeText(
+        SnubHexagonalGridGenerator.generate(1, 2, SnubHexagonalGridOption.STANDARD)
             .toSvg(snubHexagonalSvgOptions)
     )
     // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
@@ -121,9 +126,14 @@ private fun generateRhombiTriHexagonalExamples() {
         }
     })
 
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Singleton
+    // Rhombi Tri Hexagonal Grid 1 x 1 - Singleton
     File("examples/rhombiTriHexagonal_singleton.svg").writeText(
         RhombiTriHexagonalGridGenerator.generate(1, 1, RhombiTriHexagonalGridOption.STANDARD)
+            .toSvg(rhombiTriHexagonalSvgOptions)
+    )
+    // Rhombi Tri Hexagonal Grid 1 x 2 - Double
+    File("examples/rhombiTriHexagonal_double.svg").writeText(
+        RhombiTriHexagonalGridGenerator.generate(1, 2, RhombiTriHexagonalGridOption.STANDARD)
             .toSvg(rhombiTriHexagonalSvgOptions)
     )
     // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
