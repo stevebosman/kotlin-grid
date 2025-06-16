@@ -134,7 +134,7 @@ val grid: Grid =
 TriHexagonalGridGenerator.generate(width = 7, height = 5, option = SquareOctagon2GridOption.START_TRIANGLES)
 ```
 
-![Tri Hexagonal - starting with triangles](examples/triHexagonal_triangles.svg.png)
+![Tri Hexagonal - starting with triangles](examples/triHxagonal_triangles.svg.png)
 
 ### Elongated Triangular
 
