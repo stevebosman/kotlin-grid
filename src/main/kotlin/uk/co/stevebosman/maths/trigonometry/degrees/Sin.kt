@@ -32,7 +32,12 @@ object Sin {
         Pair(330.0, -0.5),
     )
 
+    /**
+     * Return sine of degrees value.
+     */
     fun of(value: Double) = cache.getOrPut(value) {
-        sin(PI * value / 180)
+        cache.getOrPut(value.mod(360.0)) {
+            sin(PI * value / 180)
+        }
     }
 }

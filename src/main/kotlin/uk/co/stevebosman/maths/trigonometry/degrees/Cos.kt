@@ -32,7 +32,12 @@ object Cos {
         Pair(330.0, sqrt(0.75)),
     )
 
+    /**
+     * Return cosine of degrees value.
+     */
     fun of(value: Double) = cache.getOrPut(value) {
-        cos(PI * value / 180)
+        cache.getOrPut(value.mod(360.0)) {
+            cos(PI * value / 180)
+        }
     }
 }
