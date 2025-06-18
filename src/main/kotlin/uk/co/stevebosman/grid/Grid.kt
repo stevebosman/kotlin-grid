@@ -26,6 +26,21 @@ data class Grid(
         if (options.showXIndex || options.showYIndex) {
             result.append("    <style>.coordinates {font: italic ${options.scaling / 5}px sans-serif;}</style>\n")
         }
+        if (options.borderColour!=null) {
+            val borderVertices: List<Point> = listOf(
+                boundingBox.lowerLeft,
+                Point(boundingBox.lowerLeft.x, boundingBox.lowerLeft.y + boundingBox.height),
+                Point(boundingBox.lowerLeft.x + boundingBox.width, boundingBox.lowerLeft.y + boundingBox.height),
+                Point(boundingBox.lowerLeft.x + boundingBox.width, boundingBox.lowerLeft.y),
+            )
+            result.append("    <polygon")
+            result.append(" points=\"${borderVertices.joinToString(" ") { v -> coordinates(v) }}\"")
+            result.append(" fill=\"white\"")
+            result.append(" stroke=\"${options.borderColour}\"")
+            result.append(" stroke-linecap=\"${options.lineCap}\"")
+            result.append(" stroke-width=\"${options.lineWidth}\"")
+            result.append("/>\n")
+        }
 
         cells.values.forEach { c ->
             val polygon = c.getPolygon()

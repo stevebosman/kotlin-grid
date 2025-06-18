@@ -3,6 +3,7 @@ package uk.co.stevebosman.grid
 data class SvgOptions(
     val scaling: Int = 25,
     val border: Int = 5,
+    val borderColour: String? = null,
     val showCentre: Boolean = false,
     val showXIndex: Boolean = false,
     val showYIndex: Boolean = false,
