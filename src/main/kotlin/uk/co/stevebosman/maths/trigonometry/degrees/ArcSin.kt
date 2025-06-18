@@ -17,6 +17,9 @@ object ArcSin {
         Pair(1.0, 90.0),
     )
 
+    /**
+     * Returns arc sine value in degrees between -90° and 90°.
+     */
     fun of(value: Double) = cache.getOrPut(value) {
         asin(value) * 180 / PI
     }
