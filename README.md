@@ -286,11 +286,62 @@ val grid: Grid = SnubHexagonalGridGenerator.generate(width = 3, height = 3, Snub
 
 ![Snub Hexagonal - triangular](examples/snubHexagonal_triangle.svg.png)
 
-### Planned
+### Floret Pentagonal
 
-#### Floret Pentagonal
+These grids are generated in overlapping repetitions of the singleton pattern.
 
-![Floret Pentagonal](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg/120px-Tiling_Dual_Semiregular_V3-3-3-3-6_Floret_Pentagonal.svg.svg.png)
+#### Singleton
+
+```kotlin
+val grid: Grid = FloretPentagonalGridGenerator.generate(width = 1, height = 1)
+```
+
+![Floret Pentagonal - singleton](examples/floretPentagonal_singleton.svg.png)
+
+#### Standard
+
+```kotlin
+val grid: Grid = FloretPentagonalGridGenerator.generate(width = 3, height = 3)
+```
+
+![Floret Pentagonal - standard](examples/floretPentagonal.svg.png)
+
+#### Standard Skip Last
+
+Skip last is disabled when width is 1.
+
+```kotlin
+val grid: Grid =
+FloretPentagonalGridGenerator.generate(width = 3, height = 3, FloretPentagonalGridOption.STANDARD_SKIP_LAST)
+```
+
+![Floret Pentagonal - standard skip last](examples/floretPentagonal_skip_last.svg.png)
+
+#### Offset
+
+```kotlin
+val grid: Grid = FloretPentagonalGridGenerator.generate(width = 3, height = 3, FloretPentagonalGridOption.OFFSET)
+```
+
+![Floret Pentagonal - offset](examples/floretPentagonal_offset.svg.png)
+
+#### Offset Skip Last
+
+Skip last is disabled when width is 1.
+
+```kotlin
+val grid: Grid = FloretPentagonalGridGenerator.generate(width = 3, height = 3, FloretPentagonalGridOption.OFFSET_SKIP_LAST)
+```
+
+![Floret Pentagonal - offset skip last](examples/floretPentagonal_offset_skip_last.svg.png)
+
+#### Triangular
+
+```kotlin
+val grid: Grid = FloretPentagonalGridGenerator.generate(width = 3, height = 3, FloretPentagonalGridOption.TRIANGLE)
+```
+
+![Floret Pentagonal - triangular](examples/floretPentagonal_triangle.svg.png)
 
 ## SVG Grid Generation
 

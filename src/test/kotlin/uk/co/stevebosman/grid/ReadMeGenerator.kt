@@ -42,13 +42,13 @@ fun generateSquareExamples() {
     // Square Grid 5 x 5
     File("examples/square.svg").writeText(
         SquareGridGenerator.generate(5, 5)
-            .toSvg(SvgOptions(fill = { r: GridReference -> if ((r.x + r.y) % 2 == 0) "gold" else "darkorange" }))
+            .toSvg(SvgOptions(fill = { r: GridReference -> if ((r.x + r.y) % 2 == 0) "#FFC107" else "#FF6F3C" }))
     )
 }
 
 fun generateTriangleExamples() {
     val triangularSvgOptions = SvgOptions(scaling = 35, fill = { r: GridReference ->
-        if (TriangleGridHelper.isUp(r)) "darkorange" else "gold"
+        if (TriangleGridHelper.isUp(r)) "#FF6F3C" else "#FFC107"
     })
 
     // Triangular Grid 7 x 4 - Standard
@@ -79,9 +79,9 @@ private fun generateSnubHexagonalExamples() {
     val snubHexagonalSvgOptions = SvgOptions(
         fill = { r: GridReference ->
             when (SnubHexagonalCellType.of(r)) {
-                SnubHexagonalCellType.Hexagon -> "greenyellow"
-                SnubHexagonalCellType.TriangleLeft -> "darkorange"
-                SnubHexagonalCellType.TriangleRight -> "gold"
+                SnubHexagonalCellType.Hexagon -> "#347433"
+                SnubHexagonalCellType.TriangleLeft -> "#FF6F3C"
+                SnubHexagonalCellType.TriangleRight -> "#FFC107"
             }
         })
 
@@ -125,8 +125,8 @@ private fun generateSnubHexagonalExamples() {
 private fun generateRhombiTriHexagonalExamples() {
     val rhombiTriHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (RhombiTriHexagonalCellType.of(r)) {
-            RhombiTriHexagonalCellType.Hexagon, RhombiTriHexagonalCellType.TriangleDown, RhombiTriHexagonalCellType.TriangleUp -> "darkorange"
-            RhombiTriHexagonalCellType.Square0, RhombiTriHexagonalCellType.Square30, RhombiTriHexagonalCellType.Square60 -> "gold"
+            RhombiTriHexagonalCellType.Hexagon, RhombiTriHexagonalCellType.TriangleDown, RhombiTriHexagonalCellType.TriangleUp -> "#FF6F3C"
+            RhombiTriHexagonalCellType.Square0, RhombiTriHexagonalCellType.Square30, RhombiTriHexagonalCellType.Square60 -> "#FFC107"
         }
     })
 
@@ -170,11 +170,11 @@ private fun generateRhombiTriHexagonalExamples() {
 private fun generateElongatedTriangularExamples() {
     val elongatedTriangularSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (ElongatedTriangularCellType.of(r)) {
-            ElongatedTriangularCellType.TriangleDown -> if (r.y % 4 == 2) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
+            ElongatedTriangularCellType.TriangleDown -> if (r.y % 4 == 2) "#FFC107" else if (r.x % 4 == 0) "#FF6F3C" else "#347433"
 
-            ElongatedTriangularCellType.TriangleUp -> if (r.y % 4 == 0) "gold" else if (r.x % 4 == 0) "darkorange" else "greenyellow"
+            ElongatedTriangularCellType.TriangleUp -> if (r.y % 4 == 0) "#FFC107" else if (r.x % 4 == 0) "#FF6F3C" else "#347433"
 
-            ElongatedTriangularCellType.Square -> if (r.x % 4 == 0) (if (r.y % 4 == 3) "gold" else "greenyellow") else "darkorange"
+            ElongatedTriangularCellType.Square -> if (r.x % 4 == 0) (if (r.y % 4 == 3) "#FFC107" else "#347433") else "#FF6F3C"
         }
     })
 
@@ -203,8 +203,8 @@ private fun generateElongatedTriangularExamples() {
 private fun generateTriHexagonalExamples() {
     val triHexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
         when (TriHexagonalCellType.of(r)) {
-            TriHexagonalCellType.TriangleUp, TriHexagonalCellType.TriangleDown -> "darkorange"
-            TriHexagonalCellType.Hexagon -> "gold"
+            TriHexagonalCellType.TriangleUp, TriHexagonalCellType.TriangleDown -> "#FF6F3C"
+            TriHexagonalCellType.Hexagon -> "#FFC107"
         }
     })
 
@@ -225,9 +225,9 @@ private fun generateTriHexagonalExamples() {
 private fun generateTruncatedSquareExamples() {
     val truncatedSquareSvgOptions = SvgOptions(fill = { r: GridReference ->
         when {
-            SquareOctagon2GridHelper.isSquareCell(r) -> "greenyellow"
-            (r.y % 2 == 0) -> "darkorange"
-            else -> "gold"
+            SquareOctagon2GridHelper.isSquareCell(r) -> "#347433"
+            (r.y % 2 == 0) -> "#FF6F3C"
+            else -> "#FFC107"
         }
     })
 
@@ -248,9 +248,9 @@ private fun generateTruncatedSquareExamples() {
 private fun generateHexagonalExamples() {
     val hexagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
         when ((3 + r.x - r.y % 2) % 3) {
-            0 -> "greenyellow"
-            1 -> "gold"
-            else -> "darkorange"
+            0 -> "#347433"
+            1 -> "#FFC107"
+            else -> "#FF6F3C"
         }
     })
 
@@ -281,12 +281,45 @@ private fun generateHexagonalExamples() {
 }
 
 private fun generateFloretPentagonalExamples() {
-    val FloretPentagonalSvgOptions = SvgOptions(
-        fill = { r: GridReference -> "greenyellow"})
+    val floretPentagonalSvgOptions = SvgOptions(fill = { r: GridReference ->
+        when (r.x%2 + (r.y % 2)*2) {
+            0 -> "#347433"
+            1 -> "#FF6F3C"
+            2 -> "#B22222"
+            else -> "#FFC107"
+        }
+    })
 
-    // Rhombi Tri Hexagonal Grid 1 x 1 - Singleton
+    // Floret Pentagonal Grid 1 x 1 - Singleton
     File("examples/floretPentagonal_singleton.svg").writeText(
         FloretPentagonalGridGenerator.generate(1, 1, FloretPentagonalGridOption.STANDARD)
-            .toSvg(FloretPentagonalSvgOptions)
+            .toSvg(floretPentagonalSvgOptions)
+    )
+
+    // Floret Pentagonal Grid 3 x 3 - Standard
+    File("examples/floretPentagonal.svg").writeText(
+        FloretPentagonalGridGenerator.generate(3, 3, FloretPentagonalGridOption.STANDARD)
+            .toSvg(floretPentagonalSvgOptions)
+    )
+
+    // Floret Pentagonal Grid 3 x 3 - Standard SKip Last
+    File("examples/floretPentagonal_skip_last.svg").writeText(
+        FloretPentagonalGridGenerator.generate(3, 3, FloretPentagonalGridOption.STANDARD_SKIP_LAST)
+            .toSvg(floretPentagonalSvgOptions)
+    )
+    // Floret Pentagonal Grid 3 x 3 - Triangle
+    File("examples/floretPentagonal_triangle.svg").writeText(
+        FloretPentagonalGridGenerator.generate(3, 3, FloretPentagonalGridOption.TRIANGLE)
+            .toSvg(floretPentagonalSvgOptions)
+    )
+    // Floret Pentagonal Grid 3 x 3 - Offset
+    File("examples/floretPentagonal_offset.svg").writeText(
+        FloretPentagonalGridGenerator.generate(3, 3, FloretPentagonalGridOption.OFFSET)
+            .toSvg(floretPentagonalSvgOptions)
+    )
+    // Floret Pentagonal Grid 3 x 3 - Offset Skip Last
+    File("examples/floretPentagonal_offset_skip_last.svg").writeText(
+        FloretPentagonalGridGenerator.generate(3, 3, FloretPentagonalGridOption.OFFSET_SKIP_LAST)
+            .toSvg(floretPentagonalSvgOptions)
     )
 }

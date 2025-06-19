@@ -102,7 +102,7 @@ object RhombiTriHexagonalGridGenerator {
             )
         }
         val xRange = (references.minOf { r -> r.x }..references.maxOf { r -> r.x })
-        val yRange = (references.minOf { r -> r.x }..references.maxOf { r -> r.y })
+        val yRange = (references.minOf { r -> r.y }..references.maxOf { r -> r.y })
 
         val cells = references.associateWith { r ->
             val neighbours = neighboursOf(r).filter { r -> references.contains(r) }
