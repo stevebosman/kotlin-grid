@@ -1,5 +1,7 @@
 package uk.co.stevebosman.grid
 
+import uk.co.stevebosman.grid.impl.floretPentagonal.FloretPentagonalGridGenerator
+import uk.co.stevebosman.grid.impl.floretPentagonal.FloretPentagonalGridOption
 import uk.co.stevebosman.grid.impl.regular.hex.HexGridGenerator
 import uk.co.stevebosman.grid.impl.regular.hex.HexGridOption
 import uk.co.stevebosman.grid.impl.regular.square.SquareGridGenerator
@@ -21,6 +23,7 @@ import uk.co.stevebosman.grid.impl.uniform.squareOctagon2.SquareOctagon2GridOpti
 import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalCellType
 import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalGridGenerator
 import uk.co.stevebosman.grid.impl.uniform.triHexagonal.TriHexagonalGridOption
+import uk.co.stevebosman.grid.svg.GridSvg.toSvg
 import java.io.File
 
 fun main() {
@@ -32,6 +35,7 @@ fun main() {
     generateElongatedTriangularExamples()
     generateRhombiTriHexagonalExamples()
     generateSnubHexagonalExamples()
+    generateFloretPentagonalExamples()
 }
 
 fun generateSquareExamples() {
@@ -81,37 +85,37 @@ private fun generateSnubHexagonalExamples() {
             }
         })
 
-    // Rhombi Tri Hexagonal Grid 1 x 1 - Singleton
+    // Snub Hexagonal Grid 1 x 1 - Singleton
     File("examples/snubHexagonal_singleton.svg").writeText(
         SnubHexagonalGridGenerator.generate(1, 1, SnubHexagonalGridOption.STANDARD)
             .toSvg(snubHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 1 x 2 - Double
+    // Snub Hexagonal Grid 1 x 2 - Double
     File("examples/snubHexagonal_double.svg").writeText(
         SnubHexagonalGridGenerator.generate(1, 2, SnubHexagonalGridOption.STANDARD)
             .toSvg(snubHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard
+    // Snub Hexagonal Grid 3 x 3 - Standard
     File("examples/snubHexagonal.svg").writeText(
         SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.STANDARD)
             .toSvg(snubHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Standard SKip Last
+    // Snub Hexagonal Grid 3 x 3 - Standard SKip Last
     File("examples/snubHexagonal_skip_last.svg").writeText(
         SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.STANDARD_SKIP_LAST)
             .toSvg(snubHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Triangle
+    // Snub Hexagonal Grid 3 x 3 - Triangle
     File("examples/snubHexagonal_triangle.svg").writeText(
         SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.TRIANGLE)
             .toSvg(snubHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset
+    // Snub Hexagonal Grid 3 x 3 - Offset
     File("examples/snubHexagonal_offset.svg").writeText(
         SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.OFFSET)
             .toSvg(snubHexagonalSvgOptions)
     )
-    // Rhombi Tri Hexagonal Grid 3 x 3 - Offset Skip Last
+    // Snub Hexagonal Grid 3 x 3 - Offset Skip Last
     File("examples/snubHexagonal_offset_skip_last.svg").writeText(
         SnubHexagonalGridGenerator.generate(3, 3, SnubHexagonalGridOption.OFFSET_SKIP_LAST)
             .toSvg(snubHexagonalSvgOptions)
@@ -273,5 +277,16 @@ private fun generateHexagonalExamples() {
     // Hex Grid 5 x 5 - Triangle
     File("examples/hexagonal_triangle.svg").writeText(
         HexGridGenerator.generate(5, 5, HexGridOption.TRIANGLE).toSvg(hexagonalSvgOptions)
+    )
+}
+
+private fun generateFloretPentagonalExamples() {
+    val FloretPentagonalSvgOptions = SvgOptions(
+        fill = { r: GridReference -> "greenyellow"})
+
+    // Rhombi Tri Hexagonal Grid 1 x 1 - Singleton
+    File("examples/floretPentagonal_singleton.svg").writeText(
+        FloretPentagonalGridGenerator.generate(1, 1, FloretPentagonalGridOption.STANDARD)
+            .toSvg(FloretPentagonalSvgOptions)
     )
 }
