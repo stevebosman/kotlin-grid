@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="135.0" height="135.0" viewBox="0 0 135.0 135.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <polygon points="5.0,5.0 30.0,5.0 30.0,30.0 5.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="5.0,30.0 30.0,30.0 30.0,55.0 5.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="5.0,55.0 30.0,55.0 30.0,80.0 5.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="5.0,80.0 30.0,80.0 30.0,105.0 5.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="5.0,105.0 30.0,105.0 30.0,130.0 5.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="30.0,5.0 55.0,5.0 55.0,30.0 30.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="30.0,30.0 55.0,30.0 55.0,55.0 30.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="30.0,55.0 55.0,55.0 55.0,80.0 30.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="30.0,80.0 55.0,80.0 55.0,105.0 30.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="30.0,105.0 55.0,105.0 55.0,130.0 30.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="55.0,5.0 80.0,5.0 80.0,30.0 55.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="55.0,30.0 80.0,30.0 80.0,55.0 55.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="55.0,55.0 80.0,55.0 80.0,80.0 55.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="55.0,80.0 80.0,80.0 80.0,105.0 55.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="55.0,105.0 80.0,105.0 80.0,130.0 55.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="80.0,5.0 105.0,5.0 105.0,30.0 80.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="80.0,30.0 105.0,30.0 105.0,55.0 80.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="80.0,55.0 105.0,55.0 105.0,80.0 80.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="80.0,80.0 105.0,80.0 105.0,105.0 80.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="80.0,105.0 105.0,105.0 105.0,130.0 80.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="105.0,5.0 130.0,5.0 130.0,30.0 105.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="105.0,30.0 130.0,30.0 130.0,55.0 105.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="105.0,55.0 130.0,55.0 130.0,80.0 105.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
-    <polygon points="105.0,80.0 130.0,80.0 130.0,105.0 105.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="darkorange"/>
-    <polygon points="105.0,105.0 130.0,105.0 130.0,130.0 105.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="gold"/>
+    <polygon points="5.0,5.0 30.0,5.0 30.0,30.0 5.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="5.0,30.0 30.0,30.0 30.0,55.0 5.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="5.0,55.0 30.0,55.0 30.0,80.0 5.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="5.0,80.0 30.0,80.0 30.0,105.0 5.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="5.0,105.0 30.0,105.0 30.0,130.0 5.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="30.0,5.0 55.0,5.0 55.0,30.0 30.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="30.0,30.0 55.0,30.0 55.0,55.0 30.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="30.0,55.0 55.0,55.0 55.0,80.0 30.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="30.0,80.0 55.0,80.0 55.0,105.0 30.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="30.0,105.0 55.0,105.0 55.0,130.0 30.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="55.0,5.0 80.0,5.0 80.0,30.0 55.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="55.0,30.0 80.0,30.0 80.0,55.0 55.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="55.0,55.0 80.0,55.0 80.0,80.0 55.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="55.0,80.0 80.0,80.0 80.0,105.0 55.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="55.0,105.0 80.0,105.0 80.0,130.0 55.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="80.0,5.0 105.0,5.0 105.0,30.0 80.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="80.0,30.0 105.0,30.0 105.0,55.0 80.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="80.0,55.0 105.0,55.0 105.0,80.0 80.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="80.0,80.0 105.0,80.0 105.0,105.0 80.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="80.0,105.0 105.0,105.0 105.0,130.0 80.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="105.0,5.0 130.0,5.0 130.0,30.0 105.0,30.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="105.0,30.0 130.0,30.0 130.0,55.0 105.0,55.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="105.0,55.0 130.0,55.0 130.0,80.0 105.0,80.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
+    <polygon points="105.0,80.0 130.0,80.0 130.0,105.0 105.0,105.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FF6F3C"/>
+    <polygon points="105.0,105.0 130.0,105.0 130.0,130.0 105.0,130.0" stroke="black" stroke-linecap="round" stroke-width="1" fill="#FFC107"/>
 </svg>
