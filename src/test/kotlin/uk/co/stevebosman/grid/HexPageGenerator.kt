@@ -2,6 +2,7 @@ package uk.co.stevebosman.grid
 
 import uk.co.stevebosman.grid.impl.regular.hex.HexGridGenerator
 import uk.co.stevebosman.grid.impl.regular.hex.HexGridOption
+import uk.co.stevebosman.grid.svg.GridSvg.toSvg
 import java.io.File
 
 fun main() {
